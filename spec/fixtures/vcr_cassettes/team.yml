@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/teams/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Wed, 20 Sep 2017 15:04:54 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=9a439c98e3a9c78eda434c1153286b6e7fe3ea33931c519bd748000c899b86fbd6ad9bf3c04b613cd995e2d44d9bdf894b11fea5bf7e5155f7e4fcfef5e66b72;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '[{"idteam":"1","name":"Неспроста","town":"Москва","comment":""}]'
+    http_version: 
+  recorded_at: Wed, 20 Sep 2017 15:04:50 GMT
+recorded_with: VCR 3.0.3

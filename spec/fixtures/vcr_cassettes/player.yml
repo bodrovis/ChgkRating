@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/players/42511
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Wed, 20 Sep 2017 15:01:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=0eb85e096a11c08630e35358989aad8213f8ccbb9418d1af9e10cb1e1260981016377e2f3c562f64bbc6f5a72393c89726223ee33e5348c00502047a0d3109e3;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '[{"idplayer":"42511","surname":"Некрылов","name":"Николай","patronymic":"Андреевич","comment":"","db_chgk_info_tag":"nnekrylov"}]'
+    http_version: 
+  recorded_at: Wed, 20 Sep 2017 15:01:00 GMT
+recorded_with: VCR 3.0.3
