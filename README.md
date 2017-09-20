@@ -7,4 +7,4 @@ is a popular intellectual game where teams of up to six people are trying to fin
 
 **This gem is not production-ready yet**
 
-(c) 2017 [Ilya Bodrov][http://bodrovis.tech]
+(c) 2017 [Ilya Bodrov](http://bodrovis.tech)
