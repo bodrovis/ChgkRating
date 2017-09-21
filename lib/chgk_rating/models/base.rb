@@ -10,10 +10,10 @@ module ChgkRating
         # Otherwise extract all data from the hash
         if raw.nil?
           @id = id_or_hash
-          @lazy = true
         else
           extract_from(raw)
         end
+        @lazy = lazy
       end
 
       # Load data from API if the resource was initially lazily loaded.

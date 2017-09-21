@@ -5,17 +5,19 @@ module ChgkRating
 
       def initialize(season_id_or_hash, team_id = nil)
         @team_id = team_id
-        raw = raw_by season_id_or_hash
-
-        @season_id = raw['idseason']
-        @players = ChgkRating::Collections::Players.new raw['players'], true
-        @captain = ChgkRating::Models::Player.new raw['captain'], true
+        super season_id_or_hash, false
       end
 
       private
 
       def api_path
         "teams/#{@team_id}/recaps"
+      end
+
+      def extract_from(data)
+        @season_id = data['idseason']
+        @players = ChgkRating::Collections::Players.new data['players'], true
+        @captain = ChgkRating::Models::Player.new data['captain'], true
       end
     end
   end

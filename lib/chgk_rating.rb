@@ -5,12 +5,16 @@ require 'chgk_rating/version'
 require 'chgk_rating/connection'
 require 'chgk_rating/request'
 
+require 'chgk_rating/concerns/search'
+
 require 'chgk_rating/models/base'
+require 'chgk_rating/models/tournament'
 require 'chgk_rating/models/player'
 require 'chgk_rating/models/team'
 require 'chgk_rating/models/recap'
 
 require 'chgk_rating/collections/base'
+require 'chgk_rating/collections/tournaments'
 require 'chgk_rating/collections/players'
 require 'chgk_rating/collections/teams'
 require 'chgk_rating/collections/recaps'
