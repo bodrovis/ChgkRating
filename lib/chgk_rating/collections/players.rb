@@ -7,7 +7,9 @@ module ChgkRating
       def initialize(params_or_ids = {}, lazy = false)
         collection = params_or_ids.is_a?(Array) ? params_or_ids : get(api_path, params_or_ids)['items']
 
-        @items = collection.map {|raw_player| ChgkRating::Models::Player.new(raw_player, lazy) }
+        @items = collection.map do |raw_player|
+          ChgkRating::Models::Player.new(raw_player, lazy: lazy)
+        end
         @lazy = lazy
       end
 

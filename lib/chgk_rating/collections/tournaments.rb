@@ -13,7 +13,7 @@ module ChgkRating
 
         result = get(api_path, params)
         @items = result[result.has_key?('items') ? 'items' : 'tournaments'].map do |raw_tournament|
-          ChgkRating::Models::Tournament.new raw_tournament, true
+          ChgkRating::Models::Tournament.new raw_tournament, lazy: lazy
         end
         @lazy = lazy
       end

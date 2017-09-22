@@ -16,11 +16,11 @@ module ChgkRating
     end
 
     def respond(response)
-     # begin
-      MultiJson.load response.body
-     #rescue MultiJson::ParseError
-        #return_error(response.status, response.body)
-      #end
+      begin
+        MultiJson.load response.body
+      rescue MultiJson::ParseError
+        return_error response.status, response.body
+      end
     end
 
     def return_error(code, body)
