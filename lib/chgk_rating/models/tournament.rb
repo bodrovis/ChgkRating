@@ -12,15 +12,15 @@ module ChgkRating
       end
 
       def team_players(team_id)
-        ChgkRating::Collections::TournamentPlayers.new @id, team_id
+        ChgkRating::Collections::TournamentPlayers.new tournament_id: @id, team_id: team_id
       end
 
       def team_results(team_id)
-        ChgkRating::Collections::TournamentTeamResults.new @id, team_id
+        ChgkRating::Collections::TournamentTeamResults.new tournament_id: @id, team_id: team_id
       end
 
       def team_list
-        ChgkRating::Collections::TournamentTeams.new @id
+        ChgkRating::Collections::TournamentTeams.new tournament_id: @id
       end
 
       def team(team_id)

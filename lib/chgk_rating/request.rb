@@ -28,10 +28,10 @@ module ChgkRating
     end
 
     def error(code, body)
-      # unless [200, 201].include?(code)
-      #   klass = OkLinker::Error::ERRORS[code]
-      #   klass.from_response(body)
-      # end
+      unless [200, 201].include?(code)
+        klass = ChgkRating::Error::ERRORS[code]
+        klass.from_response(body)
+      end
     end
   end
 end

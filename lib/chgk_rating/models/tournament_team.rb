@@ -14,11 +14,11 @@ module ChgkRating
       end
 
       def players
-        ChgkRating::Collections::TournamentPlayers.new @tournament_id, @id
+        ChgkRating::Collections::TournamentPlayers.new tournament_id: @tournament_id, team_id: @id
       end
 
       def results
-        ChgkRating::Collections::TournamentTeamResults.new @tournament_id, @id
+        ChgkRating::Collections::TournamentTeamResults.new tournament_id: @tournament_id, team_id: @id
       end
 
       private

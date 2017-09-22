@@ -1,10 +1,20 @@
 module ChgkRating
   module Collections
     class Recaps < Base
-      def initialize(team_id, params = {})
-        path = "teams/#{team_id}/recaps"
-        @items = get(path, params).values.
-            map {|raw_recap| ChgkRating::Models::Recap.new(raw_recap, team_id: team_id) }
+      def initialize(params = {})
+        @team_id = params[:team_id]
+
+        super
+      end
+
+      private
+
+      def process(result, params = {})
+        ChgkRating::Models::Recap.new result, team_id: @team_id
+      end
+
+      def api_path
+        "teams/#{@team_id}/recaps"
       end
     end
   end

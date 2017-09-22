@@ -3,9 +3,13 @@ module ChgkRating
     class Teams < Base
       include ChgkRating::Concerns::Search
       def initialize(params = {})
-        @items = get(api_path, params)['items'].map do |raw_team|
-          ChgkRating::Models::Team.new raw_team
-        end
+        super
+      end
+
+      private
+
+      def process(result, params = {})
+        ChgkRating::Models::Team.new result
       end
 
       def api_path

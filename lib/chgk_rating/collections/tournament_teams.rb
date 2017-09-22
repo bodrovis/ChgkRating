@@ -1,9 +1,20 @@
 module ChgkRating
   module Collections
     class TournamentTeams < Base
-      def initialize(tournament_id)
-        path = "tournaments/#{tournament_id}/list"
-        @items = get(path).map {|raw_list| ChgkRating::Models::TournamentTeam.new(raw_list) }
+      def initialize(params = {})
+        @tournament_id = params[:tournament_id]
+
+        super
+      end
+
+      private
+
+      def process(result, params = {})
+        ChgkRating::Models::TournamentTeam.new result
+      end
+
+      def api_path
+        "tournaments/#{@tournament_id}/list"
       end
     end
   end

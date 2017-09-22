@@ -9,7 +9,7 @@ module ChgkRating
       end
 
       def recaps(params = {})
-        ChgkRating::Collections::Recaps.new @id, params
+        ChgkRating::Collections::Recaps.new team_id: @id
       end
 
       def recap(season_id)
@@ -17,7 +17,7 @@ module ChgkRating
       end
 
       def tournaments(season_id, params = {})
-        ChgkRating::Collections::Tournaments.new team_or_id: self, season_id: season_id, params: params
+        ChgkRating::Collections::Tournaments.new team: self, season_id: season_id
       end
 
       def at_tournament(tournament_id)
@@ -29,7 +29,7 @@ module ChgkRating
       end
 
       def ratings
-        ChgkRating::Collections::Ratings.new @id
+        ChgkRating::Collections::Ratings.new team_id: @id
       end
 
       def api_path

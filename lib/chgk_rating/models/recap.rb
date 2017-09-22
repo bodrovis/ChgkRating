@@ -20,7 +20,7 @@ module ChgkRating
       def extract_from(data)
         @team_id = data['idteam']
         @season_id = data['idseason']
-        @players = ChgkRating::Collections::Players.new data['players'], true
+        @players = ChgkRating::Collections::Players.new collection: data['players'], lazy: true
         @captain = ChgkRating::Models::Player.new data['captain'], lazy: true
       end
     end

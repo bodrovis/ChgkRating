@@ -4,11 +4,13 @@ require 'uri'
 require 'faraday'
 require 'multi_json'
 
+require 'ext/date'
+
 require 'chgk_rating/version'
+require 'chgk_rating/error'
 require 'chgk_rating/connection'
 require 'chgk_rating/request'
 
-require 'chgk_rating/utils/date'
 require 'chgk_rating/utils/boolean_parser'
 
 require 'chgk_rating/concerns/search'

@@ -29,7 +29,7 @@ module ChgkRating
     end
 
     def tournaments(team_id = nil, season_id = nil, params = {})
-      ChgkRating::Collections::Tournaments.new team_or_id: team_id, season_id: season_id, params: params
+      ChgkRating::Collections::Tournaments.new team_id: team_id, season_id: season_id
     end
 
     def team_at_tournament(tournament_id, team_id)

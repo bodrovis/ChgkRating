@@ -6,6 +6,15 @@ module ChgkRating
 
       attr_reader :items
 
+      def initialize(params = {})
+        results = if params[:collection].is_a?(Array)
+                    params[:collection]
+                  else
+                    prepare get(api_path, {})
+                  end
+        @items = results.map { |result| process result, params }
+      end
+
       def each
         @items.each { |element| yield element }
       end
@@ -14,12 +23,14 @@ module ChgkRating
         @items[index]
       end
 
-      # Load data from API for all the resources of the collection if it was initially lazily loaded.
-      # Set `force` to reload data even they are already present.
-      def eager_load!(force = false)
-        return unless @lazy || force
-        @items.each(&:eager_load!)
-        @lazy = false
+      private
+
+      def prepare(raw_results)
+        return raw_results if raw_results.is_a?(Array)
+        return raw_results['tournaments'] if raw_results.has_key?('tournaments')
+        return raw_results['items'] if raw_results.has_key?('items')
+        return raw_results.values if raw_results.is_a?(Hash)
+        raw_results
       end
     end
   end
