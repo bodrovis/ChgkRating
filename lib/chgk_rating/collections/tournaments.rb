@@ -1,6 +1,8 @@
 module ChgkRating
   module Collections
     class Tournaments < Base
+      include ChgkRating::Concerns::Pagination
+
       attr_reader :team, :season_id
 
       #def initialize(team_or_id: nil, season_id: nil, params: {}, lazy: true)

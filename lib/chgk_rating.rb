@@ -13,7 +13,8 @@ require 'chgk_rating/request'
 
 require 'chgk_rating/utils/boolean_parser'
 
-require 'chgk_rating/concerns/search'
+require 'chgk_rating/concerns/pagination'
+require 'chgk_rating/concerns/searching'
 
 require 'chgk_rating/models/base'
 require 'chgk_rating/models/tournament_team_result'

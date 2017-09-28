@@ -17,21 +17,16 @@ module ChgkRating
 
     def respond(response)
       begin
-        MultiJson.load response.body
+        body = MultiJson.load response.body
+        raise MultiJson::ParseError if body.respond_to?(:has_key?) && body.has_key?('error')
+        body
       rescue MultiJson::ParseError
-        return_error response.status, response.body
+        respond_with_error response.status, response.body
       end
     end
 
-    def return_error(code, body)
-      fail error(code, body)
-    end
-
-    def error(code, body)
-      unless [200, 201].include?(code)
-        klass = ChgkRating::Error::ERRORS[code]
-        klass.from_response(body)
-      end
+    def respond_with_error(code, body)
+      fail ChgkRating::Error::ERRORS[code].from_response(body)
     end
   end
 end

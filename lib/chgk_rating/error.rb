@@ -9,14 +9,13 @@ module ChgkRating
       end
     end
 
-    # HTTP status code 400 - invalid params
-    BadRequest = Class.new(ClientError)
-
-    # HTTP status code 501 - not implemented
+    BadRequest = Class.new(ServerError)
+    NotFound = Class.new(ServerError)
     NotImplemented = Class.new(ServerError)
 
     ERRORS = {
         400 => ChgkRating::Error::BadRequest,
+        404 => ChgkRating::Error::NotFound,
         501 => ChgkRating::Error::NotImplemented
     }
 

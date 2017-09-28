@@ -1,9 +1,9 @@
 module ChgkRating
   module Concerns
-    module Search
+    module Searching
       # some black magic
       def self.included(klass)
-        search_class = Class.new(klass) do |params_or_ids = {}, lazy = false|
+        search_class = Class.new(klass) do |*args|
           def api_path
             super + '/search'
           end

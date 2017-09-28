@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/teams/1/recaps/9
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Thu, 28 Sep 2017 16:42:36 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=d5f70bd17ae9e40c4e012ea3c733399d4001d697f814bf90d16561c6aa013ea936297feb2357ebc38ec75ce17d64166ad1223e55c76a2c551e29693dd07f9f1e;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '{"idteam":"1","idseason":"9","players":["2935","18935","20612","32979"],"captain":"2935"}'
+    http_version: 
+  recorded_at: Thu, 28 Sep 2017 16:42:31 GMT
+recorded_with: VCR 3.0.3

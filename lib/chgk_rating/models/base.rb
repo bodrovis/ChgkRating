@@ -4,7 +4,6 @@ module ChgkRating
       include ChgkRating::Request
       include ChgkRating::Utils::BooleanParser
 
-      #def initialize(id_or_hash, lazy = false)
       def initialize(id_or_hash, params = {})
         raw = raw_by id_or_hash, lazy_load?(params)
 
@@ -16,7 +15,7 @@ module ChgkRating
       end
 
       # Load data from API if the resource was initially lazily loaded.
-      # Set `force` to reload data even they are already present.
+      # Set `force` to reload data even if it is already present.
       def eager_load!(force = false)
         return unless @lazy || force
         puts raw_by(self.id)

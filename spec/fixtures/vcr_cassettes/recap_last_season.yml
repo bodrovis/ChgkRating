@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/teams/7931/recaps/last
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Thu, 28 Sep 2017 17:00:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=d22f8aaf72a4cdfcf3a32ba9ad3b82935f14c7ddd1477bdfa4347974ab5a30f172999cd58c672b370605ff9af77a6144c43e5a10bb8acd2d29c71c04555a9b17;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '{"idteam":"7931","idseason":"51","players":["2668","6654","23539","53735","94783","98697","115867"],"captain":"23539"}'
+    http_version: 
+  recorded_at: Thu, 28 Sep 2017 17:00:33 GMT
+recorded_with: VCR 3.0.3

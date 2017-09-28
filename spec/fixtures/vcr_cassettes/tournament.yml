@@ -1,0 +1,56 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/tournaments/3506
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Thu, 28 Sep 2017 17:04:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=992cf99a51153071b84e595e77155c666e9c53122a1dee315711e203ee864d339e9f88cd99280212684c6bffeb8a97700426abd3bebbe0dab10faae81635cf72;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '[{"idtournament":"3506","name":"Чемпионат Перми и Пермского края","town":"Пермь","long_name":"XV
+        Чемпионат Перми и Пермского края по игре \"Что? Где? Когда?\"","date_start":"2015-11-08
+        14:00:00","date_end":"2015-11-08 18:00:00","tour_count":"4","tour_questions":"12","tour_ques_per_tour":"","questions_total":"48","type_name":"Обычный","main_payment_value":"660","discounted_payment_value":"360","discounted_payment_reason":"для
+        детских команд; 480 - для студенческих","date_requests_allowed_to":"","comment":"","site_url":"https:\/\/vk.com\/chgk.perm.championship"}]'
+    http_version: 
+  recorded_at: Thu, 28 Sep 2017 17:04:19 GMT
+recorded_with: VCR 3.0.3

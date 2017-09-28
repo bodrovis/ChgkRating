@@ -1,7 +1,8 @@
 module ChgkRating
   module Collections
     class Players < Base
-      include ChgkRating::Concerns::Search
+      include ChgkRating::Concerns::Searching
+      include ChgkRating::Concerns::Pagination
 
       def initialize(params = {})
         super

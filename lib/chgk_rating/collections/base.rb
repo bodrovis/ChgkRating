@@ -10,7 +10,7 @@ module ChgkRating
         results = if params[:collection].is_a?(Array)
                     params[:collection]
                   else
-                    prepare get(api_path, {})
+                    prepare get(api_path, respond_to?(:page_from) ? page_from(params) : {})
                   end
         @items = results.map { |result| process result, params }
       end

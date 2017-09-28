@@ -15,7 +15,7 @@ module ChgkRating
       end
 
       def api_path
-        "tournamentsss/#{@tournament_id}/results/#{@team_id}"
+        "tournaments/#{@tournament_id}/results/#{@team_id}"
       end
     end
   end

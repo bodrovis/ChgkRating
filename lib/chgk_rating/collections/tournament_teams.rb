@@ -1,6 +1,8 @@
 module ChgkRating
   module Collections
     class TournamentTeams < Base
+      include ChgkRating::Concerns::Pagination
+
       def initialize(params = {})
         @tournament_id = params[:tournament_id]
 

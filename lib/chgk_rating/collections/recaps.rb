@@ -1,6 +1,8 @@
 module ChgkRating
   module Collections
     class Recaps < Base
+      include ChgkRating::Concerns::Pagination
+
       def initialize(params = {})
         @team_id = params[:team_id]
 
