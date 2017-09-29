@@ -1,9 +1,9 @@
 # ChgkRating
 
-[![Build Status](https://travis-ci.org/bodrovis/chgk_rating.svg?branch=master)](https://travis-ci.org/bodrovis/chgk_rating)
-[![Code Climate](https://codeclimate.com/github/bodrovis/chgk_rating/badges/gpa.svg)](https://codeclimate.com/github/bodrovis/chgk_rating)
-[![Test Coverage](https://codeclimate.com/github/bodrovis/chgk_rating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/chgk_rating/coverage)
-[![Dependency Status](https://gemnasium.com/bodrovis/chgk_rating.svg)](https://gemnasium.com/bodrovis/chgk_rating)
+[![Build Status](https://travis-ci.org/bodrovis/ChgkRating.svg?branch=master)](https://travis-ci.org/bodrovis/ChgkRating)
+[![Code Climate](https://codeclimate.com/github/bodrovis/ChgkRating/badges/gpa.svg)](https://codeclimate.com/github/bodrovis/ChgkRating)
+[![Test Coverage](https://codeclimate.com/github/bodrovis/ChgkRating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/ChgkRating/coverage)
+[![Dependency Status](https://gemnasium.com/bodrovis/ChgkRating.svg)](https://gemnasium.com/bodrovis/ChgkRating)
 
 Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI.  
 
