@@ -6,3 +6,10 @@ rvm:
   - 2.4.2
 
 install: bundle install --retry=3
+
+after_success:
+  - bundle exec codeclimate-test-reporter
+
+addons:
+  code_climate:
+    repo_token: b8340b168e37d0230bbfad2f9186e3f4a758517745010dc93a035af7898c7a53

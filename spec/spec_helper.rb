@@ -3,7 +3,6 @@ SimpleCov.start do
   add_filter "spec/"
 end
 
-require 'pry'
 require 'chgk_rating'
 
 # Support files
