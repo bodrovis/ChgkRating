@@ -5,10 +5,10 @@ RSpec.describe ChgkRating::Client do
         test_client.recaps(1)
       end
       recap = recaps[0]
-      expect(recap.season_id).to eq(6)
-      expect(recap.team_id).to eq(1)
-      expect(recap.captain.id).to eq(2935)
-      expect(recap.players.first.id).to eq(1585)
+      expect(recap.season_id).to eq '6'
+      expect(recap.team_id).to eq '1'
+      expect(recap.captain.id).to eq '2935'
+      expect(recap.players.first.id).to eq '1585'
     end
   end
 
