@@ -5,6 +5,14 @@ RSpec.shared_examples 'lazy loaded' do
 end
 
 RSpec.describe ChgkRating::Client do
+  context 'errors' do
+    it 'should raise an error for an erroneous request' do
+      expect( -> { VCR.use_cassette 'erroneous_request' do
+        test_client.tournament '/thats/an/error'
+      end } ).to raise_error(ChgkRating::Error::NotFound)
+    end
+  end
+
   describe '#team_at_tournament' do
     subject { test_client.team_at_tournament 3506, 52853 }
 
@@ -48,7 +56,7 @@ RSpec.describe ChgkRating::Client do
     end
   end
 
-  context '#recap' do
+  describe '#recap' do
     it 'should allow to choose the last season' do
       recap = VCR.use_cassette 'recap_last_season' do
         test_client.recap 7931, :last

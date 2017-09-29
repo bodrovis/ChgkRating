@@ -4,8 +4,7 @@ module ChgkRating
       include ChgkRating::Concerns::Pagination
 
       attr_reader :team, :season_id
-
-      #def initialize(team_or_id: nil, season_id: nil, params: {}, lazy: true)
+      
       def initialize(params = {})
         @team = if params[:team].instance_of?(ChgkRating::Models::Team)
                   params[:team]

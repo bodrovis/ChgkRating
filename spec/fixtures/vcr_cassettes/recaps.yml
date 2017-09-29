@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/teams/1/recaps
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Fri, 29 Sep 2017 16:25:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=ba56f7f0332a0ec3d81b17f03377a32d6b7bd60ab41188120a150cae6ae215f4fc36293b49dbf5f232a51724c1f08a29474e3ffdeefd2a3436a82e7fb96a1a2b;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '{"6":{"idteam":"1","idseason":"6","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"7":{"idteam":"1","idseason":"7","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"8":{"idteam":"1","idseason":"8","players":["2935","18935","20612","29800","30152","32979"],"captain":"2935"},"9":{"idteam":"1","idseason":"9","players":["2935","18935","20612","32979"],"captain":"2935"}}'
+    http_version: 
+  recorded_at: Fri, 29 Sep 2017 16:25:34 GMT
+recorded_with: VCR 3.0.3

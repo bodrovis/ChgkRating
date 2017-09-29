@@ -1,5 +1,24 @@
 RSpec.describe ChgkRating::Client do
-  context '#teams' do
+  describe '#recaps' do
+    it 'should return all recaps by default' do
+      recaps = VCR.use_cassette 'recaps' do
+        test_client.recaps(1)
+      end
+      recap = recaps[0]
+      expect(recap.season_id).to eq(6)
+      expect(recap.team_id).to eq(1)
+      expect(recap.captain.id).to eq(2935)
+      expect(recap.players.first.id).to eq(1585)
+    end
+  end
+
+  describe '#teams' do
+    it 'should allow to perform searching' do
+      teams = VCR.use_cassette 'teams_searching' do
+        test_client.teams
+      end
+    end
+
     it 'should return the first page by default' do
       teams = VCR.use_cassette 'teams' do
         test_client.teams
@@ -21,7 +40,7 @@ RSpec.describe ChgkRating::Client do
     end
   end
 
-  context '#players' do
+  describe '#players' do
     it 'should return first page by default' do
       players = VCR.use_cassette 'players' do
         test_client.players
