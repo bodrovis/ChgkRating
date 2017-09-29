@@ -9,13 +9,12 @@ RSpec.describe ChgkRating::Client do
     subject { test_client.team_at_tournament 3506, 52853 }
 
     include_examples 'lazy loaded' do
-      let(:object) { subject.team }
+      let(:object) { subject }
     end
 
     it 'should contain only lazily loaded data' do
-      binding.pry
       expect(subject.tournament_id).to eq(3506)
-      puts subject.inspect
+      expect(subject.id).to eq(52853)
     end
   end
 

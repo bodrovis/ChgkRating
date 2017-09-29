@@ -4,6 +4,8 @@ module ChgkRating
       include ChgkRating::Request
       include ChgkRating::Utils::BooleanParser
 
+      attr_reader :lazy
+
       def initialize(id_or_hash, params = {})
         raw = raw_by id_or_hash, lazy_load?(params)
 
@@ -18,7 +20,6 @@ module ChgkRating
       # Set `force` to reload data even if it is already present.
       def eager_load!(force = false)
         return unless @lazy || force
-        puts raw_by(self.id)
         extract_from raw_by(self.id)
         @lazy = false
       end
@@ -31,6 +32,7 @@ module ChgkRating
 
       def self.no_lazy_support!
         self.const_set :NO_LAZY_SUPPORT, true
+        undef_method :lazy
       end
 
       private

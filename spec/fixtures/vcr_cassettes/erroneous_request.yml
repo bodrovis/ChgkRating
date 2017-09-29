@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/tournaments/thats/an/error
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.10.3
+      Date:
+      - Fri, 29 Sep 2017 16:00:14 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Frame-Options:
+      - deny
+      Set-Cookie:
+      - chgk_session_idhash=a1989f531b9a984e3d2b44a5bcb02c4deefd5c18660b02ad7a968c8e741ae46dd1d6bd0be68ffbee44a2d1be145617dc980a69cbfa1a41d2b5c8a6749a2f6746;
+        path=/; HttpOnly
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - '0'
+      X-Powered-By:
+      - Luracast Restler v3.0.0rc5
+      Content-Language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":404,"message":"Not Found"}}'
+    http_version: 
+  recorded_at: Fri, 29 Sep 2017 16:00:09 GMT
+recorded_with: VCR 3.0.3

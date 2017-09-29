@@ -10,5 +10,5 @@ require 'chgk_rating'
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 
 RSpec.configure do |config|
-  config.include SpecHelper
+  config.include TestClient
 end

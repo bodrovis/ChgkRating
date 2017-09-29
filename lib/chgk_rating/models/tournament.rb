@@ -4,7 +4,7 @@ module ChgkRating
       attr_reader :id, :name, :town, :long_name, :date_start, :date_end, :tour_count,
                   :tour_questions, :tour_ques_per_tour, :questions_total, :type_name, :main_payment_value,
                   :discounted_payment_value, :discounted_payment_reason, :date_requests_allowed_to,
-                  :comment, :site_url, :lazy
+                  :comment, :site_url
 
      # def initialize(id_or_hash, lazy = false)
       def initialize(id_or_hash, params = {})

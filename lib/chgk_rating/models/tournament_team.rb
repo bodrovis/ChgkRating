@@ -2,15 +2,14 @@ module ChgkRating
   module Models
     class TournamentTeam < Base
       no_eager_loading!
-      # no lazy support should undef lazy method. by default all should have lazy support
+
       attr_reader :id, :current_name, :base_name, :position, :questions_total,
                   :mask, :bonus_a, :bonus_b, :tech_rating, :predicted_position,
-                  :real_bonus_b, :d_bonus_b, :included_in_rating, :lazy
+                  :real_bonus_b, :d_bonus_b, :included_in_rating, :tournament_id
 
-     # def initialize(team_id_or_hash, tournament_id = nil)
       def initialize(team_id_or_hash, params = {})
         @tournament_id = params[:tournament_id]
-        super# team_id_or_hash, !team_id_or_hash.is_a?(Hash)
+        super
       end
 
       def players
