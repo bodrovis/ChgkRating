@@ -25,7 +25,7 @@ module ChgkRating
       end
 
       def self.no_eager_loading!
-        define_method :eager_load! do |*args|
+        define_method :eager_load! do |*_args|
           raise ChgkRating::Error::EagerLoadingNotSupported
         end
       end

@@ -3,7 +3,7 @@ module ChgkRating
     module Searching
       # some black magic
       def self.included(klass)
-        search_class = Class.new(klass) do |*args|
+        search_class = Class.new(klass) do |*_args|
           def api_path
             super + '/search'
           end

@@ -14,7 +14,7 @@ module ChgkRating
       end
 
       def each
-        @items.each { |item| yield *item }
+        @items.each { |item| yield(*item) }
       end
 
       def [](index)
@@ -35,7 +35,7 @@ module ChgkRating
         raw_results
       end
 
-      def process(results, params)
+      def process(results, *_args)
         if results.is_a? Array
           results.map { |result| yield result }
         else
