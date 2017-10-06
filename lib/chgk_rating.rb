@@ -5,6 +5,7 @@ require 'faraday'
 require 'multi_json'
 
 require 'ext/date'
+require 'ext/uri'
 
 require 'chgk_rating/version'
 require 'chgk_rating/error'
@@ -13,7 +14,6 @@ require 'chgk_rating/request'
 
 require 'chgk_rating/utils/boolean_parser'
 
-require 'chgk_rating/concerns/pagination'
 require 'chgk_rating/concerns/searching'
 
 require 'chgk_rating/models/base'

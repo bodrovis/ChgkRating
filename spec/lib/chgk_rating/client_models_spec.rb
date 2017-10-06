@@ -27,8 +27,17 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#tournament' do
+    let(:lazy_tournament) { test_client.tournament 3506, true }
+
     include_examples 'lazy loaded' do
-      let(:object) { test_client.tournament 3506, true }
+      let(:object) { lazy_tournament }
+    end
+
+    it 'should support eager loading' do
+      VCR.use_cassette 'tournament' do
+        lazy_tournament.eager_load!
+      end
+      expect(lazy_tournament.name).to eq 'Чемпионат Перми и Пермского края'
     end
 
     it 'should request full info by default' do
@@ -53,6 +62,21 @@ RSpec.describe ChgkRating::Client do
       expect(tournament.date_requests_allowed_to).to be_nil
       expect(tournament.comment).to eq ''
       expect(tournament.site_url).to eq URI.parse('https://vk.com/chgk.perm.championship')
+    end
+  end
+
+  describe '#rating' do
+    it 'should return team rating for a given release' do
+      team_rating = VCR.use_cassette 'rating_release' do
+        test_client.team_rating 1, 24
+      end
+
+      expect(team_rating).to be_an_instance_of ChgkRating::Models::Rating
+      expect(team_rating.team_id).to eq '1'
+      expect(team_rating.rating).to eq 9071
+      expect(team_rating.rating_position).to eq 9
+      expect(team_rating.date.to_s).to eq '1999-01-07'
+      expect(team_rating.formula).to eq :b
     end
   end
 

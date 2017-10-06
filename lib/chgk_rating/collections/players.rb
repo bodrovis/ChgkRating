@@ -2,7 +2,6 @@ module ChgkRating
   module Collections
     class Players < Base
       include ChgkRating::Concerns::Searching
-      include ChgkRating::Concerns::Pagination
 
       def initialize(params = {})
         super
@@ -10,8 +9,8 @@ module ChgkRating
 
       private
 
-      def process(result, params = {})
-        ChgkRating::Models::Player.new result, lazy: params[:lazy]
+      def process(_results, params = {})
+        super { |result| ChgkRating::Models::Player.new result, lazy: params[:lazy] }
       end
 
       def api_path

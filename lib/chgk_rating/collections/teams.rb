@@ -2,7 +2,6 @@ module ChgkRating
   module Collections
     class Teams < Base
       include ChgkRating::Concerns::Searching
-      include ChgkRating::Concerns::Pagination
 
       def initialize(params = {})
         super
@@ -10,8 +9,8 @@ module ChgkRating
 
       private
 
-      def process(result, params = {})
-        ChgkRating::Models::Team.new result
+      def process(*_args)
+        super { |result| ChgkRating::Models::Team.new result }
       end
 
       def api_path

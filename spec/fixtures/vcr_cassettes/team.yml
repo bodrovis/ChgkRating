@@ -11,43 +11,41 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Wed, 20 Sep 2017 15:04:54 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:00:22 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=9a439c98e3a9c78eda434c1153286b6e7fe3ea33931c519bd748000c899b86fbd6ad9bf3c04b613cd995e2d44d9bdf894b11fea5bf7e5155f7e4fcfef5e66b72;
+      set-cookie:
+      - chgk_session_idhash=b07acb79426a0818d3f22a549462d6430ba2fa3151a92a7dd92843b8d091ff90646ed15416d8f99432937fbb3c520fbfb7058ebe6f9f0dfaf9a9629aacb21d90;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
       string: '[{"idteam":"1","name":"Неспроста","town":"Москва","comment":""}]'
     http_version: 
-  recorded_at: Wed, 20 Sep 2017 15:04:50 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:13 GMT
 recorded_with: VCR 3.0.3

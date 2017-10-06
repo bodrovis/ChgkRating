@@ -10,8 +10,8 @@ module ChgkRating
 
       private
 
-      def process(result, params = {})
-        ChgkRating::Models::TournamentTeamResult.new result
+      def process(*_args)
+        super { |result| ChgkRating::Models::TournamentTeamResult.new result }
       end
 
       def api_path

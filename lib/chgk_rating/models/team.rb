@@ -3,21 +3,20 @@ module ChgkRating
     class Team < Base
       attr_reader :id, :name, :town, :comment
 
-      #def initialize(id_or_hash, lazy = false)
       def initialize(id_or_hash, params = {})
         super
       end
 
       def recaps(params = {})
-        ChgkRating::Collections::Recaps.new team_id: @id
+        ChgkRating::Collections::Recaps.new params.merge(team_id: @id)
       end
 
       def recap(season_id)
         ChgkRating::Models::Recap.new season_id, team_id: @id
       end
 
-      def tournaments(season_id, params = {})
-        ChgkRating::Collections::Tournaments.new team: self, season_id: season_id
+      def tournaments(season_id: nil, params: {})
+        ChgkRating::Collections::Tournaments.new params.merge team: self, season_id: season_id, lazy: true
       end
 
       def at_tournament(tournament_id)

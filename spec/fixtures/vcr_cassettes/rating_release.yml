@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://rating.chgk.info/api/teams/7931/recaps/last
+    uri: http://rating.chgk.info/api/teams/1/rating/24
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:00:22 GMT
+      - Fri, 06 Oct 2017 16:56:57 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=364c8331d8c2266009f11f1937e543621f437638606e481004d7abe757b77394f4f611a76bed6b342046cc78bd9113cdf4236c45ebb63aa1c79bbbbf8129a113;
+      - chgk_session_idhash=75668851ffdbb6339a53e447b79cb77a54aac6c0827e6190bbed3b34dbc8526239834a5ae9828ac52cfeddd23144ccbec2fd2ff067a8ff4f507f0a934087dc15;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,7 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"idteam":"7931","idseason":"51","players":["2668","6654","23539","53735","94783","98697","115867"],"captain":"23539"}'
+      string: '{"idteam":"1","idrelease":"24","rating":"9071","rating_position":"9","date":"1999-01-07","formula":"b"}'
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:14 GMT
+  recorded_at: Fri, 06 Oct 2017 16:56:49 GMT
 recorded_with: VCR 3.0.3

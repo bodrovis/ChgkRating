@@ -11,39 +11,37 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Thu, 28 Sep 2017 16:34:10 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:01:07 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=bce695f5e3dd4bb7c213191038c6467f9bdd5b83000e52711b344f26e2f9f10e35e4e91f33558cbc6f1b7cd8d73bf35522437df625ee22dcc58dff914c13a1ee;
+      set-cookie:
+      - chgk_session_idhash=2f93ae5714f7b38e31cca483e75cac4e99c82cf0787f329b900421fad7fdb8d302cf68e689fca1ddaf1c610e4ff90b62a20769073542b3578aaa2306e7660b20;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
@@ -348,7 +346,7 @@ http_interactions:
         Цукамото","town":"Москва"},{"idteam":"3396","name":"Название команды","town":"Южно-Сахалинск"},{"idteam":"3397","name":"Дети
         Фемиды","town":"Тверь"},{"idteam":"3398","name":"Вахтанг успокойся","town":"Павлоград"},{"idteam":"3399","name":"Игры
         разума","town":"Тирасполь"},{"idteam":"3400","name":"Максимум","town":"Малоярославец"},{"idteam":"3401","name":"НЛО","town":"Самара"},{"idteam":"3402","name":"Школа
-        №5","town":"Южно-Сахалинск"},{"idteam":"3403","name":"Ва-банк","town":"Тверь"}],"total_items":"31815","current_items":"2001-3000"}'
+        №5","town":"Южно-Сахалинск"},{"idteam":"3403","name":"Ва-банк","town":"Тверь"}],"total_items":"31882","current_items":"2001-3000"}'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 16:34:05 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:59 GMT
 recorded_with: VCR 3.0.3

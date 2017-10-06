@@ -4,6 +4,8 @@ class Date
       Date.parse raw_date
     rescue ArgumentError
       nil
+    rescue TypeError
+      nil
     end
   end
 end

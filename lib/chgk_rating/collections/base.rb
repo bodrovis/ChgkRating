@@ -7,16 +7,14 @@ module ChgkRating
       attr_reader :items
 
       def initialize(params = {})
-        results = if params[:collection].is_a?(Array)
-                    params[:collection]
-                  else
-                    prepare get(api_path, respond_to?(:page_from) ? page_from(params) : {})
-                  end
-        @items = results.map { |result| process result, params }
+        results = params[:collection] ||
+            prepare(get(api_path, build_request_params_from(params)))
+
+        @items = process results, params
       end
 
       def each
-        @items.each { |element| yield element }
+        @items.each { |item| yield *item }
       end
 
       def [](index)
@@ -25,12 +23,24 @@ module ChgkRating
 
       private
 
+      def build_request_params_from(params)
+        request_params = params[:request].to_h
+        request_params[:page] = params.delete(:page).to_i if params.has_key?(:page)
+        request_params
+      end
+
       def prepare(raw_results)
-        return raw_results if raw_results.is_a?(Array)
-        return raw_results['tournaments'] if raw_results.has_key?('tournaments')
-        return raw_results['items'] if raw_results.has_key?('items')
-        return raw_results.values if raw_results.is_a?(Hash)
+        return raw_results['tournaments'] if raw_results.has_key?('tournaments') && raw_results.respond_to?(:has_key?)
+        return raw_results['items'] if raw_results.has_key?('items') && raw_results.respond_to?(:has_key?)
         raw_results
+      end
+
+      def process(results, params)
+        if results.is_a? Array
+          results.map { |result| yield result }
+        else
+          results.each { |season, result| results[season] = yield result }
+        end
       end
     end
   end

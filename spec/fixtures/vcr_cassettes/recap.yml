@@ -11,43 +11,41 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Thu, 28 Sep 2017 16:42:36 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:00:22 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=d5f70bd17ae9e40c4e012ea3c733399d4001d697f814bf90d16561c6aa013ea936297feb2357ebc38ec75ce17d64166ad1223e55c76a2c551e29693dd07f9f1e;
+      set-cookie:
+      - chgk_session_idhash=2c6727a0e42b714a89119bc4ab12ec6d06ae2cd9a83d395e70a8e77981b000a2031b6f7feede425b026f0356f918c98ab8eeff255e934c690a4796dc07834937;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
       string: '{"idteam":"1","idseason":"9","players":["2935","18935","20612","32979"],"captain":"2935"}'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 16:42:31 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:14 GMT
 recorded_with: VCR 3.0.3

@@ -5,10 +5,9 @@ module ChgkRating
       no_lazy_support!
       attr_reader :team_id, :release_id, :rating, :rating_position, :date, :formula
 
-     # def initialize(release_id_or_hash = '', team_id = nil)
-      def initialize(release_id_or_hash = '', params = {})
+      def initialize(release_id_or_hash, params = {})
         @team_id = params[:team_id]
-        super# release_id_or_hash, @lazy
+        super
       end
 
       private

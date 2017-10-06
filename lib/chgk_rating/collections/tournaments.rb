@@ -1,8 +1,6 @@
 module ChgkRating
   module Collections
     class Tournaments < Base
-      include ChgkRating::Concerns::Pagination
-
       attr_reader :team, :season_id
 
       def initialize(params = {})
@@ -11,21 +9,29 @@ module ChgkRating
                 else
                   ChgkRating::Models::Team.new(params[:team], lazy: true) if params[:team]
                 end
-        @season_id = params[:season_id]
 
+        @season_id = params[:season_id]
+        params.merge!(lazy: true) if @team || @season_id
         super
       end
 
       private
 
-      def process(result, params = {})
-        ChgkRating::Models::Tournament.new result, lazy: params[:lazy]
+      def process(_results, params = {})
+        super do |result|
+          if @team && @season_id.nil?
+            ChgkRating::Collections::Tournaments.new collection: result['tournaments'],
+                                                     lazy: true
+          else
+            ChgkRating::Models::Tournament.new result, lazy: params[:lazy]
+          end
+        end
       end
 
       def api_path
         path = 'tournaments'
         return path unless @team
-        path = "#{@team.api_path}/#{@team.id}/#{path}"
+        path = "teams/#{@team.id}/#{path}"
         return path unless @season_id
         path + "/#{@season_id}"
       end

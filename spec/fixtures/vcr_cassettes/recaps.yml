@@ -11,43 +11,41 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Fri, 29 Sep 2017 16:25:39 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:01:06 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=ba56f7f0332a0ec3d81b17f03377a32d6b7bd60ab41188120a150cae6ae215f4fc36293b49dbf5f232a51724c1f08a29474e3ffdeefd2a3436a82e7fb96a1a2b;
+      set-cookie:
+      - chgk_session_idhash=2365224e6aead7fcaf53e0497cb5315569dd83630017d68a67dc989e1c23ec89f6246383bf2275d3ddf85e308f870d4f53aef506a0c2e988c07c2410166215dd;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
       string: '{"6":{"idteam":"1","idseason":"6","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"7":{"idteam":"1","idseason":"7","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"8":{"idteam":"1","idseason":"8","players":["2935","18935","20612","29800","30152","32979"],"captain":"2935"},"9":{"idteam":"1","idseason":"9","players":["2935","18935","20612","32979"],"captain":"2935"}}'
     http_version: 
-  recorded_at: Fri, 29 Sep 2017 16:25:34 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:57 GMT
 recorded_with: VCR 3.0.3

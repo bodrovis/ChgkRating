@@ -11,39 +11,37 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Thu, 28 Sep 2017 17:04:24 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:00:22 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=992cf99a51153071b84e595e77155c666e9c53122a1dee315711e203ee864d339e9f88cd99280212684c6bffeb8a97700426abd3bebbe0dab10faae81635cf72;
+      set-cookie:
+      - chgk_session_idhash=fbecb938fbd84b04f1ee3bbf37cb643a145500148fbdb736d6f360354a3a6322c201e62344a5dca240a287175fc220faceb9127f20d2588ace8db746d81c6b7b;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
@@ -52,5 +50,5 @@ http_interactions:
         14:00:00","date_end":"2015-11-08 18:00:00","tour_count":"4","tour_questions":"12","tour_ques_per_tour":"","questions_total":"48","type_name":"Обычный","main_payment_value":"660","discounted_payment_value":"360","discounted_payment_reason":"для
         детских команд; 480 - для студенческих","date_requests_allowed_to":"","comment":"","site_url":"https:\/\/vk.com\/chgk.perm.championship"}]'
     http_version: 
-  recorded_at: Thu, 28 Sep 2017 17:04:19 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:14 GMT
 recorded_with: VCR 3.0.3

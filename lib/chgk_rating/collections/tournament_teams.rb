@@ -1,8 +1,6 @@
 module ChgkRating
   module Collections
     class TournamentTeams < Base
-      include ChgkRating::Concerns::Pagination
-
       def initialize(params = {})
         @tournament_id = params[:tournament_id]
 
@@ -11,8 +9,8 @@ module ChgkRating
 
       private
 
-      def process(result, params = {})
-        ChgkRating::Models::TournamentTeam.new result
+      def process(*_args)
+        super { |result| ChgkRating::Models::TournamentTeam.new result }
       end
 
       def api_path

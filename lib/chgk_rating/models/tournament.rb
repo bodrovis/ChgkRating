@@ -50,7 +50,7 @@ module ChgkRating
         @discounted_payment_reason = data['discounted_payment_reason']
         @date_requests_allowed_to = Date.parse_safely data['date_requests_allowed_to']
         @comment = data['comment']
-        @site_url = URI.parse data['site_url']
+        @site_url = URI.parse_safely data['site_url']
       end
     end
   end

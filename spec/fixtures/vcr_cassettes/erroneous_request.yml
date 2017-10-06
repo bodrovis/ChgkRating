@@ -11,43 +11,41 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 404
-      message: Not Found
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Fri, 29 Sep 2017 16:00:14 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:00:22 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=a1989f531b9a984e3d2b44a5bcb02c4deefd5c18660b02ad7a968c8e741ae46dd1d6bd0be68ffbee44a2d1be145617dc980a69cbfa1a41d2b5c8a6749a2f6746;
+      set-cookie:
+      - chgk_session_idhash=36793c48c06eb72b4d3be638d59ce69bab7d0cd29b0b9de583e9253c8ac5ea381435aad3df2f05ffbfb0d0497fac1f337507f3690c2fd6316b5bba904e129916;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
       string: '{"error":{"code":404,"message":"Not Found"}}'
     http_version: 
-  recorded_at: Fri, 29 Sep 2017 16:00:09 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:13 GMT
 recorded_with: VCR 3.0.3

@@ -11,39 +11,37 @@ http_interactions:
       - application/json
       User-Agent:
       - chgk_rating ruby gem/1.0.0
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
     status:
       code: 200
-      message: OK
+      message: 
     headers:
-      Server:
+      server:
       - nginx/1.10.3
-      Date:
-      - Wed, 20 Sep 2017 15:05:48 GMT
-      Content-Type:
+      date:
+      - Fri, 06 Oct 2017 16:01:07 GMT
+      content-type:
       - application/json; charset=utf-8
-      Transfer-Encoding:
+      transfer-encoding:
       - chunked
-      Connection:
-      - keep-alive
-      X-Frame-Options:
+      connection:
+      - close
+      x-frame-options:
       - deny
-      Set-Cookie:
-      - chgk_session_idhash=b49311a732d4be21d434a935d28637b582978b81781614a376a66e0073027ff3525d1c7e0e6bb72587de9b679e4485ee775a5c59796fb562bf34662f4564f808;
+      set-cookie:
+      - chgk_session_idhash=a74d09efd8de94004dbf9a9f2263e6ee1c4f4bad70b59eeb613a56e775963beae39f9a138d9fe41aac1b0064d6209700c99755b0f06d4167aaa5ebe5d8a66d56;
         path=/; HttpOnly
-      Pragma:
+      pragma:
       - no-cache
-      Vary:
+      vary:
       - Accept
-      Cache-Control:
+      cache-control:
       - no-cache, must-revalidate
-      Expires:
+      expires:
       - '0'
-      X-Powered-By:
+      x-powered-by:
       - Luracast Restler v3.0.0rc5
-      Content-Language:
+      content-language:
       - en
     body:
       encoding: UTF-8
@@ -314,7 +312,7 @@ http_interactions:
         Джек","town":"Житомир"},{"idteam":"1140","name":"Черти","town":"Тарту"},{"idteam":"1141","name":"Каравелла","town":"Великий
         Новгород"},{"idteam":"1142","name":"Равлик","town":"Херсон"},{"idteam":"1143","name":"WWF","town":"Великий
         Новгород"},{"idteam":"1144","name":"Y-Files","town":"Сумы"},{"idteam":"1145","name":"Шу.Хер","town":"Херсон"},{"idteam":"1146","name":"UA","town":"Житомир"},{"idteam":"1147","name":"Кирум","town":"Кропивницкий
-        (Кировоград)"},{"idteam":"1148","name":"МиФ","town":"Минск"},{"idteam":"1149","name":"Zombii","town":"Кишинёв"},{"idteam":"1150","name":"Экспромт","town":"Волгоград"}],"total_items":"31634","current_items":"1-1000"}'
+        (Кировоград)"},{"idteam":"1148","name":"МиФ","town":"Минск"},{"idteam":"1149","name":"Zombii","town":"Кишинёв"},{"idteam":"1150","name":"Экспромт","town":"Волгоград"}],"total_items":"31882","current_items":"1-1000"}'
     http_version: 
-  recorded_at: Wed, 20 Sep 2017 15:05:43 GMT
+  recorded_at: Fri, 06 Oct 2017 16:00:59 GMT
 recorded_with: VCR 3.0.3
