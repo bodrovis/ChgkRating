@@ -7,8 +7,8 @@ module ChgkRating
         super
       end
 
-      def recaps(params = {})
-        ChgkRating::Collections::Recaps.new params.merge(team_id: @id)
+      def recaps
+        ChgkRating::Collections::Recaps.new team_id: @id
       end
 
       def recap(season_id)

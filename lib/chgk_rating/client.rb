@@ -22,7 +22,7 @@ module ChgkRating
       tournament(tournament_id, true).team(team_id)
     end
 
-    def team_rating(team_id, release_id)
+    def rating(team_id, release_id)
       team(team_id, true).rating(release_id)
     end
 
@@ -46,15 +46,15 @@ module ChgkRating
       ChgkRating::Collections::Players.new params
     end
 
-    def recaps(team_id, params = {})
-      team(team_id, true).recaps(params)
+    def recaps(team_id)
+      team(team_id, true).recaps
     end
 
     def tournaments(team_id: nil, season_id: nil, params: {})
       ChgkRating::Collections::Tournaments.new params.merge(team: team_id, season_id: season_id)
     end
 
-    def team_ratings(team_id)
+    def ratings(team_id)
       team(team_id, true).ratings
     end
 

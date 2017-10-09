@@ -102,7 +102,7 @@ RSpec.describe ChgkRating::Client do
   describe '#rating' do
     it 'should return team rating for a given release' do
       team_rating = VCR.use_cassette 'rating_release' do
-        test_client.team_rating 1, 24
+        test_client.rating 1, 24
       end
 
       expect(team_rating).to be_an_instance_of ChgkRating::Models::Rating
@@ -182,10 +182,10 @@ RSpec.describe ChgkRating::Client do
     expect(player.db_chgk_info_tag).to eq 'nnekrylov'
   end
 
-  describe '#team_ratings' do
+  describe '#ratings' do
     it 'should return all ratings for a team' do
       ratings = VCR.use_cassette 'team_ratings' do
-        test_client.team_ratings 1
+        test_client.ratings 1
       end
       team_rating = ratings[0]
       expect(team_rating.date.to_s).to eq '2003-07-01'

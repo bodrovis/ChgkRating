@@ -1,6 +1,8 @@
 module ChgkRating
   module Collections
     class Recaps < Base
+      attr_reader :team_id
+
       def initialize(params = {})
         @team_id = params[:team_id]
 

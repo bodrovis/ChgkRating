@@ -3,7 +3,6 @@ module ChgkRating
     class Player < Base
       attr_reader :id, :name, :surname, :patronymic, :comment, :db_chgk_info_tag
 
-      #def initialize(id_or_hash, lazy = false)
       def initialize(id_or_hash, params = {})
         super
       end
