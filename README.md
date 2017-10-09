@@ -30,9 +30,9 @@ The client can be initialized with the following shortcut:
 client = ChgkRating.client
 ```
 
-This method does not accepts any arguments because the client does not require any configuration.
+This method does not accept any arguments because the client requires no configuration. You don't need any API keys, access tokens and that stuff - just go ahead and send any queries you like. It does not seem like the API has any quota limitation as well but of course it does not mean you should abuse it.
 
-Now you may use `client` variable to perform various requests.
+So, now you may use the `client` local variable to perform various requests described below.
 
 ### Players
 
