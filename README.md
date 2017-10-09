@@ -5,7 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/bodrovis/ChgkRating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/ChgkRating/coverage)
 [![Dependency Status](https://gemnasium.com/bodrovis/ChgkRating.svg)](https://gemnasium.com/bodrovis/ChgkRating)
 
-Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI.  
+Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a full-fledged client that allows to easily work with various API resources.
 
 [Competitive CHGK (aka What? Where? When?)](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game)
 is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
