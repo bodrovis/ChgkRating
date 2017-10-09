@@ -6,7 +6,6 @@ module ChgkRating
 
       attr_reader :tour, :result
 
-      #def initialize(hash)
       def initialize(hash, _params = {})
         super
       end
@@ -14,7 +13,7 @@ module ChgkRating
       private
 
       def extract_from(data)
-        @tour = data['tour']
+        @tour = data['tour'].to_i
         @result = data['mask'].map {|result| to_boolean(result) }
       end
     end

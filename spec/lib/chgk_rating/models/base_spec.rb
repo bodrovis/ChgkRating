@@ -27,7 +27,9 @@ RSpec.describe ChgkRating::Models::Base do
     subject { klass.new }
 
     it 'should raise an EagerLoadingNotSupported error' do
-      expect( -> { subject.eager_load! }).to raise_error(ChgkRating::Error::EagerLoadingNotSupported)
+      expect( -> { subject.eager_load! }).to raise_error(ChgkRating::Error::EagerLoadingNotSupported).
+          with_message 'Eager loading is not supported for this resource.'
+
     end
   end
 end

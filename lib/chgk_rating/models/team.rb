@@ -20,7 +20,7 @@ module ChgkRating
       end
 
       def at_tournament(tournament_id)
-        ChgkRating::Models::TournamentTeam.new @id, tournament_id: tournament_id
+        ChgkRating::Models::TournamentTeam.new @id, tournament_id: tournament_id, lazy: true
       end
 
       def rating(release_id)

@@ -30,8 +30,11 @@ module ChgkRating
       end
 
       def prepare(raw_results)
-        return raw_results['tournaments'] if raw_results.has_key?('tournaments') && raw_results.respond_to?(:has_key?)
-        return raw_results['items'] if raw_results.has_key?('items') && raw_results.respond_to?(:has_key?)
+        if raw_results.respond_to?(:has_key?)
+          return raw_results['tournaments'] if raw_results.has_key?('tournaments')
+          return raw_results['items'] if raw_results.has_key?('items')
+        end
+
         raw_results
       end
 

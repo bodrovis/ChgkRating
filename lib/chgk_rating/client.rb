@@ -54,6 +54,10 @@ module ChgkRating
       ChgkRating::Collections::Tournaments.new params.merge(team: team_id, season_id: season_id)
     end
 
+    def team_ratings(team_id)
+      team(team_id, true).ratings
+    end
+
     ## Collections with no pagination
 
     def teams_at_tournament(tournament_id)

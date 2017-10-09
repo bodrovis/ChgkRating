@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/tournaments/3506/results/52853
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Mon, 09 Oct 2017 16:15:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=8e8dc0d57c67789541f4188fd8b87ffdd8196c3ff8d783f46fdb4595307e3c3e3cd6256872b02e4e4ae773e1cc34f2a92afbef9cd90fc21aee44112f4b9fe8be;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '[{"tour":"1","mask":["0","0","0","0","1","1","1","0","0","1","0","0"]},{"tour":"2","mask":["0","0","1","0","1","1","1","0","0","0","1","0"]},{"tour":"3","mask":["1","0","0","0","1","1","1","1","0","1","0","0"]},{"tour":"4","mask":["1","0","0","0","0","1","0","0","0","1","0","1"]}]'
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 16:15:15 GMT
+recorded_with: VCR 3.0.3

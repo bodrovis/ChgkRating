@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/tournaments/3506/list
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Mon, 09 Oct 2017 16:05:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=177da30884ce57716b9bc291cfd5799321359ad2409e33247fc2626bf28d5a5ab65d3b09822abaac52e72d58976a7bafb0da99b564c937ad4717a9b7d84ce335;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: '[{"idteam":"2124","current_name":"Полосатый мамонт","base_name":"Полосатый
+        мамонт","position":"3","questions_total":"34","mask":"111011111111100001111101110010110110101011101111","bonus_a":"1575","bonus_b":"-48","tech_rating":"2561","predicted_position":"2","real_bonus_b":"421","d_bonus_b":"-48","included_in_rating":"1"},{"idteam":"4883","current_name":"Несколько
+        сложнее","base_name":"Несколько сложнее","position":"18","questions_total":"18","mask":"110001101111100000100001000010010100010001000101","bonus_a":"0","bonus_b":"-42","tech_rating":"586","predicted_position":"10","real_bonus_b":"14","d_bonus_b":"-42","included_in_rating":"1"},{"idteam":"28434","current_name":"Признаки
+        разума","base_name":"Признаки разума","position":"14","questions_total":"19","mask":"101001101110101000100100100011010101001000000001","bonus_a":"0","bonus_b":"-7","tech_rating":"201","predicted_position":"13","real_bonus_b":"22","d_bonus_b":"-7","included_in_rating":"0"},{"idteam":"43427","current_name":"Шпроты
+        Шрёдингера","base_name":"Шпроты Шрёдингера","position":"24","questions_total":"15","mask":"110001101011000010100100010000010000100010000001","bonus_a":"0","bonus_b":"-11","tech_rating":"102","predicted_position":"14","real_bonus_b":"1","d_bonus_b":"-11","included_in_rating":"1"},{"idteam":"43945","current_name":"Карниз
+        досады","base_name":"Карниз досады","position":"4","questions_total":"33","mask":"111001111111001111111110001001110101110101010111","bonus_a":"1196","bonus_b":"1","tech_rating":"1890","predicted_position":"4","real_bonus_b":"387","d_bonus_b":"1","included_in_rating":"1"},{"idteam":"43948","current_name":"СК+","base_name":"СК+","position":"14","questions_total":"19","mask":"110001100111101000100100100010000101101001000001","bonus_a":"3","bonus_b":"-11","tech_rating":"207","predicted_position":"12","real_bonus_b":"22","d_bonus_b":"-11","included_in_rating":"1"},{"idteam":"45438","current_name":"Бидоси","base_name":"Верный
+        вомбат","position":"5.5","questions_total":"31","mask":"111001111111000111101110110011110101100001110101","bonus_a":"897","bonus_b":"-22","tech_rating":"1674","predicted_position":"5","real_bonus_b":"275","d_bonus_b":"-22","included_in_rating":"1"},{"idteam":"45493","current_name":"Упругий
+        дельфин","base_name":"Упругий дельфин","position":"10.5","questions_total":"22","mask":"110001101011000111100100110011010100101001000001","bonus_a":"36","bonus_b":"-33","tech_rating":"677","predicted_position":"8","real_bonus_b":"77","d_bonus_b":"-33","included_in_rating":"1"},{"idteam":"45495","current_name":"Винный
+        Средний","base_name":"Винный Средний","position":"5.5","questions_total":"31","mask":"111001111111100011101110100011110101111001100011","bonus_a":"897","bonus_b":"43","tech_rating":"1240","predicted_position":"6","real_bonus_b":"275","d_bonus_b":"43","included_in_rating":"1"},{"idteam":"46568","current_name":"Дикари","base_name":"Дикари","position":"8.5","questions_total":"23","mask":"101001100010101010100100010011110101100101100101","bonus_a":"157","bonus_b":"-17","tech_rating":"785","predicted_position":"7","real_bonus_b":"133","d_bonus_b":"-17","included_in_rating":"1"},{"idteam":"46806","current_name":"Невероятное
+        что","base_name":"Невероятное что","position":"14","questions_total":"19","mask":"000001001111000010100100110001010100101001100101","bonus_a":"3","bonus_b":"-17","tech_rating":"279","predicted_position":"11","real_bonus_b":"22","d_bonus_b":"-17","included_in_rating":"1"},{"idteam":"48787","current_name":"Беспорядок
+        дня","base_name":"Беспорядок дня","position":"30.5","questions_total":"8","mask":"000000100001000000100000100000010100101000000000","bonus_a":"0","bonus_b":"-2","tech_rating":"18","predicted_position":"22","real_bonus_b":"0","d_bonus_b":"-2","included_in_rating":"1"},{"idteam":"49132","current_name":"Эрудированное
+        состояние","base_name":"Арарат","position":"25.5","questions_total":"14","mask":"100001100010000010100000010010100100100001000101","bonus_a":"0","bonus_b":"-8","tech_rating":"73","predicted_position":"17","real_bonus_b":"0","d_bonus_b":"-8","included_in_rating":"0"},{"idteam":"49307","current_name":"Мозговые
+        шестерёнки","base_name":"Мозговые шестерёнки","position":"18","questions_total":"18","mask":"110001110000100001100000110000010101000001100111","bonus_a":"0","bonus_b":"13","tech_rating":"7","predicted_position":"23","real_bonus_b":"14","d_bonus_b":"13","included_in_rating":"1"},{"idteam":"49357","current_name":"Альтер-Эго","base_name":"Альтер-Эго","position":"23","questions_total":"16","mask":"100001101111000000100000000011100101100000000011","bonus_a":"0","bonus_b":"-9","tech_rating":"84","predicted_position":"15","real_bonus_b":"1","d_bonus_b":"-9","included_in_rating":"1"},{"idteam":"49360","current_name":"Капитан
+        Очевидность","base_name":"Капитан Очевидность","position":"21","questions_total":"17","mask":"110001100011001000100001010011000101000011000001","bonus_a":"0","bonus_b":"-5","tech_rating":"65","predicted_position":"18.5","real_bonus_b":"4","d_bonus_b":"-5","included_in_rating":"1"},{"idteam":"49363","current_name":"Юра,
+        мы всё проиграли","base_name":"Маленькая толстенькая команда","position":"10.5","questions_total":"22","mask":"100001001111000011100100011010110101000111100001","bonus_a":"36","bonus_b":"-23","tech_rating":"610","predicted_position":"9","real_bonus_b":"77","d_bonus_b":"-23","included_in_rating":"0"},{"idteam":"50310","current_name":"Сапсан","base_name":"Сапсан","position":"33.5","questions_total":"6","mask":"000000100000000000100000000001000101000000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"51466","current_name":"Большие
+        красные прокариоты","base_name":"Большие красные прокариоты","position":"1","questions_total":"38","mask":"111011101111101111111110111111111110101011110001","bonus_a":"1905","bonus_b":"3","tech_rating":"4018","predicted_position":"1","real_bonus_b":"744","d_bonus_b":"3","included_in_rating":"1"},{"idteam":"51889","current_name":"Ныробская
+        яма","base_name":"Неопалимая куница","position":"2","questions_total":"38","mask":"110001111111101111101101111110111111111111100011","bonus_a":"1778","bonus_b":"99","tech_rating":"1892","predicted_position":"3","real_bonus_b":"519","d_bonus_b":"99","included_in_rating":"1"},{"idteam":"52090","current_name":"Зиккурат","base_name":"Зиккурат","position":"36","questions_total":"4","mask":"000000100000000000100000000000100100000000000000","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52092","current_name":"Медвежий
+        ключ","base_name":"Медвежий ключ","position":"14","questions_total":"19","mask":"000001100011101101100110100011000101100001000001","bonus_a":"3","bonus_b":"14","tech_rating":"54","predicted_position":"20","real_bonus_b":"22","d_bonus_b":"14","included_in_rating":"1"},{"idteam":"52190","current_name":"Две
+        скобочки","base_name":"Две скобочки","position":"21","questions_total":"17","mask":"100001101011000000100010010011010100000001110001","bonus_a":"0","bonus_b":"-5","tech_rating":"65","predicted_position":"18.5","real_bonus_b":"4","d_bonus_b":"-5","included_in_rating":"1"},{"idteam":"52792","current_name":"В
+        джазе только котики","base_name":"В джазе только котики","position":"8.5","questions_total":"23","mask":"100001101001001111101110100001010101101001000011","bonus_a":"0","bonus_b":"115","tech_rating":"83","predicted_position":"16","real_bonus_b":"133","d_bonus_b":"115","included_in_rating":"1"},{"idteam":"52853","current_name":"Ыч","base_name":"Ыч","position":"14","questions_total":"19","mask":"000011100100001011100010100011110100100001000101","bonus_a":"3","bonus_b":"22","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"22","d_bonus_b":"22","included_in_rating":"1"},{"idteam":"52918","current_name":"Мишки
+        любого размера","base_name":"Мишки любого размера","position":"21","questions_total":"17","mask":"100001001011001000100110100001010100000001000111","bonus_a":"0","bonus_b":"2","tech_rating":"6","predicted_position":"24","real_bonus_b":"4","d_bonus_b":"2","included_in_rating":"1"},{"idteam":"52919","current_name":"Члены
+        Политбюро","base_name":"Члены Политбюро","position":"30.5","questions_total":"8","mask":"000001100000000010100010000010000100000000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52920","current_name":"Друзья
+        Друзя","base_name":"Друзья Друзя","position":"30.5","questions_total":"8","mask":"100000100000000011100010000000000100000000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52921","current_name":"Маленькая
+        лошадка","base_name":"Маленькая лошадка","position":"33.5","questions_total":"6","mask":"000001100000000010100000000000000100000000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52922","current_name":"Хемингуёвина","base_name":"Хемингуёвина","position":"7","questions_total":"25","mask":"101001101101001110100110000011110101111001000101","bonus_a":"421","bonus_b":"162","tech_rating":"21","predicted_position":"21","real_bonus_b":"166","d_bonus_b":"162","included_in_rating":"1"},{"idteam":"52923","current_name":"Хайзенберг","base_name":"Хайзенберг","position":"35","questions_total":"5","mask":"000001000000000000100000000001000100000000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52924","current_name":"Бросок
+        шмеля","base_name":"Бросок шмеля","position":"30.5","questions_total":"8","mask":"000001101000000000100010000000000100000000000011","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52925","current_name":"ОГМ","base_name":"ОГМ","position":"25.5","questions_total":"14","mask":"000001101010000010100000011001010110100000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52926","current_name":"Жыжа","base_name":"Жыжа","position":"28","questions_total":"9","mask":"000001100001000010100000000000010100001000000001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52927","current_name":"Пунш
+        внаём","base_name":"Пунш внаём","position":"27","questions_total":"12","mask":"100001100000100000100010000001010100000001100001","bonus_a":"0","bonus_b":"0","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"0","d_bonus_b":"0","included_in_rating":"1"},{"idteam":"52928","current_name":"Штопор","base_name":"Штопор","position":"18","questions_total":"18","mask":"100000100101000001101110001001010100010011000011","bonus_a":"0","bonus_b":"14","tech_rating":"0","predicted_position":"30.5","real_bonus_b":"14","d_bonus_b":"14","included_in_rating":"1"}]'
+    http_version: 
+  recorded_at: Mon, 09 Oct 2017 16:05:48 GMT
+recorded_with: VCR 3.0.3
