@@ -247,7 +247,7 @@ RSpec.describe ChgkRating::Client do
   describe '#tournaments' do
     it 'should return tournaments that a team played in a season' do
       tournaments = VCR.use_cassette 'team_tournaments_season' do
-        test_client.tournaments team_id: 1, season_id: 4
+        test_client.tournaments team: 1, season_id: 4
       end
 
       expect(tournaments.first.id).to eq '188'
@@ -255,8 +255,9 @@ RSpec.describe ChgkRating::Client do
 
     it 'should return tournaments for a team' do
       tournaments = VCR.use_cassette 'team_tournaments' do
-        test_client.tournaments team_id: 1
+        test_client.tournaments team: 1
       end
+      binding.pry
       tournament = tournaments['8'][0]
       expect(tournament.id).to eq '424'
     end

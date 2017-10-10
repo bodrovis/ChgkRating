@@ -50,15 +50,13 @@ module ChgkRating
       team(team_id, true).recaps
     end
 
-    def tournaments(team_id: nil, season_id: nil, params: {})
-      ChgkRating::Collections::Tournaments.new params.merge(team: team_id, season_id: season_id)
+    def tournaments(team: nil, season_id: nil, params: {})
+      ChgkRating::Collections::Tournaments.new params.merge(team: team, season_id: season_id)
     end
 
     def ratings(team_id)
       team(team_id, true).ratings
     end
-
-    ## Collections with no pagination
 
     def teams_at_tournament(tournament_id)
       tournament(tournament_id, true).team_list
