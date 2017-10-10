@@ -257,7 +257,6 @@ RSpec.describe ChgkRating::Client do
       tournaments = VCR.use_cassette 'team_tournaments' do
         test_client.tournaments team: 1
       end
-      binding.pry
       tournament = tournaments['8'][0]
       expect(tournament.id).to eq '424'
     end
