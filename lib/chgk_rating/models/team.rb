@@ -1,8 +1,6 @@
 module ChgkRating
   module Models
     class Team < Base
-      attr_reader :id, :name, :town, :comment
-
       def initialize(id_or_hash, params = {})
         super
       end
@@ -33,15 +31,6 @@ module ChgkRating
 
       def api_path
         'teams'
-      end
-
-      private
-
-      def extract_from(data)
-        @id = data['idteam']
-        @name = data['name']
-        @town = data['town']
-        @comment = data['comment']
       end
     end
   end

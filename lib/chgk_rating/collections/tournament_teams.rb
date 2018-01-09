@@ -9,8 +9,8 @@ module ChgkRating
 
       private
 
-      def process(*_args)
-        super { |result| ChgkRating::Models::TournamentTeam.new result }
+      def process(_results, params = {})
+        super { |result| ChgkRating::Models::TournamentTeam.new result, lazy: params[:lazy] }
       end
 
       def api_path

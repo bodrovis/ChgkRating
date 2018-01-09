@@ -4,11 +4,7 @@ module ChgkRating
       attr_reader :team, :season_id
 
       def initialize(params = {})
-        @team = if params[:team].instance_of?(ChgkRating::Models::Team)
-                  params[:team]
-                else
-                  ChgkRating::Models::Team.new(params[:team], lazy: true) if params[:team]
-                end
+        @team = build_from(params[:team], ChgkRating::Models::Team, lazy: true)
 
         @season_id = params[:season_id]
         params.merge!(lazy: true) if @team || @season_id

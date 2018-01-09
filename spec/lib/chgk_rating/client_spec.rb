@@ -76,8 +76,8 @@ RSpec.describe ChgkRating::Client do
       expect(tournament.id).to eq '3506'
       expect(tournament.name).to eq 'Чемпионат Перми и Пермского края'
       expect(tournament.long_name).to eq 'XV Чемпионат Перми и Пермского края по игре "Что? Где? Когда?"'
-      expect(tournament.date_start).to eq Date.parse('2015-11-08 14:00:00')
-      expect(tournament.date_end).to eq Date.parse('2015-11-08 18:00:00')
+      expect(tournament.date_start).to eq DateTime.parse('2015-11-08 14:00:00')
+      expect(tournament.date_end).to eq DateTime.parse('2015-11-08 18:00:00')
       expect(tournament.tour_count).to eq 4
       expect(tournament.tour_questions).to eq 12
       expect(tournament.tour_ques_per_tour).to eq 0
@@ -106,7 +106,7 @@ RSpec.describe ChgkRating::Client do
       end
 
       expect(team_rating).to be_an_instance_of ChgkRating::Models::Rating
-      expect(team_rating.team_id).to eq '1'
+      expect(team_rating.team.id).to eq '1'
       expect(team_rating.rating).to eq 9071
       expect(team_rating.rating_position).to eq 9
       expect(team_rating.date.to_s).to eq '1999-01-07'
@@ -122,7 +122,7 @@ RSpec.describe ChgkRating::Client do
 
       expect(recap).to be_an_instance_of ChgkRating::Models::Recap
       expect(recap.season_id).to eq '51'
-      expect(recap.team_id).to eq '7931'
+      expect(recap.team.id).to eq '7931'
       expect(recap.captain.id).to eq '23539'
       expect(recap.players.first.id).to eq '2668'
     end
@@ -133,7 +133,7 @@ RSpec.describe ChgkRating::Client do
       end
 
       expect(recap.season_id).to eq '9'
-      expect(recap.team_id).to eq '1'
+      expect(recap.team.id).to eq '1'
       expect(recap.captain.id).to eq '2935'
       expect(recap.players.first.id).to eq '2935'
     end
@@ -192,7 +192,7 @@ RSpec.describe ChgkRating::Client do
       expect(team_rating.formula).to eq :a
       expect(team_rating.rating_position).to eq 8
       expect(team_rating.release_id).to eq '1'
-      expect(team_rating.team_id).to eq '1'
+      expect(team_rating.team.id).to eq '1'
       expect(team_rating.rating).to eq 6093
     end
   end
@@ -237,10 +237,10 @@ RSpec.describe ChgkRating::Client do
       expect(team.real_bonus_b).to eq 421
       expect(team.d_bonus_b).to eq -48
       expect(team.included_in_rating).to eq true
-      expect(team.mask).to eq [true, true, true, false, true, true, true, true, true, true, true,
-                               true, true, false, false, false, false, true, true, true, true, true, false, true,
-                               true, true, false, false, true, false, true, true, false, true, true, false, true,
-                               false, true, false, true, true, true, false, true, true, true, true]
+      expect(team.result).to eq [true, true, true, false, true, true, true, true, true, true, true,
+                                 true, true, false, false, false, false, true, true, true, true, true, false, true,
+                                 true, true, false, false, true, false, true, true, false, true, true, false, true,
+                                 false, true, false, true, true, true, false, true, true, true, true]
     end
   end
 
@@ -268,8 +268,8 @@ RSpec.describe ChgkRating::Client do
       tournament = tournaments[0]
       expect(tournament.id).to eq '4592'
       expect(tournament.name).to eq 'Гран-при Бауманки. Синхрон'
-      expect(tournament.date_start).to eq Date.parse('2017-10-29 10:00:00')
-      expect(tournament.date_end).to eq Date.parse('2018-08-23 10:00:00')
+      expect(tournament.date_start).to eq DateTime.parse('2017-10-29 10:00:00')
+      expect(tournament.date_end).to eq DateTime.parse('2018-08-23 10:00:00')
       expect(tournament.type_name).to eq 'Общий зачёт'
     end
   end
@@ -281,7 +281,7 @@ RSpec.describe ChgkRating::Client do
       end
       recap = recaps['6']
       expect(recap.season_id).to eq '6'
-      expect(recap.team_id).to eq '1'
+      expect(recap.team.id).to eq '1'
       expect(recap.captain.id).to eq '2935'
       expect(recap.players.first.id).to eq '1585'
     end

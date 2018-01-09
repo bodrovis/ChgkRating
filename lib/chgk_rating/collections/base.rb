@@ -21,6 +21,11 @@ module ChgkRating
         @items[index]
       end
 
+      def build_from(object, klass, params = {})
+        return unless object
+        object.instance_of?(klass) ? object : klass.new(object, params)
+      end
+
       private
 
       def build_request_params_from(params)

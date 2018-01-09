@@ -88,8 +88,11 @@ we are also loading the players lazily.
 If a model supports lazy loading, it will have a `@lazy` attribute and and `lazy` reader. If it does not support
 lazy loading, the `lazy` reader will not be defined and the `NO_LAZY_SUPPORT` will be set to `true`.
 
-If a model supports eager loading it is explicitly mentioned so in the "special notes". The collections cannot
-be lazily loaded.
+In order to lazily-load all elements of a collection, set `:lazy` to `true` when instantiating the collection:
+
+```ruby
+client.players lazy: true
+```
 
 #### Eager Loading
 
@@ -129,6 +132,14 @@ players[3].eager_load!
 
 An API request will be performed and information about the player will be loaded for you!
 
+Also it is possible to eager-load all elements of a collection:
+
+```ruby
+players.each &:eager_load!
+```
+
+Note however that this will perform **lots** of API requests.
+
 ### Initializing the Client
 
 Okay, so that you know the basics behind the gem's logic let's talk about the available methods.
@@ -144,57 +155,54 @@ You don't need any API keys, access tokens and that stuff - just go ahead and se
 
 Now you may use the `client` local variable to perform various requests described below.
 
-### Individual Players
+### Players
 
 #### Players - Collection
 
 Get a list of all players sorted by their ids:
 
 ```ruby
-client.players
+client.players params={} # Input:
+                         # (optional) params - Hash
 ```
 
-Returns an array-like `Players` object that can be iterated using the `each` method. Individual players
-can be accessed using the `[]`:
-
-```ruby
-client.players[100]
-```
+Returns an array-like `Players` object.
 
 Only the following information is returned for each player:
 
 ```ruby
-id          # string
-name        # string
-surname     # string
-patronymic  # string
+id          # String
+name        # String
+surname     # String
+patronymic  # String
 ```
 
-To get a more detailed information for a specific team, use the `player` method.
+To get a bit more detailed information for a specific player, use the `player` method.
 
 Special notes:
 
 * The results are paginated by the API.
 * Searching is supported.
-* Can be lazily-loaded. 
 
 #### Player - Model
 
 Get information about a player with an id of `1`:
 
 ```ruby
-client.player 1
+client.player id, lazy=false # Input:
+                             # id - Integer, player's id
+                             # (optional) lazy - Boolean   
 ```
 
 Full information about the player will be returned in this case:
 
 ```ruby
-id               # string
-name             # string
-surname          # string
-patronymic       # string
-comment          # string
-db_chgk_info_tag # string
+id               # String
+name             # String
+surname          # String
+patronymic       # String
+comment          # String
+db_chgk_info_tag # String
 ```
 
 Special notes:
@@ -222,27 +230,21 @@ Special notes:
 
 ### Teams
 
-#### Collection
+#### Teams - Collection
 
 Get a list of all teams sorted by their ids:
 
 ```ruby
-client.teams
+client.teams params={} # Input:
+                       # (optional) params - Hash
 ```
 
-Returns an array-like `Teams` object that can be iterated using the `each` method. Individual teams
-can be accessed using the `[]`:
+Returns an array-like `Teams` object. A limited set of information is returned for each `Team` model:
 
 ```ruby
-client.teams[10]
-```
-
-A limited set of information is returned for each team:
-
-```ruby
-id       # string
-name     # string
-town     # string
+id       # String
+name     # String
+town     # String
 ```
 
 To get a bit more detailed information for a specific team, use the `team` method.
@@ -251,23 +253,24 @@ Special notes:
 
 * The results are paginated by the API.
 * Searching is supported.
-* Models can be lazily-loaded. 
 
-#### Individual Team
+#### Team - Model
 
-Get information about a team with an id of `1`:
+Get full information about a single team:
 
 ```ruby
-client.team 1
+client.team id, lazy=false # Input:
+                           # id - Integer, team's id
+                           # (optional) lazy - Boolean    
 ```
 
-Full information will be returned in this case:
+`Team` has the following info:
 
 ```ruby
-id       # string
-name     # string
-town     # string
-comment  # string
+id       # String
+name     # String
+town     # String
+comment  # String
 ```
 
 Special notes:
@@ -300,80 +303,72 @@ Special notes:
 The term "recap" is used by the ChgkRating API but I do not think it is really suitable here.
 It basically means "team's roster", "team list", or "team's lineup".
 
-#### Collection
+#### Recaps - Collection
 
-Get recaps for all the seasons for a team `1`:
-
-```ruby
-client.recaps 1 # Accepts season's id or :last value to get recaps for the most recent season
-```
-
-Returns a hash-like `Recaps` object with the season numbers as the keys and the `Recap` objects as values.
-If the team has not played in some season, it is **not** included in the response. Each `Recap` responds
-to the method listed in the Models section below.
-
-The collection itself responds to the `team_id` method that returns the team's id (`string`).
-It also supports `[]` and `each` methods, just like any other hash.
-
-Special notes:
-
-* The results are not paginated.
-* Search, lazy-loading and eager-loading is not supported.
-
-#### Models
-
-Get information about a team's `1` recap in a season `9`:
+Get recaps for all the seasons for a single team:
 
 ```ruby
-client.team 1, 9 
+client.recaps team_id # Input:
+                      # team_id - Integer
 ```
 
-Returns an `Recap` object that has the following accessors:
+Returns a hash-like `Recaps` object with the season numbers as the keys and the `Recap` model as values.
+If the team has not played in some season, it is **not** included in the response. Each `Recap` model responds
+to the methods listed in the Models section below.
+
+The `Recaps` collection itself responds to the following methods:
 
 ```ruby
-team_id     # id of the team (string)
-season_id   # season id (string)
-players     # Lazily-loaded Players collection. Each Player only has an id specified, all other attributes are nil
-captain     # Lazily-loaded Player model (has only id specified)
+team_id # String
 ```
 
-Special notes:
+#### Recap - Model
 
-* Lazy-loading and eager-loading is not supported.
+Get information about a team's recap in a given season:
 
-### Team's Rating 
+```ruby
+client.recap team_id, season_id # Input:
+                                # team_id - Integer or String
+                                # season_id - Integer or String
+```
 
-#### Collection
+Returns an `Recap` model that has the following accessors:
+
+```ruby
+team_id     # String
+season_id   # String
+players     # Players collection, lazily-loaded. Each Player model inside has only an id specified, all other attributes are nil
+captain     # Player model, lazily-loaded. Has only id specified
+```
+
+### Team Ratings
+
+#### Team Ratings - Collection
 
 Get all ratings for a team:
 
 ```ruby
-client.ratings 1 # Input:
-                 # team_id (string or integer)
+client.ratings team_id # Input:
+                       # team_id - String or Integer
 ```
 
-Returns an array-like `Ratings` collection containing `Recap` models.
+Returns an array-like `Ratings` collection containing `Rating` models.
 Collection responds to the following methods:
 
 ```ruby
-team_id # id of the team (string or integer)
+team_id # String or Integer - id of the team
 ```
 
 Each `Recap` model responds to the methods listed in the next section.
 
-Special notes:
+#### Team Rating - Model
 
-* The results are not paginated.
-* Search, lazy-loading and eager-loading is not supported.
-
-#### Model
-
-Get rating for a team in a release `9`:
+Get rating for a team in a given release:
 
 ```ruby
-client.rating 1, 9  # Input:
-                    # team_id (String or Integer)
-                    # release_id (String or Integer)  
+client.rating team_id, release_id  # Input:
+                                   # team_id - String or Integer
+                                   # release_id - String or Integer  
 ```
 
 Responds to the following accessors:
@@ -384,29 +379,25 @@ release_id      # String
 rating          # Integer
 rating_position # Integer
 date            # Date
-formula         # Symbol (:a or :b)
+formula         # Symbol - :a or :b
 ```
-
-Special notes:
-
-* Lazy-loading and eager-loading is not supported.
 
 ### Tournaments
 
-#### Tournaments Collection
+#### Tournaments - Collection
 
 ```ruby
 client.tournaments team: nil, season_id: nil, params: {} # Input (arguments are passed in a hash-like format):
-                                                         # (optional) team (String, Integer or Team)
-                                                         # (optional) season_id (String or Integer)
-                                                         # (optional) params (Hash) 
+                                                         # (optional) team - String, Integer or Team
+                                                         # (optional) season_id - String or Integer
+                                                         # (optional) params - Hash
 ```
 
 The collection responds to the following methods:
 
 ```ruby
 team        # Nil or lazily-loaded Team containing only id
-season_id   # Nil or string
+season_id   # Nil or String
 ```
 
 **When `team` and `season_id` are not set**, returns an array-like `Tournaments` collection with all the
@@ -438,16 +429,15 @@ id  # String
 Special notes:
 
 * The results are paginated.
-* Models can be lazily-loaded.
 
-#### Tournament Model
+#### Tournament - Model
 
 Get information about a single tournament:
 
 ```ruby
 client.tournament id, lazy=false  # Input:
                                   # id - Integer or String
-                                  # lazy (optional) - Boolean
+                                  # (optional) lazy - Boolean
 ```
 
 `Tournament` has the following attributes:
@@ -479,13 +469,13 @@ Special notes:
 
 ### Teams at Tournament
 
-#### Teams at Tournament Collection
+#### Teams at Tournament - Collection
 
 Get a list of all teams which participated in a given tournament:
 
 ```ruby
 client.teams_at_tournament tournament_id  # Input:
-                                          # tournament_id - Integer
+                                          # tournament_id - Integer or String
 ```
 
 Returns an array-like `TournamentTeams` collection that responds to the following methods:
@@ -523,7 +513,7 @@ current_name        # String
 base_name           # String
 position            # Integer
 questions_total     # Integer
-mask                # Array containing Boolean values. Each value corresponds to a single question and
+mask                # Array - contains Boolean values. Each value corresponds to a single question and
                     # says whether the team answered the question or not. The length of the array equals to the
                     # value returned by the questions_total method 
 bonus_a             # Integer
@@ -537,7 +527,7 @@ included_in_rating  # Boolean
 
 ### Team Results at Tournament
 
-#### Team Results at Tournament Collection
+#### Team Results at Tournament - Collection
 
 Get team results at a given tournament:
 
@@ -574,15 +564,17 @@ result  # Array containing Boolean values. Each value corresponds to a single qu
 Get information about the team's roster at the given tournament:
 
 ```ruby
-client.team_players_at_tournament tournament_id, team_id
+client.team_players_at_tournament tournament_id, team_id  # Input:
+                                                          # tournament_id - Integer or String
+                                                          # team_id - Integer or String 
 ```
 
 Returns an array-like `TournamentPlayers` collection containing `TournamentPlayer` models (each model represents one player).
 The collection responds to the following methods: 
 
 ```ruby
-team_id
-tournament_id
+team_id        # String
+tournament_id  # String
 ```
 
 #### Team Players at Tournament - Model
