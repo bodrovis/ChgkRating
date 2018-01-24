@@ -3,10 +3,6 @@ module ChgkRating
     class Players < Base
       include ChgkRating::Concerns::Searching
 
-      def initialize(params = {})
-        super
-      end
-
       private
 
       def process(_results, params = {})
