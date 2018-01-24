@@ -20,24 +20,23 @@ module ChgkRating
       end
 
       def parse_raw_scheme(raw_scheme)
-        mapping = {}
-        if raw_scheme.respond_to? :each
-          # key - symbol
-          # value - string or array
-          raw_scheme.each do |key, value|
-            if value.is_a?(String)
-              mapping[key] = name_from(value)
-            elsif value.is_a?(Array)
-              # value[0] - string, raw key name
-              # value[1] - symbol, model name that turns to method name (eg, team_model)
-              value = [key.to_s] if value[0].nil? # for cases `rating: []`
-              mapping[key] = name_from(value[0]).merge transformation(value[1])
-            end
-          end
+        if raw_scheme.respond_to? :inject
+          scheme_from raw_scheme
         else
-          mapping[raw_scheme] = name_from(raw_scheme)
+          { raw_scheme => name_from(raw_scheme) }
         end
-        mapping
+      end
+
+      def scheme_from(raw_scheme)
+        raw_scheme.inject({}) do |memo, (key, value)|
+          if value.is_a?(String)
+            memo[key] = name_from(value)
+          elsif value.is_a?(Array)
+            value = [key.to_s] if value[0].nil? # for cases like `rating: []`
+            memo[key] = name_from(value[0]).merge transformation(value[1])
+          end
+          memo
+        end
       end
 
       def generate_mapping_for(raw_schemes)
@@ -45,7 +44,6 @@ module ChgkRating
 
         if raw_schemes.is_a? Array
           raw_schemes.inject({}) do |memo, raw_scheme|
-            # raw_scheme - hash or symbol
             memo.merge parse_raw_scheme(raw_scheme)
           end
         else

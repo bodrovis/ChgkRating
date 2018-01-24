@@ -66,13 +66,13 @@ module ChgkRating
           date: ->(d) { Date.parse_safely d},
           datetime: ->(d) { DateTime.parse_safely d},
           splitboolean: ->(d) do
-            d.split('').map {|result| to_boolean.call(result)}
+            d&.split('')&.map {|result| to_boolean.call(result)}
           end,
           arraystrboolean: ->(d) do
-            d.map {|result| to_binary_boolean.call(result)}
+            d&.map {|result| to_binary_boolean.call(result)}
           end,
           arrayboolean: ->(d) do
-            d.map {|result| to_boolean.call(result)}
+            d&.map {|result| to_boolean.call(result)}
           end,
           team: chgk_object('Team'),
           player: chgk_object('Player'),

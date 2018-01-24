@@ -59,13 +59,13 @@ module ChgkRating
         self.class.const_defined?(:NO_LAZY_SUPPORT) ? false : params[:lazy]
       end
 
+      # If the `object` is a `String` or `Integer` - that's an id.
+      # If `lazy` is not set to `true` we need to perform an API request.
+      # If `lazy` is set to `true` - do nothing,
+      # we are going to only save this ID.
+      # If the `object` is not a `String` or `Integer`, it already has all the necessary information and
+      # so we simply create a new instance of the class using it.
       def raw_by(object, lazy = false)
-        # If the `object` is a `String` or `Integer` - that's an id.
-        # If `lazy` is not set to `true` we need to perform an API request.
-        # If `lazy` is set to `true` - do nothing,
-        # we are going to only save this ID.
-        # If the `object` is not a `String` or `Integer`, it already has all the necessary information and
-        # so we simply create a new instance of the class using it.
         return object unless object.is_a?(String) || object.is_a?(Integer) || object.is_a?(Symbol)
         return nil if lazy
 
