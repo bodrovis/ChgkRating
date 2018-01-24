@@ -8,7 +8,7 @@ require 'ext/date'
 require 'ext/date_time'
 require 'ext/uri'
 
-require 'chgk_rating/utils/boolean_parser'
+require 'chgk_rating/utils/transformations'
 require 'chgk_rating/utils/snakecase'
 
 require 'chgk_rating/version'

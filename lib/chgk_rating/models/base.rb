@@ -2,7 +2,6 @@ module ChgkRating
   module Models
     class Base
       include ChgkRating::Request
-      include ChgkRating::Utils::BooleanParser
 
       attr_reader :lazy
 
@@ -53,7 +52,7 @@ module ChgkRating
 
       def self.attribute_mapping
         return nil unless self.name
-        ChgkRating::AttributeMappings.const_get self.name.snakecase_upcase
+        ChgkRating::AttributeMappings.find self.name
       end
 
       def lazy_load?(params)

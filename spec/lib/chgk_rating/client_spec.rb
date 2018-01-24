@@ -33,13 +33,10 @@ RSpec.describe ChgkRating::Client do
   describe '#team_at_tournament' do
     subject { test_client.team_at_tournament 3506, 52853 }
 
+    it { is_expected.to be_an_instance_of ChgkRating::Models::TournamentTeam }
+
     include_examples 'lazy loaded' do
       let(:object) { subject }
-    end
-
-    it 'should contain only lazily loaded data' do
-      expect(subject.tournament_id).to eq(3506)
-      expect(subject.id).to eq(52853)
     end
   end
 
@@ -100,18 +97,11 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#rating' do
-    it 'should return team rating for a given release' do
-      team_rating = VCR.use_cassette 'rating_release' do
-        test_client.rating 1, 24
-      end
-
-      expect(team_rating).to be_an_instance_of ChgkRating::Models::Rating
-      expect(team_rating.team.id).to eq '1'
-      expect(team_rating.rating).to eq 9071
-      expect(team_rating.rating_position).to eq 9
-      expect(team_rating.date.to_s).to eq '1999-01-07'
-      expect(team_rating.formula).to eq :b
+    subject do
+      VCR.use_cassette('rating_release') { test_client.rating 1, 24 }
     end
+
+    it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
   end
 
   describe '#recap' do
@@ -140,46 +130,23 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#team' do
-    let(:team) do
-      VCR.use_cassette 'team' do
-        test_client.team(1)
-      end
-    end
+    subject { test_client.team 1, true }
 
-    it 'should return a proper team' do
-      expect(team).to be_an_instance_of ChgkRating::Models::Team
-      expect(team.id).to eq '1'
-      expect(team.town).to eq 'Москва'
-      expect(team.name).to eq 'Неспроста'
-    end
+    it { is_expected.to be_an_instance_of ChgkRating::Models::Team }
 
-    it 'should all tournaments played by the team' do
-      tournaments = VCR.use_cassette 'team_tournaments' do
-        team.tournaments
-      end
-      season_tournaments = tournaments['2']
-      expect(season_tournaments[0].id).to eq '54'
-      expect(season_tournaments[1].id).to eq '25'
-    end
-
-    it 'should return team at tournament' do
-      tournament_team = team.at_tournament '1000'
-      expect(tournament_team.id).to eq '1'
-      expect(tournament_team.tournament_id).to eq '1000'
+    include_examples 'lazy loaded' do
+      let(:object) { subject }
     end
   end
 
-  specify '#player' do
-    player = VCR.use_cassette 'player' do
-      test_client.player(42511)
-    end
+  describe '#player' do
+    subject { test_client.player 42511, true }
 
-    expect(player).to be_an_instance_of ChgkRating::Models::Player
-    expect(player.id).to eq '42511'
-    expect(player.surname).to eq 'Некрылов'
-    expect(player.name).to eq 'Николай'
-    expect(player.patronymic).to eq 'Андреевич'
-    expect(player.db_chgk_info_tag).to eq 'nnekrylov'
+    it { is_expected.to be_an_instance_of ChgkRating::Models::Player }
+
+    include_examples 'lazy loaded' do
+      let(:object) { subject }
+    end
   end
 
   describe '#ratings' do
