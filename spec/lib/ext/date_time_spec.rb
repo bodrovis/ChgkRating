@@ -1,4 +1,4 @@
-describe DateTime do
+RSpec.describe DateTime do
   subject { DateTime.new(2018,01,24,16,58,34) }
 
   specify '#to_s_chgk' do

@@ -4,15 +4,6 @@ RSpec.shared_examples 'lazy loaded' do
   end
 end
 
-RSpec.shared_examples 'tournament players' do
-  it 'should return player info' do
-    expect(player.id).to eq '51249'
-    expect(player.is_captain).to eq true
-    expect(player.is_base).to eq true
-    expect(player.is_foreign).to eq false
-  end
-end
-
 RSpec.shared_examples 'tournament results' do
   it 'should return result for a tour' do
     expect(team_result.result).to eq [false, false, false, false, true, true,
@@ -89,28 +80,22 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#ratings' do
-    it 'should return all ratings for a team' do
-      ratings = VCR.use_cassette 'team_ratings' do
+    subject do
+      VCR.use_cassette 'team_ratings' do
         test_client.ratings 1
       end
-      team_rating = ratings[0]
-      expect(team_rating.date.to_s).to eq '2003-07-01'
-      expect(team_rating.formula).to eq :a
-      expect(team_rating.rating_position).to eq 8
-      expect(team_rating.release_id).to eq '1'
-      expect(team_rating.team.id).to eq '1'
-      expect(team_rating.rating).to eq 6093
     end
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
   end
 
   describe '#team_players_at_tournament' do
-    let(:player) do
-      recap = VCR.use_cassette 'team_players_at_tournament' do
+    subject do
+      VCR.use_cassette 'team_players_at_tournament' do
         test_client.team_players_at_tournament 3506, 52853
       end
-      recap[0]
     end
-    include_examples 'tournament players'
+
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::TournamentPlayers }
   end
 
   describe '#team_results_at_tournament' do
@@ -151,32 +136,34 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#tournaments' do
-    it 'should return tournaments that a team played in a season' do
-      tournaments = VCR.use_cassette 'team_tournaments_season' do
-        test_client.tournaments team: 1, season_id: 4
+    context 'all tournaments for a team by season' do
+      subject do
+        VCR.use_cassette 'team_tournaments_season' do
+          test_client.tournaments team: 1, season_id: 4
+        end
       end
 
-      expect(tournaments.first.id).to eq '188'
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
     end
 
-    it 'should return tournaments for a team' do
-      tournaments = VCR.use_cassette 'team_tournaments' do
-        test_client.tournaments team: 1
+    context 'tournaments for a team' do
+      subject do
+        VCR.use_cassette 'team_tournaments' do
+          test_client.tournaments team: test_client.team(1, true)
+        end
       end
-      tournament = tournaments['8'][0]
-      expect(tournament.id).to eq '424'
+
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
     end
 
-    it 'should return all tournaments' do
-      tournaments = VCR.use_cassette 'tournaments' do
-        test_client.tournaments
+    context 'all tournaments' do
+      subject do
+        VCR.use_cassette 'tournaments' do
+          test_client.tournaments
+        end
       end
-      tournament = tournaments[0]
-      expect(tournament.id).to eq '4592'
-      expect(tournament.name).to eq 'Гран-при Бауманки. Синхрон'
-      expect(tournament.date_start).to eq DateTime.parse('2017-10-29 10:00:00')
-      expect(tournament.date_end).to eq DateTime.parse('2018-08-23 10:00:00')
-      expect(tournament.type_name).to eq 'Общий зачёт'
+
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
     end
   end
 

@@ -1,4 +1,4 @@
-describe ChgkRating::Utils::Transformations do
+RSpec.describe ChgkRating::Utils::Transformations do
   specify '.to_boolean' do
     expect(described_class.send(:to_boolean).call('1')).to eq(true)
     expect(described_class.send(:to_boolean).call('0')).to eq(false)
