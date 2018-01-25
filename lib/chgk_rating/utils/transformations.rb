@@ -1,8 +1,6 @@
 module ChgkRating
   module Utils
     module Transformations
-      # Default up transformation is integer
-      # Default down transformation is string
       def transformation(name = 'integer_string')
         up, down = name.to_s.split '_'
         up = 'integer' if up.nil? || up.empty?

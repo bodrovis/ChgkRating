@@ -29,6 +29,8 @@ module ChgkRating
         ChgkRating::Collections::Ratings.new team_id: @id
       end
 
+      private
+
       def api_path
         'teams'
       end

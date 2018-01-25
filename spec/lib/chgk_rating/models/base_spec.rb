@@ -9,7 +9,7 @@ RSpec.describe ChgkRating::Models::Base do
 
     subject { klass.new }
 
-    it { should_not respond_to(:lazy) }
+    it { is_expected.not_to respond_to(:lazy) }
 
     it 'should define NO_LAZY_SUPPORT constant' do
       expect(klass::NO_LAZY_SUPPORT).to eq(true)
@@ -29,7 +29,6 @@ RSpec.describe ChgkRating::Models::Base do
     it 'should raise an EagerLoadingNotSupported error' do
       expect( -> { subject.eager_load! }).to raise_error(ChgkRating::Error::EagerLoadingNotSupported).
           with_message 'Eager loading is not supported for this resource.'
-
     end
   end
 end

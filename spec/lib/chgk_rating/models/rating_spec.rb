@@ -6,7 +6,11 @@ RSpec.describe ChgkRating::Models::Rating do
   end
   let(:rating_h) { subject.to_h }
 
+  it_behaves_like 'model without eager loading'
+  it_behaves_like 'model without lazy support'
+
   specify('#team') { expect(subject.team.id).to eq '1' }
+  specify('#release_id') { expect(subject.release_id).to eq '24' }
   specify('#rating') { expect(subject.rating).to eq 9071 }
   specify('#rating_position') { expect(subject.rating_position).to eq 9 }
   specify('#date') { expect(subject.date).to eq Date.new(1999, 01, 07) }

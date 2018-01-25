@@ -98,9 +98,9 @@ module ChgkRating
                               ],
                               TOURNAMENT_PLAYER: {
                                   id: 'idplayer',
-                                  is_captain: ['is_captain', :boolean],
-                                  is_base: ['is_base', :boolean],
-                                  is_foreign: ['is_foreign', :boolean]
+                                  is_captain: ['is_captain', :boolean_binboolean],
+                                  is_base: ['is_base', :boolean_binboolean],
+                                  is_foreign: ['is_foreign', :boolean_binboolean]
                               },
                               TOURNAMENT_TEAM: [
                                   {
@@ -114,7 +114,7 @@ module ChgkRating
                                       predicted_position: [],
                                       real_bonus_b: [],
                                       d_bonus_b: [],
-                                      included_in_rating: ['included_in_rating', :boolean]
+                                      included_in_rating: ['included_in_rating', :boolean_binboolean]
                                   },
                                   :current_name,
                                   :base_name
