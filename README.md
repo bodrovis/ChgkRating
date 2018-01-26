@@ -5,13 +5,17 @@
 [![Test Coverage](https://codeclimate.com/github/bodrovis/ChgkRating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/ChgkRating/coverage)
 [![Dependency Status](https://gemnasium.com/bodrovis/ChgkRating.svg)](https://gemnasium.com/bodrovis/ChgkRating)
 
-Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a complex full-fledged client that allows to easily work with various API resources. It is still not 100% finished.
+Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a
+wrapper, but rather a complex full-fledged client that allows to easily work with various API resources.
+It is still not 100% finished.
 
-[Competitive CHGK (aka What? Where? When?)](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game) is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
+[Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game)
+is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
 
 ## Installation and Requirements
 
-This gem works **only** with Ruby 2.4+ and I have no plans of making it compatible with older versions. Apart from that, the gem has no special requirements.
+This gem works **only** with Ruby 2.4+ and I have no plans of making it compatible with older versions.
+Apart from that, the gem has no special requirements.
 
 Install it by running:
 
@@ -21,19 +25,48 @@ Install it by running:
 
 Remember that ChgkRating API is **read-only**.
 
+### A Very Quick Example
+
+```ruby
+# Instantiate the client:
+client = ChgkRating.client
+
+# Get all players:
+client.players 
+
+# Get a specific team:
+team = client.team 1 
+
+# Get information about the team at a given tournament:
+team.at_tournament 1000 
+
+# Get results for the given team as the tournament:
+team.at_tournament(1000).results
+
+# The same data can be fetched with: 
+client.team_results_at_tournament 1000, team
+
+# Or you can even grab the tournament and pass it later:
+tournament = client.tournament 1000
+
+team.at_tournament(tournament).results
+# OR
+client.team_results_at_tournament tournament, team
+```
+
 ### Before You Start
 
-As long as this gem is not just a wrapper, there are a bunch of things you should know.
+As long as this gem is not just a wrapper, there are a bunch of things you should know before starting to use it.
 
 #### Types of Resources
 
 ChgkRating has two types of resources: *models* and *collections*.
 
-* Collection is usually an array-like object
+* *Collection* is usually an array-like object
 (a hash-like object in some cases) that can be iterated over using the `each` method as usual. Individual elements
 may be accessed with the `[]` notation. The collection may also have additional methods, like `tournament_id`
 or `season_id`. Collection usually contains a bunch of models (though sometimes collections are nested).
-* Model is an object representing a single entity. It has a handful or attributes and may also respond to various
+* *Model* is an object representing a single entity. It has a handful or attributes and may also respond to various
 interface methods. 
 
 So, for example `Players` is a collection that contains a bunch of `Player` models. `Teams` is also a collection,

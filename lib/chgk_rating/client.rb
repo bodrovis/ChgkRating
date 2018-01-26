@@ -17,8 +17,8 @@ module ChgkRating
       team(team_or_id, true).recap(season_id)
     end
 
-    def tournament(tournament_or_id, lazy = false)
-      ChgkRating::Models::Tournament.new tournament_or_id, lazy: lazy
+    def tournament(id, lazy = false)
+      ChgkRating::Models::Tournament.new id, lazy: lazy
     end
 
     def team_at_tournament(tournament_or_id, team_or_id)
