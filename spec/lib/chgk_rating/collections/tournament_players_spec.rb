@@ -5,8 +5,5 @@ RSpec.describe ChgkRating::Collections::TournamentPlayers do
     end
   end
 
-  specify('#id') { expect(subject.id).to eq '51249' }
-  specify('#is_captain') { expect(subject.is_captain).to eq true }
-  specify('#is_base') { expect(subject.is_base).to eq true }
-  specify('#is_foreign') { expect(subject.is_foreign).to eq false }
+  it_behaves_like 'tournament team player'
 end

@@ -8,10 +8,8 @@ RSpec.describe ChgkRating::Models::TournamentTeamResult do
 
   it_behaves_like 'model without eager loading'
   it_behaves_like 'model without lazy support'
+  it_behaves_like 'tournament team result'
 
-  specify('#result') { expect(subject.result).to eq [false, false, false, false, true, true,
-                                                         true, false, false, true, false, false] }
-  specify('#tour') { expect(subject.tour).to eq 1 }
   specify '#to_h' do
     expect(tournament_team_result_h['tour']).to eq '1'
     expect(tournament_team_result_h['mask']).to eq %w(0 0 0 0 1 1 1 0 0 1 0 0)

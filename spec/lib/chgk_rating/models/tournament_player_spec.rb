@@ -8,11 +8,8 @@ RSpec.describe ChgkRating::Models::TournamentPlayer do
 
   it_behaves_like 'model without eager loading'
   it_behaves_like 'model without lazy support'
+  it_behaves_like 'tournament team player'
 
-  specify('#id') { expect(subject.id).to eq '51249' }
-  specify('#is_captain') { expect(subject.is_captain).to eq true }
-  specify('#is_base') { expect(subject.is_base).to eq true }
-  specify('#is_foreign') { expect(subject.is_foreign).to eq false }
   specify '#to_h' do
     expect(tournament_player_h['idplayer']).to eq '51249'
     expect(tournament_player_h['is_captain']).to eq '1'

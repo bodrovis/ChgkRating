@@ -59,4 +59,31 @@ RSpec.describe ChgkRating::Models::Team do
     end
     it { expect(team_recap).to be_an_instance_of ChgkRating::Models::Recap }
   end
+
+  describe '#recaps' do
+    let(:team_recaps) do
+      VCR.use_cassette 'recaps' do
+        subject.recaps
+      end
+    end
+    it { expect(team_recaps).to be_an_instance_of ChgkRating::Collections::Recaps }
+  end
+
+  describe '#tournaments' do
+    let(:team_tournaments) do
+      VCR.use_cassette 'team_tournaments' do
+        subject.tournaments
+      end
+    end
+    it { expect(team_tournaments).to be_an_instance_of ChgkRating::Collections::Tournaments }
+  end
+
+  describe '#ratings' do
+    let(:team_ratings) do
+      VCR.use_cassette 'team_ratings' do
+        subject.ratings
+      end
+    end
+    it { expect(team_ratings).to be_an_instance_of ChgkRating::Collections::Ratings }
+  end
 end

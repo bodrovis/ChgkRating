@@ -55,32 +55,38 @@ RSpec.describe ChgkRating::Models::Tournament do
   end
 
   describe '#team_results' do
-    let(:team_result) do
+    let(:team_results) do
       VCR.use_cassette 'team_results_at_tournament' do
-        subject.team_results(52853)[0]
+        subject.team_results(52853)
       end
     end
 
-    it { expect(team_result).to be_an_instance_of ChgkRating::Models::TournamentTeamResult }
+    it { expect(team_results).to be_an_instance_of ChgkRating::Collections::TournamentTeamResults }
   end
 
   describe '#team_players' do
-    let(:player) do
+    let(:players) do
       VCR.use_cassette 'team_players_at_tournament' do
-        subject.team_players(52853)[0]
+        subject.team_players(52853)
       end
     end
 
-    it { expect(player).to be_an_instance_of ChgkRating::Models::TournamentPlayer }
+    it { expect(players).to be_an_instance_of ChgkRating::Collections::TournamentPlayers }
   end
 
   describe '#team' do
-    let(:team) do
-      VCR.use_cassette 'team_results_at_tournament' do
-        subject.team(52853)
+    let(:team) { subject.team 52853 }
+
+    it { expect(team).to be_an_instance_of ChgkRating::Models::TournamentTeam }
+  end
+
+  describe '#team_list' do
+    let(:team_list) do
+      VCR.use_cassette 'teams_at_tournament' do
+        subject.team_list
       end
     end
 
-    it { expect(team).to be_an_instance_of ChgkRating::Models::TournamentTeam }
+    it { expect(team_list).to be_an_instance_of ChgkRating::Collections::TournamentTeams }
   end
 end
