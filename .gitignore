@@ -1,5 +1,11 @@
-.idea/
+.idea/*
 *.gem
-coverage/
+coverage/*
 Gemfile.lock
-test.rb
+*~
+.bundle
+.rvmrc
+doc/*
+log/*
+measurement/*
+pkg/*
