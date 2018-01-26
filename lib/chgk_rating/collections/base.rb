@@ -1,6 +1,6 @@
 module ChgkRating
   module Collections
-    class Base
+    class Base < ChgkObject
       include ChgkRating::Request
       include Enumerable
 
@@ -19,11 +19,6 @@ module ChgkRating
 
       def [](index)
         @items[index]
-      end
-
-      def build_from(object, klass, params = {})
-        return unless object
-        object.instance_of?(klass) ? object : klass.new(object, params)
       end
 
       private

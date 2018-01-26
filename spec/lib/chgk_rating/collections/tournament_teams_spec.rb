@@ -1,7 +1,7 @@
 RSpec.describe ChgkRating::Collections::TournamentTeams do
   subject do
     VCR.use_cassette 'teams_at_tournament' do
-      described_class.new(tournament_id: 3506)[0]
+      described_class.new(tournament: 3506)[0]
     end
   end
   let(:tournament_team_h) { subject.to_h }

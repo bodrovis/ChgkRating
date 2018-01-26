@@ -10,20 +10,20 @@ module ChgkRating
       ChgkRating::Models::Player.new id, lazy: lazy
     end
 
-    def recap(team_id, season_id)
-      team(team_id, true).recap(season_id)
+    def recap(team_or_id, season_id)
+      team(team_or_id, true).recap(season_id)
     end
 
-    def tournament(id, lazy = false)
-      ChgkRating::Models::Tournament.new id, lazy: lazy
+    def tournament(tournament_or_id, lazy = false)
+      ChgkRating::Models::Tournament.new tournament_or_id, lazy: lazy
     end
 
-    def team_at_tournament(tournament_id, team_id)
-      tournament(tournament_id, true).team(team_id)
+    def team_at_tournament(tournament_or_id, team_or_id)
+      tournament(tournament_or_id, true).team(team_or_id)
     end
 
-    def rating(team_id, release_id)
-      team(team_id, true).rating(release_id)
+    def rating(team_or_id, release_id)
+      team(team_or_id, true).rating(release_id)
     end
 
     # Search
@@ -46,28 +46,28 @@ module ChgkRating
       ChgkRating::Collections::Players.new params
     end
 
-    def recaps(team_id)
-      team(team_id, true).recaps
+    def recaps(team_or_id)
+      team(team_or_id, true).recaps
     end
 
     def tournaments(team: nil, season_id: nil, params: {})
       ChgkRating::Collections::Tournaments.new params.merge(team: team, season_id: season_id)
     end
 
-    def ratings(team_id)
-      team(team_id, true).ratings
+    def ratings(team_or_id)
+      team(team_or_id, true).ratings
     end
 
     def teams_at_tournament(tournament_id)
       tournament(tournament_id, true).team_list
     end
 
-    def team_results_at_tournament(tournament_id, team_id)
-      team_at_tournament(tournament_id, team_id).results
+    def team_results_at_tournament(tournament_or_id, team_or_id)
+      team_at_tournament(tournament_or_id, team_or_id).results
     end
 
-    def team_players_at_tournament(tournament_id, team_id)
-      team_at_tournament(tournament_id, team_id).players
+    def team_players_at_tournament(tournament_or_id, team_or_id)
+      team_at_tournament(tournament_or_id, team_or_id).players
     end
   end
 end

@@ -1,10 +1,10 @@
 module ChgkRating
   module Collections
     class Recaps < Base
-      attr_reader :team_id
+      attr_reader :team
 
       def initialize(params = {})
-        @team_id = params[:team_id]
+        @team = build_model params[:team]
 
         super
       end
@@ -13,12 +13,12 @@ module ChgkRating
 
       def process(results, _params)
         results.each do |season,value|
-          results[season] = ChgkRating::Models::Recap.new value, team_id: @team_id
+          results[season] = ChgkRating::Models::Recap.new value, team: @team
         end
       end
 
       def api_path
-        "teams/#{@team_id}/recaps"
+        "teams/#{@team.id}/recaps"
       end
     end
   end

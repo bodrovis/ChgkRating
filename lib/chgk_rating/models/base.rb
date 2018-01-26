@@ -1,6 +1,6 @@
 module ChgkRating
   module Models
-    class Base
+    class Base < ChgkObject
       include ChgkRating::Request
 
       attr_reader :lazy

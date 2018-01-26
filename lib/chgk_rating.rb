@@ -19,6 +19,8 @@ require 'chgk_rating/attribute_mappings'
 
 require 'chgk_rating/concerns/searching'
 
+require 'chgk_rating/chgk_object'
+
 require 'chgk_rating/models/base'
 require 'chgk_rating/models/tournament_team_result'
 require 'chgk_rating/models/tournament_player'

@@ -1,7 +1,7 @@
 RSpec.describe ChgkRating::Collections::Recaps do
   subject do
     VCR.use_cassette 'recaps' do
-      described_class.new(team_id: 1)['6']
+      described_class.new(team: 1)['6']
     end
   end
 

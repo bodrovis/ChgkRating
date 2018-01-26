@@ -1,7 +1,7 @@
 RSpec.describe ChgkRating::Models::Rating do
   subject do
     VCR.use_cassette 'rating_release' do
-      described_class.new 24, team_id: 1
+      described_class.new 24, team: 1
     end
   end
   let(:rating_h) { subject.to_h }

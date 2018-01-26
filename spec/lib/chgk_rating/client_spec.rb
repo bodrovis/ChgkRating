@@ -5,6 +5,10 @@ RSpec.shared_examples 'lazy loaded' do
 end
 
 RSpec.describe ChgkRating::Client do
+  let(:team_1) { test_client.team(1, true) }
+  let(:team_52853) { test_client.team(52853, true) }
+  let(:tournament_3506) { test_client.tournament(3506, true) }
+
   context 'errors' do
     it 'should raise an error for an erroneous request' do
       expect( -> { VCR.use_cassette 'erroneous_request' do
@@ -14,7 +18,7 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#team_at_tournament' do
-    subject { test_client.team_at_tournament 3506, 52853 }
+    subject { test_client.team_at_tournament tournament_3506, team_52853 }
 
     it { is_expected.to be_an_instance_of ChgkRating::Models::TournamentTeam }
 
@@ -35,7 +39,7 @@ RSpec.describe ChgkRating::Client do
 
   describe '#rating' do
     subject do
-      VCR.use_cassette('rating_release') { test_client.rating 1, 24 }
+      VCR.use_cassette('rating_release') { test_client.rating team_1, 24 }
     end
 
     it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
@@ -44,7 +48,7 @@ RSpec.describe ChgkRating::Client do
   describe '#recap' do
     subject do
       VCR.use_cassette 'recap_last_season' do
-        test_client.recap 7931, :last
+        test_client.recap test_client.team(7931, true), :last
       end
     end
 
@@ -74,7 +78,7 @@ RSpec.describe ChgkRating::Client do
   describe '#ratings' do
     subject do
       VCR.use_cassette 'team_ratings' do
-        test_client.ratings 1
+        test_client.ratings team_1
       end
     end
     it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
@@ -83,7 +87,7 @@ RSpec.describe ChgkRating::Client do
   describe '#team_players_at_tournament' do
     subject do
       VCR.use_cassette 'team_players_at_tournament' do
-        test_client.team_players_at_tournament 3506, 52853
+        test_client.team_players_at_tournament tournament_3506, team_52853
       end
     end
 
@@ -93,7 +97,7 @@ RSpec.describe ChgkRating::Client do
   describe '#team_results_at_tournament' do
     subject do
       VCR.use_cassette 'team_results_at_tournament' do
-        test_client.team_results_at_tournament 3506, 52853
+        test_client.team_results_at_tournament tournament_3506, team_52853
       end
     end
 
@@ -103,7 +107,7 @@ RSpec.describe ChgkRating::Client do
   describe '#teams_at_tournament' do
     subject do
       VCR.use_cassette 'teams_at_tournament' do
-        test_client.teams_at_tournament 3506
+        test_client.teams_at_tournament tournament_3506
       end
     end
 
@@ -114,7 +118,7 @@ RSpec.describe ChgkRating::Client do
     context 'all tournaments for a team by season' do
       subject do
         VCR.use_cassette 'team_tournaments_season' do
-          test_client.tournaments team: 1, season_id: 4
+          test_client.tournaments team: team_1, season_id: 4
         end
       end
 
@@ -124,7 +128,7 @@ RSpec.describe ChgkRating::Client do
     context 'tournaments for a team' do
       subject do
         VCR.use_cassette 'team_tournaments' do
-          test_client.tournaments team: test_client.team(1, true)
+          test_client.tournaments team: team_1
         end
       end
 
@@ -145,7 +149,7 @@ RSpec.describe ChgkRating::Client do
   describe '#recaps' do
     subject do
       VCR.use_cassette 'recaps' do
-        test_client.recaps 1
+        test_client.recaps team_1
       end
     end
 

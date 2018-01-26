@@ -1,8 +1,9 @@
 module ChgkRating
   module Collections
     class TournamentTeams < Base
+      attr_reader :tournament
       def initialize(params = {})
-        @tournament_id = params[:tournament_id]
+        @tournament = build_model params[:tournament], ChgkRating::Models::Tournament
 
         super
       end
@@ -14,7 +15,7 @@ module ChgkRating
       end
 
       def api_path
-        "tournaments/#{@tournament_id}/list"
+        "tournaments/#{@tournament.id}/list"
       end
     end
   end

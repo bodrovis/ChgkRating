@@ -1,10 +1,10 @@
 module ChgkRating
   module Collections
     class Ratings < Base
-      attr_reader :team_id
+      attr_reader :team
 
       def initialize(params = {})
-        @team_id = params[:team_id]
+        @team = build_model params[:team]
 
         super
       end
@@ -16,7 +16,7 @@ module ChgkRating
       end
 
       def api_path
-        "teams/#{@team_id}/rating"
+        "teams/#{@team.id}/rating"
       end
     end
   end

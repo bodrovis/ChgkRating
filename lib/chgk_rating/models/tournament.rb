@@ -1,20 +1,20 @@
 module ChgkRating
   module Models
     class Tournament < Base
-      def team_players(team_id)
-        ChgkRating::Collections::TournamentPlayers.new tournament_id: @id, team_id: team_id
+      def team_players(team)
+        ChgkRating::Collections::TournamentPlayers.new tournament: self, team: team
       end
 
-      def team_results(team_id)
-        ChgkRating::Collections::TournamentTeamResults.new tournament_id: @id, team_id: team_id
+      def team_results(team)
+        ChgkRating::Collections::TournamentTeamResults.new tournament: self, team: team
       end
 
       def team_list
-        ChgkRating::Collections::TournamentTeams.new tournament_id: @id
+        ChgkRating::Collections::TournamentTeams.new tournament: self
       end
 
-      def team(team_id)
-        ChgkRating::Models::TournamentTeam.new team_id, tournament_id: @id, lazy: true
+      def team(team)
+        ChgkRating::Models::TournamentTeam.new team, tournament: self, lazy: true
       end
 
       private

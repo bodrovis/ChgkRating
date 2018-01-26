@@ -1,7 +1,7 @@
 RSpec.describe ChgkRating::Models::Recap do
   subject do
     VCR.use_cassette 'recap_last_season' do
-      described_class.new :last, team_id: 7931
+      described_class.new :last, team: 7931
     end
   end
   let(:recap_h) { subject.to_h }
@@ -23,7 +23,7 @@ RSpec.describe ChgkRating::Models::Recap do
   context 'with season number' do
     subject do
       VCR.use_cassette 'recap' do
-        described_class.new 9, team_id: 1
+        described_class.new 9, team: 1
       end
     end
 
