@@ -1,7 +1,10 @@
 module ChgkRating
   class Client
-    # Models
-
+    # Returns a single Team
+    #
+    # @raise [ChgkRating::Error::NotFound] Error raised when the Team cannot be found.
+    # @return [ChgkRating::Models::Team] The requested Team.
+    # @param lazy [Boolean] Should the Team be lazily loaded? Default is `false`.
     def team(id, lazy = false)
       ChgkRating::Models::Team.new id, lazy: lazy
     end

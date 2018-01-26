@@ -17,7 +17,7 @@ RSpec.describe ChgkRating::Models::Recap do
     expect(recap_h['idseason']).to eq '51'
     expect(recap_h['idteam']).to eq '7931'
     expect(recap_h['captain']).to eq '23539'
-    expect(recap_h['players']).to eq ["2668", "6654", "23539", "53735", "94783", "98697", "115867"]
+    expect(recap_h['players']).to eq %w(2668 6654 23539 53735 94783 98697 115867)
   end
 
   context 'with season number' do

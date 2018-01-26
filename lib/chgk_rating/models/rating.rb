@@ -3,17 +3,16 @@ module ChgkRating
     class Rating < Base
       no_eager_loading!
       no_lazy_support!
-      attr_reader :team
 
       def initialize(release_id_or_hash, params = {})
-        @team = build_model params[:team]
+        @team_id = extract_id_from params[:team]
         super
       end
 
       private
 
       def api_path
-        "teams/#{@team.id}/rating"
+        "teams/#{@team_id}/rating"
       end
     end
   end

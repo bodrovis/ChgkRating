@@ -29,12 +29,12 @@ module ChgkRating
 
       def scheme_from(raw_scheme)
         raw_scheme.inject({}) do |memo, (key, value)|
-          if value.is_a?(String)
-            memo[key] = name_from(value)
-          elsif value.is_a?(Array)
-            value = [key.to_s] if value[0].nil? # for cases like `rating: []`
-            memo[key] = name_from(value[0]).merge transformation(value[1])
-          end
+          memo[key] = if value.is_a?(String)
+                        name_from(value)
+                      else
+                        value = [key.to_s] if value[0].nil? # for cases like `rating: []`
+                        name_from(value[0]).merge transformation(value[1])
+                      end
           memo
         end
       end

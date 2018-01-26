@@ -8,6 +8,7 @@ RSpec.describe ChgkRating::Models::TournamentTeam do
   it_behaves_like 'model with lazy support'
 
   specify('#tournament') { expect(subject.tournament.id).to eq '3506' }
+  specify('#team') { expect(subject.team.id).to eq '52853' }
   specify('#id') { expect(subject.id).to eq '52853' }
   specify '#to_h' do
     expect(tournament_team_h['idteam']).to eq '52853'

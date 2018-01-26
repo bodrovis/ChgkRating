@@ -18,13 +18,6 @@ module ChgkRating
       def results
         ChgkRating::Collections::TournamentTeamResults.new tournament: @tournament, team: @team
       end
-
-      private
-
-      def extract_id_from(obj)
-        return obj unless obj.is_a?(ChgkRating::Models::Team)
-        obj.id
-      end
     end
   end
 end
