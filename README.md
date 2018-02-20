@@ -5,17 +5,13 @@
 [![Test Coverage](https://codeclimate.com/github/bodrovis/ChgkRating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/ChgkRating/coverage)
 [![Dependency Status](https://gemnasium.com/bodrovis/ChgkRating.svg)](https://gemnasium.com/bodrovis/ChgkRating)
 
-Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a
-wrapper, but rather a complex full-fledged client that allows to easily work with various API resources.
-It is still not 100% finished.
+Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a complex full-fledged client that allows to easily work with various API resources.
 
-[Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game)
-is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
+[Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game) is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
 
 ## Installation and Requirements
 
-This gem works **only** with Ruby 2.4+ and I have no plans of making it compatible with older versions.
-Apart from that, the gem has no special requirements.
+This gem works **only** with Ruby 2.4+ and I have no plans of making it compatible with older versions. Apart from that, it has no special requirements.
 
 Install it by running:
 
@@ -64,33 +60,28 @@ As long as this gem is not just a wrapper, there are a bunch of things that you 
 
 ### Initializing the Client
 
-Okay, so that you know the basics behind the gem's logic let's talk about the available methods.
-
-First of all, initialized the client with the following shortcut:
+Initialize the client with the following shortcut:
 
 ```ruby
 client = ChgkRating.client
 ```
 
-This method does not accept any arguments because the client requires no configuration.
-You don't need any API keys, access tokens and that stuff - just go ahead and send any queries you like. It does not seem like the API has any quota limitation as well but of course it does not mean you should abuse it.
+This method does not accept any arguments because the client requires no configuration. You don't need any API keys, access tokens and that stuff - just go ahead and send any queries you like. Seems like the API has no quota limitation as well but of course it does not mean you should abuse it.
 
-Now you may use the `client` local variable to perform various requests described below.
+Now you may utilize the `client` local variable to perform various requests described below.
 
 ### Players
 
 #### Players - Collection
 
-Get a list of all players sorted by their ids:
+Returns an array-like `Players` object containing list of `Player` models sorted by their IDs:
 
 ```ruby
 client.players params={} # Input:
                          # (optional) params - Hash
 ```
 
-Returns an array-like `Players` object.
-
-Only the following information is returned for each player:
+The following information is available for each `Player`:
 
 ```ruby
 id          # String
@@ -98,8 +89,6 @@ name        # String
 surname     # String
 patronymic  # String
 ```
-
-To get a bit more detailed information for a specific player, use the `player` method.
 
 Special notes:
 
