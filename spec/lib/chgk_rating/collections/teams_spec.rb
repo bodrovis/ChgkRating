@@ -1,13 +1,22 @@
 RSpec.describe ChgkRating::Collections::Teams do
   subject do
     VCR.use_cassette 'teams' do
-      described_class.new[1]
+      described_class.new
     end
   end
+  let(:team) { subject[1] }
 
-  specify('#id') { expect(subject.id).to eq '2' }
-  specify('#town') { expect(subject.town).to eq 'Москва' }
-  specify('#name') { expect(subject.name).to eq 'Афина' }
+  it_behaves_like 'not a hash'
+  it_behaves_like 'an array'
+
+  specify('#id') { expect(team.id).to eq '2' }
+  specify('#town') { expect(team.town).to eq 'Москва' }
+  specify('#name') { expect(team.name).to eq 'Афина' }
+  specify '#to_a' do
+    teams_arr = subject.to_a
+    expect(teams_arr.count).to eq 1000
+    expect(teams_arr[3]['idteam']).to eq '5'
+  end
 
   context 'pagination' do
     subject do

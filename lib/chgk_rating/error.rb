@@ -9,6 +9,18 @@ module ChgkRating
       end
     end
 
+    NotHashType = Class.new(ClientError) do
+      def to_s
+        'This is not a hash-like collection, so it cannot be converted to an ordinary hash.'
+      end
+    end
+
+    NotArrayType = Class.new(ClientError) do
+      def to_s
+        'This is not an array-like collection, so it cannot be converted to an ordinary array.'
+      end
+    end
+
     BadRequest = Class.new(ServerError)
     NotFound = Class.new(ServerError)
     NotImplemented = Class.new(ServerError)

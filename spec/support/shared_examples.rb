@@ -1,3 +1,23 @@
+RSpec.shared_examples_for 'an array' do
+  it { is_expected.to respond_to :to_a }
+end
+
+RSpec.shared_examples_for 'not a hash' do
+  it { is_expected.not_to respond_to :to_h }
+  it { expect( -> {subject.to_h} ).to raise_error(ChgkRating::Error::NotHashType).
+      with_message('This is not a hash-like collection, so it cannot be converted to an ordinary hash.')}
+end
+
+RSpec.shared_examples_for 'not an array' do
+  it { is_expected.not_to respond_to :to_a }
+  it { expect( -> {subject.to_a} ).to raise_error(ChgkRating::Error::NotArrayType).
+      with_message('This is not an array-like collection, so it cannot be converted to an ordinary array.')}
+end
+
+RSpec.shared_examples_for 'a hash' do
+  it { is_expected.to respond_to :to_h }
+end
+
 RSpec.shared_examples_for 'tournament team player' do
   specify('#id') { expect(subject.id).to eq '51249' }
   specify('#is_captain') { expect(subject.is_captain).to eq true }
