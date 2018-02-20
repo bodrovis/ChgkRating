@@ -52,7 +52,10 @@ RSpec.describe ChgkRating::Collections::Tournaments do
     it_behaves_like 'not an array'
 
     specify '#to_h' do
-      expect(subject.to_h['7'][0]['idtournament']).to eq '367'
+      subject_h = subject.to_h['7']
+      expect(subject_h['tournaments'][0]['idtournament']).to eq '367'
+      expect(subject_h['idseason']).to eq '7'
+      expect(subject_h['idteam']).to eq '1'
     end
     specify('#id') { expect(tournament.id).to eq '424' }
   end

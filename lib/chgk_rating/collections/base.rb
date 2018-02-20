@@ -28,7 +28,7 @@ module ChgkRating
 
       def to_h
         raise ChgkRating::Error::NotHashType unless self.respond_to?(:to_h)
-        self.items.map { |k,v| [k, v.respond_to?(:to_h) ? v.to_h : v.to_a ] }.to_h
+        self.items.map { |k,v| revert_to_hash(k, v) }.to_h
       end
 
       def respond_to?(method, include_all = false)
@@ -43,6 +43,10 @@ module ChgkRating
       end
 
       private
+
+      def revert_to_hash(key, values)
+        [key, values.to_h]
+      end
 
       def build_request_params_from(params)
         request_params = params[:request].to_h

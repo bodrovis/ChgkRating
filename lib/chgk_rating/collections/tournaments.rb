@@ -11,13 +11,24 @@ module ChgkRating
         super
       end
 
+      def revert_to_hash(key, values)
+        [
+            key,
+            {
+                'idteam' => @team.id.to_s,
+                'idseason' => key,
+                'tournaments' => values.map(&:to_h)
+            }
+        ]
+      end
+
       private
 
       def process(_results, params = {})
         super do |result|
           if @team && @season_id.nil?
-            ChgkRating::Collections::Tournaments.new collection: result['tournaments'],
-                                                     lazy: true
+            ChgkRating::Collections::Tournaments.new(collection: result['tournaments'],
+                                                     lazy: true).items
           else
             ChgkRating::Models::Tournament.new result, lazy: params[:lazy]
           end

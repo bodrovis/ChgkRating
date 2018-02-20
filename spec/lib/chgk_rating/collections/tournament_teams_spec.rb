@@ -1,24 +1,28 @@
 RSpec.describe ChgkRating::Collections::TournamentTeams do
   subject do
     VCR.use_cassette 'teams_at_tournament' do
-      described_class.new(tournament: 3506)[0]
+      described_class.new(tournament: 3506)
     end
   end
-  let(:tournament_team_h) { subject.to_h }
+  let(:team) { subject[0] }
+  let(:tournament_team_h) { team.to_h }
 
-  specify('#id') { expect(subject.id).to eq '2124' }
-  specify('#current_name') { expect(subject.current_name).to eq 'Полосатый мамонт' }
-  specify('#base_name') { expect(subject.base_name).to eq 'Полосатый мамонт' }
-  specify('#position') { expect(subject.position).to eq 3 }
-  specify('#questions_total') { expect(subject.questions_total).to eq 34 }
-  specify('#bonus_a') { expect(subject.bonus_a).to eq 1575 }
-  specify('#bonus_b') { expect(subject.bonus_b).to eq -48 }
-  specify('#tech_rating') { expect(subject.tech_rating).to eq 2561 }
-  specify('#predicted_position') { expect(subject.predicted_position).to eq 2 }
-  specify('#real_bonus_b') { expect(subject.real_bonus_b).to eq 421 }
-  specify('#d_bonus_b') { expect(subject.d_bonus_b).to eq -48 }
-  specify('#included_in_rating') { expect(subject.included_in_rating).to eq true }
-  specify('#result') { expect(subject.result).to eq [true, true, true, false, true, true,
+  it_behaves_like 'not a hash'
+  it_behaves_like 'an array'
+
+  specify('#id') { expect(team.id).to eq '2124' }
+  specify('#current_name') { expect(team.current_name).to eq 'Полосатый мамонт' }
+  specify('#base_name') { expect(team.base_name).to eq 'Полосатый мамонт' }
+  specify('#position') { expect(team.position).to eq 3 }
+  specify('#questions_total') { expect(team.questions_total).to eq 34 }
+  specify('#bonus_a') { expect(team.bonus_a).to eq 1575 }
+  specify('#bonus_b') { expect(team.bonus_b).to eq -48 }
+  specify('#tech_rating') { expect(team.tech_rating).to eq 2561 }
+  specify('#predicted_position') { expect(team.predicted_position).to eq 2 }
+  specify('#real_bonus_b') { expect(team.real_bonus_b).to eq 421 }
+  specify('#d_bonus_b') { expect(team.d_bonus_b).to eq -48 }
+  specify('#included_in_rating') { expect(team.included_in_rating).to eq true }
+  specify('#result') { expect(team.result).to eq [true, true, true, false, true, true,
                                                      true, true, true, true, true,
                                                      true, true, false, false, false, false,
                                                      true, true, true, true, true, false, true,
@@ -27,8 +31,12 @@ RSpec.describe ChgkRating::Collections::TournamentTeams do
                                                      false, true, false, true, true, true,
                                                      false, true, true, true, true] }
 
+  specify '#to_a' do
+    expect(subject.to_a[2]['idteam']).to eq '28434'
+  end
+
   # to_h for a fully loaded model
-  specify '#to_h' do
+  specify '#to_h for a model' do
     expect(tournament_team_h['idteam']).to eq '2124'
     expect(tournament_team_h['position']).to eq '3.0'
     expect(tournament_team_h['questions_total']).to eq '34'

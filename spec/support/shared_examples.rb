@@ -19,16 +19,16 @@ RSpec.shared_examples_for 'a hash' do
 end
 
 RSpec.shared_examples_for 'tournament team player' do
-  specify('#id') { expect(subject.id).to eq '51249' }
-  specify('#is_captain') { expect(subject.is_captain).to eq true }
-  specify('#is_base') { expect(subject.is_base).to eq true }
-  specify('#is_foreign') { expect(subject.is_foreign).to eq false }
+  specify('#id') { expect(player.id).to eq '51249' }
+  specify('#is_captain') { expect(player.is_captain).to eq true }
+  specify('#is_base') { expect(player.is_base).to eq true }
+  specify('#is_foreign') { expect(player.is_foreign).to eq false }
 end
 
 RSpec.shared_examples_for 'tournament team result' do
-  specify('#result') { expect(subject.result).to eq [false, false, false, false, true, true,
+  specify('#result') { expect(team_result.result).to eq [false, false, false, false, true, true,
                                                      true, false, false, true, false, false] }
-  specify('#tour') { expect(subject.tour).to eq 1 }
+  specify('#tour') { expect(team_result.tour).to eq 1 }
 end
 
 RSpec.shared_examples_for 'model without eager loading' do
