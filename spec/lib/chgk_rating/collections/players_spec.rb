@@ -17,6 +17,9 @@ RSpec.describe ChgkRating::Collections::Players do
   specify('#id') { expect(player.id).to eq '6' }
   specify('#surname') { expect(player.surname).to eq 'Абаков' }
   specify('#name') { expect(player.name).to eq 'Карен' }
+  it 'respond_to should still work properly' do
+    expect(subject.respond_to?(:count)).to eq true
+  end
 
   context 'searching' do
     subject do
