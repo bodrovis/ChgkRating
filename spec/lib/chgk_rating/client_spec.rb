@@ -118,7 +118,7 @@ RSpec.describe ChgkRating::Client do
     context 'all tournaments for a team by season' do
       subject do
         VCR.use_cassette 'team_tournaments_season' do
-          test_client.tournaments team: team_1, season_id: 4
+          test_client.tournaments team_or_id: team_1, season_id: 4
         end
       end
 
@@ -128,7 +128,7 @@ RSpec.describe ChgkRating::Client do
     context 'tournaments for a team' do
       subject do
         VCR.use_cassette 'team_tournaments' do
-          test_client.tournaments team: team_1
+          test_client.tournaments team_or_id: team_1
         end
       end
 
