@@ -9,6 +9,24 @@ Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api)
 
 [Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game) is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
 
+## Contents
+
+* [Installation and Requirements](#installation-and-requirements)
+* [Usage](#usage)
+  + [A Very Quick Example](#a-very-quick-example)
+  + [Before You Start](#before-you-start)
+  + [Initializing the Client](#initializing-the-client)
+  + [Players](#players)
+  + [Teams](#teams)
+  + [Recap (Team's Roster)](#recap-teams-roster)
+  + [Team Ratings](#team-ratings)
+  + [Tournaments](#tournaments)
+  + [Teams at Tournament](#teams-at-tournament)
+  + [Team Results at Tournament](#team-results-at-tournament)
+  + [Team Players at Tournament](#team-players-at-tournament)
+* [Testing](#testing)
+* [License](#license)
+
 ## Installation and Requirements
 
 This gem works **only** with Ruby 2.4+ and I have no plans of making it compatible with older versions. Apart from that, it has no special requirements.
