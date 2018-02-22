@@ -34,12 +34,16 @@ module ChgkRating
       def respond_to?(method, include_all = false)
         method = method.to_sym
         if %i( to_a to_h ).include?(method.to_sym)
-          return true if (method == :to_a && self.items.is_a?(Array)) ||
-              (method == :to_h && self.items.is_a?(Hash))
-          false
+          self.convertable? method
         else
           super
         end
+      end
+
+      def convertable?(method)
+        return true if (method == :to_a && self.items.is_a?(Array)) ||
+            (method == :to_h && self.items.is_a?(Hash))
+        false
       end
 
       private

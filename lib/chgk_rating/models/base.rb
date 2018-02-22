@@ -70,7 +70,11 @@ module ChgkRating
         return object unless object.is_a?(String) || object.is_a?(Integer) || object.is_a?(Symbol)
         return nil if lazy
 
-        result = get("#{api_path}/#{object}")
+        get_result_by object
+      end
+
+      def get_result_by(object)
+        result = get "#{api_path}/#{object}"
         result.is_a?(Array) ? result.first : result
       end
 
