@@ -150,12 +150,6 @@ client.teams params={}   # Input:
 
 Returns an array-like `Teams` object. A bit limited set of information is returned for each `Team` model: specifically, a `comment` attribute is set to `nil`.
 
-```ruby
-id       # String
-name     # String
-town     # String
-```
-
 #### Team - Model
 
 Get full information about a single `Team`:
@@ -198,26 +192,24 @@ Returns `Teams::Search` collection consisting of `Team` models.
 
 ### Recap (Team's Roster)
 
-The term "recap" is used by the ChgkRating API but I do not think it is really suitable here.
-It basically means "team's roster", "team list", or "team's lineup".
+The term "recap" is used by the ChgkRating API but I do not think it is suitable. Basically, it means "team's roster", "team list", or "team's lineup".
 
 #### Recaps - Collection
 
-Get recaps for all the seasons for a single team:
+Get recaps grouped by seasons for a single team:
 
 ```ruby
-client.recaps team_id # Input:
-                      # team_id - Integer
+client.recaps team_or_id # Input:
+                         # team_or_id - String, Integer or Team. Team to load recaps for.
 ```
 
 Returns a hash-like `Recaps` object with the season numbers as the keys and the `Recap` model as values.
-If the team has not played in some season, it is **not** included in the response. Each `Recap` model responds
-to the methods listed in the Models section below.
+If the team has not participated in a season, it is **not** included in the response.
 
-The `Recaps` collection itself responds to the following methods:
+The `Recaps` collection responds to the following methods:
 
 ```ruby
-team_id # String
+team # Team - lazily-loaded Team model
 ```
 
 #### Recap - Model
@@ -226,53 +218,52 @@ Get information about a team's recap in a given season:
 
 ```ruby
 client.recap team_id, season_id # Input:
-                                # team_id - Integer or String
+                                # team_or_id - String, Integer or Team
                                 # season_id - Integer or String
 ```
 
-Returns an `Recap` model that has the following accessors:
+Returns a `Recap` model that has the following getters:
 
 ```ruby
-team_id     # String
+team        # Team - lazily-loaded model
 season_id   # String
-players     # Players collection, lazily-loaded. Each Player model inside has only an id specified, all other attributes are nil
-captain     # Player model, lazily-loaded. Has only id specified
+players     # Players collection consisting of lazily-loaded Player models
+captain     # Player model, lazily-loaded
 ```
 
 ### Team Ratings
 
 #### Team Ratings - Collection
 
-Get all ratings for a team:
+Get all ratings for a single team:
 
 ```ruby
-client.ratings team_id # Input:
-                       # team_id - String or Integer
+client.ratings team_or_id # Input:
+                          # team_or_id - String, Integer or Team. Team to load ratings for.
 ```
 
 Returns an array-like `Ratings` collection containing `Rating` models.
+
 Collection responds to the following methods:
 
 ```ruby
-team_id # String or Integer - id of the team
+team # Team - lazily-loaded model
 ```
-
-Each `Recap` model responds to the methods listed in the next section.
 
 #### Team Rating - Model
 
-Get rating for a team in a given release:
+Get `Rating` for a team in a given release:
 
 ```ruby
-client.rating team_id, release_id  # Input:
-                                   # team_id - String or Integer
-                                   # release_id - String or Integer  
+client.rating team_or_id, release_id  # Input:
+                                      # team_or_id - String, Integer or Team
+                                      # release_id - String or Integer  
 ```
 
-Responds to the following accessors:
+Getters:
 
 ```ruby
-team_id         # String
+team            # Team - lazily-loaded model
 release_id      # String
 rating          # Integer
 rating_position # Integer
@@ -285,21 +276,15 @@ formula         # Symbol - :a or :b
 #### Tournaments - Collection
 
 ```ruby
-client.tournaments team: nil, season_id: nil, params: {} # Input (arguments are passed in a hash-like format):
-                                                         # (optional) team - String, Integer or Team
-                                                         # (optional) season_id - String or Integer
-                                                         # (optional) params - Hash
+client.tournaments team_or_id: nil, season_id: nil, params: {} # Input (arguments are passed in a hash-like format):
+                                                               # (optional) team_or_id - String, Integer or Team
+                                                               # (optional) season_id - String or Integer
+                                                               # (optional) params - Hash
+                                                               ## Supported params:
+                                                               ## :page - String or Integer. Default is 1
 ```
 
-The collection responds to the following methods:
-
-```ruby
-team        # Nil or lazily-loaded Team containing only id
-season_id   # Nil or String
-```
-
-**When `team` and `season_id` are not set**, returns an array-like `Tournaments` collection with all the
-tournaments from the database. In this case `Tournament` models have only the following attributes set:
+**When both `team_or_id` and `season_id` are not set**, returns an array-like `Tournaments` collection with all the tournaments. In this case `Tournament` models have only the following attributes set:
 
 ```ruby
 id          # String
@@ -309,24 +294,16 @@ date_end    # Date
 type_name   # String
 ```
 
-**When only `team` is set**, returns a hash-like `Tournaments` collection. This collection has season numbers
-as keys and nested `Tournaments` collections as values. `Tournament` models inside the nested collections are
-lazily-loaded and has only one attribute set:
+**When only `team_or_id` is set**, returns a hash-like `Tournaments` collection. This collection has season numbers as keys and array of `Tournament` models as values. `Tournament` models are lazily-loaded and have only `id` attribute set.
+
+**When both `team` and `season_id` are set**, returns an array-like `Tournaments` collection with lazily-loaded `Tournament` models that have only `id` attribute set.
+
+The collection responds to the following methods:
 
 ```ruby
-id  # String
+team        # Nil or lazily-loaded Team
+season_id   # Nil or String
 ```
-
-**When both `team` and `season_id` are set**, returns an array-like `Tournaments` collection with
-lazily-loaded `Tournament` models that have the following attributes set:
-
-```ruby
-id  # String
-```
-
-Special notes:
-
-* The results are paginated.
 
 #### Tournament - Model
 
@@ -338,13 +315,13 @@ client.tournament id, lazy=false  # Input:
                                   # (optional) lazy - Boolean
 ```
 
-`Tournament` has the following attributes:
+`Tournament` has the following getters:
 
 ```ruby
 id                        # String
 name                      # String
-date_start                # Date
-date_end                  # Date
+date_start                # DateTime
+date_end                  # DateTime
 type_name                 # String
 town                      # String
 long_name                 # String
@@ -356,7 +333,7 @@ type_name                 # String
 main_payment_value        # Float
 discounted_payment_value  # Float
 discounted_payment_reason # String
-date_requests_allowed_to  # Date
+date_requests_allowed_to  # DateTime
 comment                   # String
 site_url                  # URI
 ```
