@@ -5,7 +5,7 @@
 [![Test Coverage](https://codeclimate.com/github/bodrovis/ChgkRating/badges/coverage.svg)](https://codeclimate.com/github/bodrovis/ChgkRating/coverage)
 [![Dependency Status](https://gemnasium.com/bodrovis/ChgkRating.svg)](https://gemnasium.com/bodrovis/ChgkRating)
 
-Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a complex full-fledged client that allows to easily work with various API resources.
+Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a quite complex opinionated client that allows to easily work with various API resources.
 
 [Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game) is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
 
@@ -193,6 +193,32 @@ Special notes:
 
 ##### Interface Methods
 
+`Team` model respond to the following convenience methods:
+
+```ruby
+team.recap(season_id)                        # Returns a single Recap for the current Team at a given season. Input:
+                                             # season_id - Integer or String
+
+team.at_tournament(tournament_or_id)         # Returns TournamentTeam model that contains information about the
+                                             # team's results at the given tournament. Input:
+                                             # tournament_or_id - String, Integer or Tournament
+
+team.rating(release_id)                      # Returns Rating for the current Team in a given release. Input:
+                                             # release_id - String or Integer
+
+team.ratings                                 # Returns an array-like Ratings collection for the current team.
+
+team.recaps                                  # Returns an hash-like Recaps collection for the current team, grouped by seasons. Seasons act
+                                             # as keys, whereas Recap models - as values.
+
+team.tournaments(season_id: nil, params: {}) # Returns a collection of Tournaments that the current team participated at
+                                             # based on the given criteria. Input:
+                                             # (optional) season_id - Integer or String
+                                             # (optional) params - Hash
+                                             ## Supported params:
+                                             ## :page - String or Integer. Default is 1
+```
+
 #### Teams - Search
 
 Search for teams by a given criteria:
@@ -360,6 +386,26 @@ Special notes:
 
 * Lazy-loading and eager-loading is supported.
 
+##### Interface Methods
+
+`Tournament` model respond to the following convenience methods:
+
+```ruby
+tournament.team_players(team_or_id) # Returns an array-like TournamentPlayers collection containing roster
+                                    # for a team at the current tournament. Input:
+                                    # team_or_id - String, Integer or Team
+
+tournament.team_results(team_or_id) # Returns an array-like TournamentTeamResults collection with results
+                                    # for a given team in the current tournament. Input:
+                                    # team_or_id - String, Integer or Team
+
+tournament.team_list                # Returns an array-like TournamentTeams collection specifying which
+                                    # teams participated in the current tournament
+
+tournament.team(team_or_id)         # Returns information about a single TournamentTeam in the current tournament
+                                    # team_or_id - String, Integer or Team
+```
+
 ### Teams at Tournament
 
 #### Teams at Tournament - Collection
@@ -416,6 +462,16 @@ predicted_position  # Integer
 real_bonus_b        # Integer
 d_bonus_b           # Integer
 included_in_rating  # Boolean
+```
+
+##### Interface Methods
+
+`TournamentTeam` model respond to the following convenience methods:
+
+```ruby
+tournament_team.players # Returns an array-like TournamentPlayers collection containing roster for the current TournamentTeam
+
+tournament_team.results # Returns an array-like TournamentTeamResults collection containing results for the current TournamentTeam
 ```
 
 ### Team Results at Tournament
