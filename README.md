@@ -128,26 +128,27 @@ client.search_players params   # Input:
                                ## :name - String
                                ## :surname - String
                                ## :patronymic  - String
+                               ## :page - String or Integer. Default is 1, and there are 1000 results per page.
 ```
 
-Returns `Players` collection. 
-
-Special notes:
-
-* The result is paginated.
+Returns an array-like `Players::Search` collection consisting of `Player` models. 
 
 ### Teams
 
 #### Teams - Collection
 
-Get a list of all teams sorted by their ids:
+Get a list of all teams sorted by their IDs:
 
 ```ruby
-client.teams params={} # Input:
-                       # (optional) params - Hash
+client.teams params={}   # Input:
+                         # (optional) params - Hash
+                         ## Supported params:
+                         ## :page - Integer or String. The requested page. Default is 1, and there are 1000 results per page.
+                         ## :lazy - Boolean. Should the Team models be marked as lazily loaded? Note that the models will still contain all the information returned by the API.
+                         ## :collection - Enumerable. An array or collection of Teams that will be used to build a new collection. If this option is provided, API request will not be sent. This param is mostly used for internal purposes, but you may take advantage of it as well.
 ```
 
-Returns an array-like `Teams` object. A limited set of information is returned for each `Team` model:
+Returns an array-like `Teams` object. A bit limited set of information is returned for each `Team` model: specifically, a `comment` attribute is set to `nil`.
 
 ```ruby
 id       # String
@@ -155,24 +156,17 @@ name     # String
 town     # String
 ```
 
-To get a bit more detailed information for a specific team, use the `team` method.
-
-Special notes:
-
-* The results are paginated by the API.
-* Searching is supported.
-
 #### Team - Model
 
-Get full information about a single team:
+Get full information about a single `Team`:
 
 ```ruby
 client.team id, lazy=false # Input:
-                           # id - Integer, team's id
+                           # id - Integer or String. Team's id
                            # (optional) lazy - Boolean    
 ```
 
-The following information is available for each `Team`:
+Getter methods:
 
 ```ruby
 id       # String
@@ -183,8 +177,7 @@ comment  # String
 
 Special notes:
 
-* Can be lazily-loaded.
-* Can be eager-loaded. 
+* Can be lazily-loaded and eager-loaded. 
 
 ##### Interface Methods
 
@@ -198,13 +191,10 @@ client.search_teams params   # Input:
                              ## Supported search params:
                              ## :name - String
                              ## :town - String
+                             ## :page - String or Integer. Default is 1, and there are 1000 results per page.
 ```
 
-Returns `Teams` collection. 
-
-Special notes:
-
-* The result is paginated.
+Returns `Teams::Search` collection consisting of `Team` models. 
 
 ### Recap (Team's Roster)
 
