@@ -64,10 +64,10 @@ module ChgkRating
       end
 
       def process(results, *_args)
-        if results.is_a? Array
-          results.map { |result| yield result }
-        else
+        if results.is_a? Hash
           results.each { |season, result| results[season] = yield result }
+        else
+          results.map { |result| yield result }
         end
       end
     end

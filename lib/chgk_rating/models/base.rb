@@ -26,6 +26,7 @@ module ChgkRating
         return unless @lazy || force
         extract_from raw_by(self.id)
         @lazy = false
+        self
       end
 
       def self.no_eager_loading!
