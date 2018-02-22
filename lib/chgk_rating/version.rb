@@ -1,3 +1,3 @@
 module ChgkRating
-  VERSION = '1.0.0.pre2'.freeze
+  VERSION = '1.0.0.rc1'.freeze
 end
