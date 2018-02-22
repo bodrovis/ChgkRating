@@ -349,33 +349,33 @@ Special notes:
 Get a list of all teams which participated in a given tournament:
 
 ```ruby
-client.teams_at_tournament tournament_id  # Input:
-                                          # tournament_id - Integer or String
+client.teams_at_tournament tournament_or_id  # Input:
+                                             # tournament_id - Integer, String or Tournament
 ```
 
 Returns an array-like `TournamentTeams` collection that responds to the following methods:
 
 ```ruby
-tournament_id # String
+tournament # Tournament. Lazily-loaded model
 ```
 
-`TournamentTeam` models respond to the methods listed in the next section.
-
-#### Team at Tournament Model
+#### Team at Tournament - Model
 
 Instantiate a `TournamentTeam` model:
 
 ```ruby
-client.team_at_tournament tournament_id, team_id
+client.team_at_tournament tournament_or_id, team_or_id # Input:
+                                                       # tournament_or_id - Integer, String or Tournament
+                                                       # team_or_id -  Integer, String or Team
 ```
 
 Note that this method **always** returns a lazily-loaded model that cannot be eager-loaded later. This is
-because the API does not allow to fetch information about a single tournament team. Therefore only the following
+because the API does not allow to fetch information for a single tournament team. Therefore only the following
 attributes are set:
 
 ```ruby
 id              # String 
-tournament_id   # String
+tournament      # Tournament. Lazily-loaded model
 ```
 
 This `TournamentTeam` object, however, can be used to perform interface methods listed below. 
@@ -386,10 +386,10 @@ This `TournamentTeam` object, however, can be used to perform interface methods 
 id                  # String
 current_name        # String
 base_name           # String
-position            # Integer
+position            # Float
 questions_total     # Integer
-mask                # Array - contains Boolean values. Each value corresponds to a single question and
-                    # says whether the team answered the question or not. The length of the array equals to the
+Result              # Array - contains Boolean values. Each value corresponds to a single question and
+                    # marks whether the team answered this question or not. The length of the array equals to the
                     # value returned by the questions_total method 
 bonus_a             # Integer
 bonus_b             # Integer
@@ -407,24 +407,25 @@ included_in_rating  # Boolean
 Get team results at a given tournament:
 
 ```ruby
-client.team_results_at_tournament tournament_id, team_id
+client.team_results_at_tournament tournament_or_id, team_or_id # Input:
+                                                               # tournament_or_id - Integer, String or Tournament
+                                                               # team_or_id -  Integer, String or Team
 ```
 
-Returns an array-like `TournamentTeamResults` collection with `TournamentTeamResult` models.
-Each model has results for a single tour.
+Returns an array-like `TournamentTeamResults` collection with `TournamentTeamResult` models. Each model contains results for a single tour. 
+
 The collection responds to the following methods:
 
 ```ruby
-team_id
-tournament_id
+team       # Team. Lazily-loaded model
+tournament # Tournament. Lazily-loaded model
 ```
 
-#### Team Result at Tournament Model
+#### Team Result at Tournament - Model
 
-You cannot load team result for a given tour separately, so use the `team_results_at_tournament` method
-listed above.
+API does not allow to load team result for a given tour separately, so use the `team_results_at_tournament` method listed above.
 
-`TournamentTeamResult` model has the following readers:
+`TournamentTeamResult` model has the following getters:
 
 ```ruby
 tour    # Integer
@@ -439,25 +440,27 @@ result  # Array containing Boolean values. Each value corresponds to a single qu
 Get information about the team's roster at the given tournament:
 
 ```ruby
-client.team_players_at_tournament tournament_id, team_id  # Input:
-                                                          # tournament_id - Integer or String
-                                                          # team_id - Integer or String 
+client.team_players_at_tournament tournament_or_id, team_or_id  # Input:
+                                                                # tournament_or_id - Integer, String or Tournament
+                                                                # team_or_id -  Integer, String or Team
 ```
 
 Returns an array-like `TournamentPlayers` collection containing `TournamentPlayer` models (each model represents one player).
-The collection responds to the following methods: 
+
+The collection responds to the following getters: 
 
 ```ruby
-team_id        # String
-tournament_id  # String
+id              # String
+tournament      # Tournament. Lazily-loaded model
 ```
 
 #### Team Players at Tournament - Model
 
-It is not possible to load information about a specific player at the given tournament, so use the
-`team_players_at_tournament` method listed above.
+It is not possible to load information about a specific player at the given tournament, so use the `team_players_at_tournament` method listed above.
 
-`TournamentPlayer` model has the following readers:
+Note that `TournamentPlayer` **is a different model** which is not equal to the `Player` model. It has, however, the same id, so you may easily find the corresponding `Player` layer.
+
+`TournamentPlayer` has the following getters:
 
 ```ruby
 id          # String
