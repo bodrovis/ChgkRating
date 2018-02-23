@@ -9,19 +9,19 @@ RSpec.describe ChgkRating::Client do
   let(:team_52853) { test_client.team(52853, true) }
   let(:tournament_3506) { test_client.tournament(3506, true) }
 
+  def with_erroneous_cassette
+    VCR.use_cassette('erroneous_request') { yield }
+  end
+
   context 'errors' do
     it 'should raise an error for an erroneous request' do
       expect do
-        VCR.use_cassette 'erroneous_request' do
-          # That's a very strange bug with Ruby 2.5 and VCR 4 that raises
-          # VCR::Errors::UnhandledHTTPRequestError though the cassette is clearly in usage and
-          # the response is correct. So, this dirty hack is needed to mimic the proper functionality
-          # for such cases
-         # begin
-            test_client.tournament '/thats/an/error'
-        #  rescue VCR::Errors::UnhandledHTTPRequestError
-        #    raise ChgkRating::Error::NotFound
-       #   end
+        # That's a very strange bug that makes VCR raise UnhandledHTTPError
+        # so for now disable VCR for Ruby 2.5+
+        if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new('2.5.0')
+          test_client.tournament '/thats/an/error'
+        else
+          with_erroneous_cassette { test_client.tournament '/thats/an/error' }
         end
       end.to raise_error(ChgkRating::Error::NotFound)
     end

@@ -2,6 +2,7 @@ language: ruby
 
 rvm:
   - 2.4.3
+  - 2.5.0
 
 install: bundle install --retry=3
 

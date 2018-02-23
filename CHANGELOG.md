@@ -5,6 +5,7 @@
 * First stable version at last
 * Make `TournamentTeam` compatible with the recent API changes
 * More doc tweaks
+* Fix tests compatibility with Ruby 2.5
 
 ## v1.0.0.rc1 (2018-02-22)
 
