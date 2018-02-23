@@ -453,7 +453,7 @@ current_name        # String
 base_name           # String
 position            # Float
 questions_total     # Integer
-Result              # Array - contains Boolean values. Each value corresponds to a single question and
+result              # Array - contains Boolean values. Each value corresponds to a single question and
                     # marks whether the team answered this question or not. The length of the array equals to the
                     # value returned by the questions_total method 
 bonus_a             # Integer
