@@ -31,13 +31,13 @@ RSpec.describe ChgkRating::Collections::Tournaments do
 
     specify '#to_a' do
       tournaments_arr = subject.to_a
-      expect(tournaments_arr[10]['idtournament']).to eq '3467'
+      expect(tournaments_arr[10]['idtournament']).to eq '1538'
     end
-    specify('#id') { expect(tournament.id).to eq '4592' }
-    specify('#name') { expect(tournament.name).to eq 'Гран-при Бауманки. Синхрон' }
-    specify('#date_start') { expect(tournament.date_start).to eq DateTime.parse('2017-10-29 10:00:00') }
-    specify('#date_end') { expect(tournament.date_end).to eq DateTime.parse('2018-08-23 10:00:00') }
-    specify('#type_name') { expect(tournament.type_name).to eq 'Общий зачёт' }
+    specify('#id') { expect(tournament.id).to eq '1908' }
+    specify('#name') { expect(tournament.name).to eq 'Фестиваль в Мариуполе' }
+    specify('#date_start') { expect(tournament.date_start).to eq DateTime.parse('1989-09-01 00:00:00') }
+    specify('#date_end') { expect(tournament.date_end).to eq DateTime.parse('1989-09-03 00:00:00') }
+    specify('#type_name') { expect(tournament.type_name).to eq 'Обычный' }
   end
 
   context 'tournaments for a team' do

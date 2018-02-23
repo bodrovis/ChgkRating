@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:00:22 GMT
+      - Fri, 23 Feb 2018 14:41:47 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=364c8331d8c2266009f11f1937e543621f437638606e481004d7abe757b77394f4f611a76bed6b342046cc78bd9113cdf4236c45ebb63aa1c79bbbbf8129a113;
+      - chgk_session_idhash=2886ec034324fb14ddb0ae900efb6ac9083f552aeddbd099b3006af3b1cd455a682b8db8cf36ded5d5c79ccb6d5627afb63bcad9d67f7876abc2281f704ca2de;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,22 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"idteam":"7931","idseason":"51","players":["2668","6654","23539","53735","94783","98697","115867"],"captain":"23539"}'
+      string: |-
+        {
+            "idteam": "7931",
+            "idseason": "51",
+            "players": [
+                "2668",
+                "6654",
+                "23539",
+                "53735",
+                "94783",
+                "98697",
+                "115867",
+                "149858"
+            ],
+            "captain": "23539"
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:14 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:41:41 GMT
+recorded_with: VCR 4.0.0

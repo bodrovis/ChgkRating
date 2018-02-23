@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:01:06 GMT
+      - Fri, 23 Feb 2018 14:29:08 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=e4204439e736efc626f734e5a92927ed603719e0faee5d60d24bb65b6d07d40bf27fcfcccacd2f4f8ca4988f504dca48ba3373791e6ff0b4e9abc195e07513e5;
+      - chgk_session_idhash=9a9bdceb0328dffb14b012448085bbf7166a0963db3997d43c884026b607aa4c850adce27c84d5b969afe3dcfbe12e0af376426ead50a6d0ca9856d0acd5b0e8;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,8 +45,223 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"items":[{"idplayer":"14","surname":"Абанин","name":"Василий","patronymic":""},{"idplayer":"338","surname":"Агапитов","name":"Василий","patronymic":""},{"idplayer":"542","surname":"Акимов","name":"Василий","patronymic":""},{"idplayer":"742","surname":"Алексеев","name":"Василий","patronymic":""},{"idplayer":"743","surname":"Алексеев","name":"Василий","patronymic":""},{"idplayer":"744","surname":"Алексеев","name":"Василий","patronymic":""},{"idplayer":"1271","surname":"Антонов","name":"Василий","patronymic":""},{"idplayer":"1467","surname":"Аристов","name":"Василий","patronymic":""},{"idplayer":"44543","surname":"Артемьев","name":"Василий","patronymic":""},{"idplayer":"58748","surname":"Архипов","name":"Василий","patronymic":"Фёдорович"},{"idplayer":"60217","surname":"Анисина","name":"Василика","patronymic":"Владимировна"},{"idplayer":"69442","surname":"Агеева","name":"Василина","patronymic":"Николаевна"},{"idplayer":"69613","surname":"Арефьев","name":"Василий","patronymic":"Евгеньевич"},{"idplayer":"80940","surname":"Агапова","name":"Василиса","patronymic":""},{"idplayer":"82243","surname":"Агеев","name":"Василий","patronymic":"Григорьевич"},{"idplayer":"89621","surname":"Алиев","name":"Васиф","patronymic":""},{"idplayer":"92981","surname":"Абросимов","name":"Василий","patronymic":"Олегович"},{"idplayer":"94570","surname":"Агаев","name":"Васиф","patronymic":"Расим
-        оглы"},{"idplayer":"103463","surname":"Абдулаева","name":"Василя","patronymic":"Фаритовна"},{"idplayer":"109416","surname":"Алфёров","name":"Василий","patronymic":"Викторович"},{"idplayer":"110598","surname":"Агапов","name":"Василий","patronymic":"Петрович"},{"idplayer":"112624","surname":"Александрова","name":"Василиса","patronymic":"Романовна"},{"idplayer":"113250","surname":"Алтычникова","name":"Василиса","patronymic":"Даниловна"},{"idplayer":"114194","surname":"Алленов","name":"Василий","patronymic":"Александрович"},{"idplayer":"123524","surname":"Алексеев","name":"Василий","patronymic":"Алексеевич"},{"idplayer":"126399","surname":"Андреев","name":"Василий","patronymic":""},{"idplayer":"130765","surname":"Андрюшкявичуте","name":"Васаре","patronymic":""},{"idplayer":"141096","surname":"Антонюк","name":"Василий","patronymic":""},{"idplayer":"148380","surname":"Абросимов","name":"Василий","patronymic":"Андреевич"}],"total_items":"29","current_items":"1-1000"}'
+      string: |-
+        {
+            "items": [
+                {
+                    "idplayer": "14",
+                    "surname": "Абанин",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "338",
+                    "surname": "Агапитов",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "542",
+                    "surname": "Акимов",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "742",
+                    "surname": "Алексеев",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "743",
+                    "surname": "Алексеев",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "744",
+                    "surname": "Алексеев",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "1271",
+                    "surname": "Антонов",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "1467",
+                    "surname": "Аристов",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "44543",
+                    "surname": "Артемьев",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "58748",
+                    "surname": "Архипов",
+                    "name": "Василий",
+                    "patronymic": "Фёдорович"
+                },
+                {
+                    "idplayer": "60217",
+                    "surname": "Анисина",
+                    "name": "Василика",
+                    "patronymic": "Владимировна"
+                },
+                {
+                    "idplayer": "69442",
+                    "surname": "Агеева",
+                    "name": "Василина",
+                    "patronymic": "Николаевна"
+                },
+                {
+                    "idplayer": "69613",
+                    "surname": "Арефьев",
+                    "name": "Василий",
+                    "patronymic": "Евгеньевич"
+                },
+                {
+                    "idplayer": "80940",
+                    "surname": "Агапова",
+                    "name": "Василиса",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "82243",
+                    "surname": "Агеев",
+                    "name": "Василий",
+                    "patronymic": "Григорьевич"
+                },
+                {
+                    "idplayer": "89621",
+                    "surname": "Алиев",
+                    "name": "Васиф",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "92981",
+                    "surname": "Абросимов",
+                    "name": "Василий",
+                    "patronymic": "Олегович"
+                },
+                {
+                    "idplayer": "94570",
+                    "surname": "Агаев",
+                    "name": "Васиф",
+                    "patronymic": "Расим оглы"
+                },
+                {
+                    "idplayer": "103463",
+                    "surname": "Абдулаева",
+                    "name": "Василя",
+                    "patronymic": "Фаритовна"
+                },
+                {
+                    "idplayer": "109416",
+                    "surname": "Алфёров",
+                    "name": "Василий",
+                    "patronymic": "Викторович"
+                },
+                {
+                    "idplayer": "110598",
+                    "surname": "Агапов",
+                    "name": "Василий",
+                    "patronymic": "Петрович"
+                },
+                {
+                    "idplayer": "112624",
+                    "surname": "Александрова",
+                    "name": "Василиса",
+                    "patronymic": "Романовна"
+                },
+                {
+                    "idplayer": "113250",
+                    "surname": "Алтычникова",
+                    "name": "Василиса",
+                    "patronymic": "Даниловна"
+                },
+                {
+                    "idplayer": "114194",
+                    "surname": "Алленов",
+                    "name": "Василий",
+                    "patronymic": "Александрович"
+                },
+                {
+                    "idplayer": "123524",
+                    "surname": "Алексеев",
+                    "name": "Василий",
+                    "patronymic": "Алексеевич"
+                },
+                {
+                    "idplayer": "126399",
+                    "surname": "Андреев",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "130765",
+                    "surname": "Андрюшкявичуте",
+                    "name": "Васаре",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "141096",
+                    "surname": "Антонюк",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "148380",
+                    "surname": "Абросимов",
+                    "name": "Василий",
+                    "patronymic": "Андреевич"
+                },
+                {
+                    "idplayer": "153870",
+                    "surname": "Антонов",
+                    "name": "Василий",
+                    "patronymic": "Иванович"
+                },
+                {
+                    "idplayer": "153927",
+                    "surname": "Александров",
+                    "name": "Василий",
+                    "patronymic": ""
+                },
+                {
+                    "idplayer": "158895",
+                    "surname": "Андриянец",
+                    "name": "Василиса",
+                    "patronymic": "Андреевна"
+                },
+                {
+                    "idplayer": "160142",
+                    "surname": "Аверина",
+                    "name": "Василиса",
+                    "patronymic": "Алексеевна"
+                },
+                {
+                    "idplayer": "161002",
+                    "surname": "Артемьев",
+                    "name": "Василий",
+                    "patronymic": "Александрович"
+                },
+                {
+                    "idplayer": "163853",
+                    "surname": "Афанасьев",
+                    "name": "Василий",
+                    "patronymic": ""
+                }
+            ],
+            "total_items": "35",
+            "current_items": "1-1000"
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:58 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:02 GMT
+recorded_with: VCR 4.0.0

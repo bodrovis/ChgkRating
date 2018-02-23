@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:01:05 GMT
+      - Fri, 23 Feb 2018 14:29:51 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=015024385a4d487a0995c3b7b94168c8d904611d9695a61586f91777e0336727d1a9dc1723d28e3db22817f7e1eb1b52ddc0677420e92ad1e46d1410ddf57295;
+      - chgk_session_idhash=b4157d55de2e6ca154bfcbbf85176f0fffadeee4e8b6eea1d17811177d793871ad46b19ebaf78601a5a69f69659845843d80cbde7fea4bc50533e5dc7c13b839;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,183 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"8":{"idteam":"1","idseason":"8","tournaments":["424","438","398","390","385"]},"7":{"idteam":"1","idseason":"7","tournaments":["367","364","378","327","315","304","302","301","300","291","306"]},"6":{"idteam":"1","idseason":"6","tournaments":["272","269","264","232","226","205","202","195","211"]},"4":{"idteam":"1","idseason":"4","tournaments":["188","155","150","160","141","118","126","121"]},"3":{"idteam":"1","idseason":"3","tournaments":["89","76","62","63"]},"2":{"idteam":"1","idseason":"2","tournaments":["54","25","30","22","16","3","10","12"]},"1":{"idteam":"1","idseason":"1","tournaments":["8","1409","1391","1358","1387","1369","1342","1337","1320","1333","3009","1317"]},"10":{"idteam":"1","idseason":"10","tournaments":["1271","1277","1264","1260","1255","1224","1216","1195","1188","1172"]},"11":{"idteam":"1","idseason":"11","tournaments":["1160","1159","1131","1129","1122","3011","1109","1082","1049","1132","1045","1044"]},"5":{"idteam":"1","idseason":"5","tournaments":["1017","1243","1055","1008","1005","1680","1450","1441","1327","1137","1115","1077"]},"21":{"idteam":"1","idseason":"21","tournaments":["1091","1028","1064","1503","1440","1306","1502","1506","1509"]},"18":{"idteam":"1","idseason":"18","tournaments":["1590","3000"]}}'
+      string: |-
+        {
+            "8": {
+                "idteam": "1",
+                "idseason": "8",
+                "tournaments": [
+                    "424",
+                    "438",
+                    "398",
+                    "390",
+                    "385"
+                ]
+            },
+            "7": {
+                "idteam": "1",
+                "idseason": "7",
+                "tournaments": [
+                    "367",
+                    "364",
+                    "378",
+                    "327",
+                    "315",
+                    "304",
+                    "302",
+                    "301",
+                    "300",
+                    "291",
+                    "306"
+                ]
+            },
+            "6": {
+                "idteam": "1",
+                "idseason": "6",
+                "tournaments": [
+                    "272",
+                    "269",
+                    "264",
+                    "232",
+                    "226",
+                    "205",
+                    "202",
+                    "195",
+                    "211"
+                ]
+            },
+            "4": {
+                "idteam": "1",
+                "idseason": "4",
+                "tournaments": [
+                    "188",
+                    "155",
+                    "150",
+                    "160",
+                    "141",
+                    "118",
+                    "126",
+                    "121"
+                ]
+            },
+            "3": {
+                "idteam": "1",
+                "idseason": "3",
+                "tournaments": [
+                    "89",
+                    "76",
+                    "62",
+                    "63"
+                ]
+            },
+            "2": {
+                "idteam": "1",
+                "idseason": "2",
+                "tournaments": [
+                    "54",
+                    "25",
+                    "30",
+                    "22",
+                    "16",
+                    "3",
+                    "10",
+                    "12"
+                ]
+            },
+            "1": {
+                "idteam": "1",
+                "idseason": "1",
+                "tournaments": [
+                    "8",
+                    "1409",
+                    "1391",
+                    "1358",
+                    "1387",
+                    "1369",
+                    "1342",
+                    "1337",
+                    "1320",
+                    "1333",
+                    "3009",
+                    "1317"
+                ]
+            },
+            "10": {
+                "idteam": "1",
+                "idseason": "10",
+                "tournaments": [
+                    "1271",
+                    "1277",
+                    "1264",
+                    "1260",
+                    "1255",
+                    "1224",
+                    "1216",
+                    "1195",
+                    "1188",
+                    "1172"
+                ]
+            },
+            "11": {
+                "idteam": "1",
+                "idseason": "11",
+                "tournaments": [
+                    "1160",
+                    "1159",
+                    "1131",
+                    "1129",
+                    "1122",
+                    "3011",
+                    "1109",
+                    "1082",
+                    "1049",
+                    "1132",
+                    "1045",
+                    "1044"
+                ]
+            },
+            "5": {
+                "idteam": "1",
+                "idseason": "5",
+                "tournaments": [
+                    "1017",
+                    "1243",
+                    "1055",
+                    "1008",
+                    "1005",
+                    "1680",
+                    "1450",
+                    "1441",
+                    "1327",
+                    "1137",
+                    "1115",
+                    "1077"
+                ]
+            },
+            "21": {
+                "idteam": "1",
+                "idseason": "21",
+                "tournaments": [
+                    "1091",
+                    "1028",
+                    "1064",
+                    "1503",
+                    "1440",
+                    "1306",
+                    "1502",
+                    "1506",
+                    "1509"
+                ]
+            },
+            "18": {
+                "idteam": "1",
+                "idseason": "18",
+                "tournaments": [
+                    "1590",
+                    "3000"
+                ]
+            }
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:57 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:45 GMT
+recorded_with: VCR 4.0.0

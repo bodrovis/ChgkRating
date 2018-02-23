@@ -10,7 +10,7 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0.pre1
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
@@ -19,7 +19,7 @@ http_interactions:
       server:
       - nginx/1.10.3
       date:
-      - Tue, 20 Feb 2018 19:39:19 GMT
+      - Fri, 23 Feb 2018 14:29:51 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=3435747244eabccf92dda977f54c6051635c1a11b1b2210f1d2613f8a8b9a80bea5e555be1cb81a4d4cd7917997a48aff42b6d5bdaa14a48e7710fb9a0fd8da3;
+      - chgk_session_idhash=f42fa6591a5326e71e5c33fb36a4a12a87c7307da702e8d20371eb327cf1510090069780a0b8fa08fcd7ba775853dd248740c582d607a2a494262276a4374b79;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -61,5 +61,5 @@ http_interactions:
             ]
         }
     http_version: 
-  recorded_at: Tue, 20 Feb 2018 19:39:16 GMT
+  recorded_at: Fri, 23 Feb 2018 14:29:45 GMT
 recorded_with: VCR 4.0.0

@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Mon, 09 Oct 2017 16:15:17 GMT
+      - Fri, 23 Feb 2018 14:29:52 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=8e8dc0d57c67789541f4188fd8b87ffdd8196c3ff8d783f46fdb4595307e3c3e3cd6256872b02e4e4ae773e1cc34f2a92afbef9cd90fc21aee44112f4b9fe8be;
+      - chgk_session_idhash=f2fa2d6d670b92cfe9230c031b54778f77a308d8f0565cee17b26e4ed3015a910537c05551e6186d134bcf915c3a8238dbd4c1f0e1231a1b54dcc83a62255f46;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,77 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '[{"tour":"1","mask":["0","0","0","0","1","1","1","0","0","1","0","0"]},{"tour":"2","mask":["0","0","1","0","1","1","1","0","0","0","1","0"]},{"tour":"3","mask":["1","0","0","0","1","1","1","1","0","1","0","0"]},{"tour":"4","mask":["1","0","0","0","0","1","0","0","0","1","0","1"]}]'
+      string: |-
+        [
+            {
+                "tour": "1",
+                "mask": [
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "1",
+                    "1",
+                    "0",
+                    "0",
+                    "1",
+                    "0",
+                    "0"
+                ]
+            },
+            {
+                "tour": "2",
+                "mask": [
+                    "0",
+                    "0",
+                    "1",
+                    "0",
+                    "1",
+                    "1",
+                    "1",
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "0"
+                ]
+            },
+            {
+                "tour": "3",
+                "mask": [
+                    "1",
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "1",
+                    "1",
+                    "1",
+                    "0",
+                    "1",
+                    "0",
+                    "0"
+                ]
+            },
+            {
+                "tour": "4",
+                "mask": [
+                    "1",
+                    "0",
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "0",
+                    "0",
+                    "0",
+                    "1",
+                    "0",
+                    "1"
+                ]
+            }
+        ]
     http_version: 
-  recorded_at: Mon, 09 Oct 2017 16:15:15 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:46 GMT
+recorded_with: VCR 4.0.0

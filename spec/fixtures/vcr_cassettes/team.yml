@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:00:22 GMT
+      - Fri, 23 Feb 2018 14:27:25 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=b07acb79426a0818d3f22a549462d6430ba2fa3151a92a7dd92843b8d091ff90646ed15416d8f99432937fbb3c520fbfb7058ebe6f9f0dfaf9a9629aacb21d90;
+      - chgk_session_idhash=741e1f9f0e261e06c6c1fe267d4bb99a76184e547cdae21725cda63f77de3f55ffddde661054f0d72d0a7251a973ec783baff7cff0a4289d7ddbf4d15598f131;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,15 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '[{"idteam":"1","name":"Неспроста","town":"Москва","comment":""}]'
+      string: |-
+        [
+            {
+                "idteam": "1",
+                "name": "Неспроста",
+                "town": "Москва",
+                "comment": ""
+            }
+        ]
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:13 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:27:19 GMT
+recorded_with: VCR 4.0.0

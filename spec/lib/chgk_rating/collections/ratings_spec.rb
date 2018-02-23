@@ -14,7 +14,7 @@ RSpec.describe ChgkRating::Collections::Ratings do
   specify '#to_a' do
     ratings_arr = subject.to_a
     expect(ratings_arr.count).to eq 572
-    expect(ratings_arr[500]['date']).to eq '2006-11-23'
+    expect(ratings_arr[500]['date']).to eq '2006-08-17'
   end
   specify('#date') { expect(ratings.date.to_s).to eq '2003-07-01' }
   specify('#formula') { expect(ratings.formula).to eq :a }

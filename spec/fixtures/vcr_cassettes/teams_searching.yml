@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:01:07 GMT
+      - Fri, 23 Feb 2018 14:29:56 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=b93988536ccf99d180b50459ab125eee170dce7d3d8c03685e4a6ab0b1273b47c74786988f549987bd271f9a36fa6bd7799db45b6bceb2b47aecb8543a89ebaf;
+      - chgk_session_idhash=14d1dc932a83d366b0e72adbf0ae00ebed46cc893ce7740176da515af4ebbbd0843ded2641e7de9ffa10ae0a7793c145b5b660ef47d8085770b5b1c5ffb9df57;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,10 +45,73 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"items":[{"idteam":"5444","name":"Эйфью","town":"Минск"},{"idteam":"31864","name":"Энергия","town":"Минск"},{"idteam":"33189","name":"Эдельвейс","town":"Минск"},{"idteam":"33216","name":"Энигма","town":"Минск"},{"idteam":"39997","name":"Эталон
-        этанола","town":"Минск"},{"idteam":"42689","name":"Эрудит","town":"Минусинск"},{"idteam":"49887","name":"Экспромт
-        - 2,66","town":"Минск"},{"idteam":"51722","name":"Эстонский экспресс","town":"Минск"},{"idteam":"52728","name":"Экстремум","town":"Минусинск"},{"idteam":"53479","name":"Экономные
-        люди","town":"Минск"},{"idteam":"58743","name":"Эскадрон моих мыслей шальных","town":"Минск"}],"total_items":"11","current_items":"1-1000"}'
+      string: |-
+        {
+            "items": [
+                {
+                    "idteam": "5444",
+                    "name": "Эйфью",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "31864",
+                    "name": "Энергия",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "33189",
+                    "name": "Эдельвейс",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "33216",
+                    "name": "Энигма",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "39997",
+                    "name": "Эталон этанола",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "42689",
+                    "name": "Эрудит",
+                    "town": "Минусинск"
+                },
+                {
+                    "idteam": "49887",
+                    "name": "Экспромт - 2,66",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "51722",
+                    "name": "Эстонский экспресс",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "52728",
+                    "name": "Экстремум",
+                    "town": "Минусинск"
+                },
+                {
+                    "idteam": "53479",
+                    "name": "Экономные люди",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "58743",
+                    "name": "Эскадрон моих мыслей шальных",
+                    "town": "Минск"
+                },
+                {
+                    "idteam": "61330",
+                    "name": "Эскулапы",
+                    "town": "Минск"
+                }
+            ],
+            "total_items": "12",
+            "current_items": "1-1000"
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:58 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:50 GMT
+recorded_with: VCR 4.0.0

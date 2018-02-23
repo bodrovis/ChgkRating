@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:01:06 GMT
+      - Fri, 23 Feb 2018 14:29:55 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=2365224e6aead7fcaf53e0497cb5315569dd83630017d68a67dc989e1c23ec89f6246383bf2275d3ddf85e308f870d4f53aef506a0c2e988c07c2410166215dd;
+      - chgk_session_idhash=ab6941e8db3bf2d0e283ce2023f7bd6e14b5bd7c1fcd5bc07242e5a1899e58195ba1de82d5e2dc133f1325cfb5d068beac462d015ea3492e41139a177279a1c1;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,59 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"6":{"idteam":"1","idseason":"6","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"7":{"idteam":"1","idseason":"7","players":["1585","2935","18935","20612","29800","32979"],"captain":"2935"},"8":{"idteam":"1","idseason":"8","players":["2935","18935","20612","29800","30152","32979"],"captain":"2935"},"9":{"idteam":"1","idseason":"9","players":["2935","18935","20612","32979"],"captain":"2935"}}'
+      string: |-
+        {
+            "6": {
+                "idteam": "1",
+                "idseason": "6",
+                "players": [
+                    "1585",
+                    "2935",
+                    "18935",
+                    "20612",
+                    "29800",
+                    "32979"
+                ],
+                "captain": "2935"
+            },
+            "7": {
+                "idteam": "1",
+                "idseason": "7",
+                "players": [
+                    "1585",
+                    "2935",
+                    "18935",
+                    "20612",
+                    "29800",
+                    "32979"
+                ],
+                "captain": "2935"
+            },
+            "8": {
+                "idteam": "1",
+                "idseason": "8",
+                "players": [
+                    "2935",
+                    "18935",
+                    "20612",
+                    "29800",
+                    "30152",
+                    "32979"
+                ],
+                "captain": "2935"
+            },
+            "9": {
+                "idteam": "1",
+                "idseason": "9",
+                "players": [
+                    "2935",
+                    "18935",
+                    "20612",
+                    "32979"
+                ],
+                "captain": "2935"
+            }
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:00:57 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:49 GMT
+recorded_with: VCR 4.0.0

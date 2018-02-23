@@ -10,16 +10,16 @@ http_interactions:
       Accept:
       - application/json
       User-Agent:
-      - chgk_rating ruby gem/1.0.0
+      - chgk_rating ruby gem/1.0.0.rc1
   response:
     status:
       code: 200
-      message: 
+      message: OK
     headers:
       server:
       - nginx/1.10.3
       date:
-      - Fri, 06 Oct 2017 16:56:57 GMT
+      - Fri, 23 Feb 2018 14:29:07 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -29,7 +29,7 @@ http_interactions:
       x-frame-options:
       - deny
       set-cookie:
-      - chgk_session_idhash=75668851ffdbb6339a53e447b79cb77a54aac6c0827e6190bbed3b34dbc8526239834a5ae9828ac52cfeddd23144ccbec2fd2ff067a8ff4f507f0a934087dc15;
+      - chgk_session_idhash=6d12639ca8e6b842ad8604d0a928138185001abb11e6ef367548bd15293c724a440179a1bed0a923f7c5775d1ffafa5f381b17afc741f0799bb51a4187bf3791;
         path=/; HttpOnly
       pragma:
       - no-cache
@@ -45,7 +45,15 @@ http_interactions:
       - en
     body:
       encoding: UTF-8
-      string: '{"idteam":"1","idrelease":"24","rating":"9071","rating_position":"9","date":"1999-01-07","formula":"b"}'
+      string: |-
+        {
+            "idteam": "1",
+            "idrelease": "24",
+            "rating": "9071",
+            "rating_position": "9",
+            "date": "1999-01-07",
+            "formula": "b"
+        }
     http_version: 
-  recorded_at: Fri, 06 Oct 2017 16:56:49 GMT
-recorded_with: VCR 3.0.3
+  recorded_at: Fri, 23 Feb 2018 14:29:01 GMT
+recorded_with: VCR 4.0.0

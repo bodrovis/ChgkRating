@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.0 (2018-02-23)
+
+* First stable version at last
+* Make `TournamentTeam` compatible with the recent API changes
+* More doc tweaks
+
 ## v1.0.0.rc1 (2018-02-22)
 
 * Collections can be converted to arrays or hashes

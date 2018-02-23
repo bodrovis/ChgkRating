@@ -116,8 +116,9 @@ module ChgkRating
                                       bonus_b: [],
                                       tech_rating: [],
                                       predicted_position: [],
-                                      real_bonus_b: [],
+                                      d_bonus_a: [],
                                       d_bonus_b: [],
+                                      d_diff_bonus: [],
                                       included_in_rating: ['included_in_rating', :boolean_binboolean]
                                   },
                                   :current_name,
