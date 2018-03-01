@@ -5,8 +5,8 @@ Gemfile.lock
 *~
 .bundle
 .rvmrc
-doc/*
 log/*
 measurement/*
 pkg/*
 .DS_Store
+docs/_site/*
