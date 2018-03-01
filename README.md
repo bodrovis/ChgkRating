@@ -10,6 +10,8 @@ Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api)
 
 [Competitive CHGK (aka "What? Where? When?")](https://en.wikipedia.org/wiki/What%3F_Where%3F_When%3F#Competitive_game) is a popular intellectual game where teams of up to six people are trying to find an answers to various questions.
 
+Documentation can also be found on [RubyDoc](http://www.rubydoc.info/github/bodrovis/ChgkRating/master).
+
 ## Contents
 
 * [Installation and Requirements](#installation-and-requirements)
