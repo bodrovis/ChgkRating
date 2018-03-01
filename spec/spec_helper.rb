@@ -1,6 +1,8 @@
 require 'simplecov'
 SimpleCov.start do
   add_filter "spec/"
+  add_filter ".github/"
+  add_filter "docs/"
 end
 
 require 'chgk_rating'
