@@ -3,6 +3,86 @@
 
 @import "{{ site.theme }}";
 
+body {
+  font-size: 17px !important;
+}
+
+// Sidebar
+
 aside#sidebar {
   font-size: 16px;
+}
+
+#sidebar .lang {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  top: 3px;
+}
+
+#sidebar ul {
+  margin: 0;
+}
+
+#sidebar li {
+  margin-top: 7px;
+}
+
+#sidebar .subtitle {
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+#sidebar .subtitle:last-of-type {
+  margin-top: 20px;
+}
+
+#sidebar footer {
+  margin-top: 40px;
+}
+
+// Typography
+
+header h2 {
+  font-size: 29px;
+}
+
+#main-content h1 {
+  margin-bottom: 15px;
+  font-size: 50px;
+}
+
+#main-content h2 {
+  font-size: 35px;
+}
+
+#main-content h3 {
+  font-size: 32px;
+}
+
+#main-content h4 {
+  font-size: 26px;
+}
+
+#main-content h5 {
+  font-size: 22px;
+}
+
+#main-content h6 {
+  font-size: 20px;
+}
+
+a.button small {
+  font-size: 17px;
+}
+
+header, #main-content h1, #main-content h2,
+#main-content h3, #main-content h4, #main-content h5,
+#main-content h6, a.button {
+  font-family: 'Caveat', 'Helvetica Neue', Helvetica, Arial, serif;
+}
+
+code, pre code {
+  background-color: transparent;
 }

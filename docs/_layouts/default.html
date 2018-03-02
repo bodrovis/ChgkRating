@@ -4,7 +4,7 @@
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}" media="screen" type="text/css">
   <link rel="stylesheet" href="{{ '/assets/css/print.css' | relative_url }}" media="print" type="text/css">
 
@@ -35,10 +35,76 @@
     </section>
 
     <aside id="sidebar">
+      <p class="subtitle">
+        <img class="lang"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC1UlEQVQ4jaWTS2hcdRyFv/8jd9J5ZfKYRCexFWtrMXUUUq0oLVWJBNtKEZE21jeK4qKIIIgUBLULsYi4UBTrG4uPLtpQU60EQUg1NF20NTUhTFWUxMwkmcydZjL33v/PRSCr7vqtzuLsznfgClErqWULKDSXAvY+sZXOM8OUhkcARXNPntKdd3PooyHwGkDEATD/C7b3kbf/GJ2Kr2/PxEgnG/ivWOW1g0+Te/8Dpr0OECG3eyfj/Y8xdPFD2lsTLFSXKNYM65p2fWu/ePchm23Kcd+LRxg8dhasZtYPaJkuUin8DQLVqWnmqzUKE1MUCh4PPncv39zfxafb++L61JMvo4DvDz5AOLaf2zevoTRXJVSCGI0YhRhNcdZn244eFg/v4rOjB5js2sjCDd1Om+YMxVffAicYoxn++FF612WoOUA5nERU6yE7N7Yx9PgaKl9+x6X+3ayVabLP7MUmNt1EsjvP/MBJlAtxyqATjfgXxqn7PiD458co//AzEtZpuGcrhCH1gZPMDx5HfULr5KZE83WB1TgECQMQwaRT6FUxQOEWa0QVH5xDEAgdcSd8HVUGrE7F0ckkSIhWgF61vK+xKysrz8Nk0igRnAgqcphIMIsR1qSSqGQcqzVYDUqBUkR+BQnDZUesxWZakChCRYJCsNqgS0tw5t9/JuUy/PnS6zLakZfRjrz8tf/Ny1Xkqx8Hj2lqPjMHDjGicgQPP89vx0cYr0ODakSlOlHJHJ5q5OxcwFihuCLuzCvvcL53D/rc2n6yZZ/OqQl6b3mKzS/8ytzsEl66DZW+BpVejZdqZW6hzo13fc6WfYPMlGtk39hHz0+HsbGj79m+cp4Tz54m1hSDm28le1WM1uwGqm0+AM3t62m7OgG33cFIWdO+5xTb+7rZ5pWsQqmueKNdveH6azHGoIGFJUdozPJxAAkCvDAiFTOIOIIg4PeJi0SiLlzpm/kfIppKwdK1IYcAAAAASUVORK5CYII=">
+        Index
+      </p>
+
       <ul>
-        <li><a href="#">a</a></li>
-        <li><a href="#">asdfsdfsdf</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/getting_started">Getting Started</a></li>
+        <li>
+          API resources
+          <ul>
+            <li><a href="/player">Player</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/recap">Recap</a></li>
+            <li><a href="/rating">Team's Rating</a></li>
+            <li><a href="/tournament">Tournament</a></li>
+            <li><a href="/tournament_team">Team at tournament</a></li>
+            <li><a href="/tournament_team_results">Team's results at tournament</a></li>
+            <li><a href="/tournament_team_players">Team's recap at tournament</a></li>
+          </ul>
+        </li>
+        <li>
+          Additional info
+          <ul>
+            <li><a href="/resources">Resources types</a></li>
+            <li><a href="/loading">Lazy/eager loading</a></li>
+            <li><a href="/pagination">Pagination</a></li>
+          </ul>
+        </li>
       </ul>
+
+      <p class="subtitle">
+        <img class="lang"
+             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVQ4jZ2Tv04CQRCHv1nGW8BGvUSJWlJp4wPwYDySve9gRWJBb20BiQUmxy03Y7EknCcK+iWT/TP7m938NiN8J+zZa2PthUyn0yLGOASCiBzQZtwdwKqqWsl8Pn8Zj8cPRyk7zGazRzWzs36//x89i8Xi4uhn/4Sm5NS1HT65h80GdDKBwUDo9SAEEAF3aJo8Zr92uINZzqcE6i6YCSI50RV0xV9DUMhCyLf/1RJ1d8w8CwXw44sIhj4PJ9zHAkIPwrbKvgLemphBYzxVazReCfEUCL4t0DZBuuqM5YjvoHKrcF7svuAQztZBI7w16Gp0UjU3BTsTjsAdMD5SquX6srwbRB2VZYmqEkR+7UYzszollssl62SvAqCqqCp/6caUEk3T8AmWYoRdOJ12+wAAAABJRU5ErkJggg==">
+        Оглавление
+      </p>
+
+      <ul>
+        <li><a href="/index_ru">Главная</a></li>
+        <li><a href="/getting_started_ru">Начало работы</a></li>
+        <li>
+          API resources
+          <ul>
+            <li><a href="/player_ru">Игроки</a></li>
+            <li><a href="/team">Team</a></li>
+            <li><a href="/recap">Recap</a></li>
+            <li><a href="/rating">Team's Rating</a></li>
+            <li><a href="/tournament">Tournament</a></li>
+            <li><a href="/tournament_team">Team at tournament</a></li>
+            <li><a href="/tournament_team_results">Team's results at tournament</a></li>
+            <li><a href="/tournament_team_players">Team's recap at tournament</a></li>
+          </ul>
+        </li>
+        <li>
+          Additional info
+          <ul>
+            <li><a href="/resources">Resources types</a></li>
+            <li><a href="/loading">Lazy/eager loading</a></li>
+            <li><a href="/pagination">Pagination</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <footer>
+        Licensed under the <a href="https://github.com/bodrovis/ChgkRating/blob/master/LICENSE" target="_blank">MIT License</a>
+        <br>
+        (c) <a href="http://bodrovis.tech" target="_blank">Ilya Bodrov-Krukowski</a>
+      </footer>
+
     </aside>
   </div>
 </div>
