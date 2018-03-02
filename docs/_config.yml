@@ -1,6 +1,9 @@
 title: ChgkRating
 description: Opinionated Ruby client for the competitive What? Where? When? rating WebAPI
 theme: jekyll-theme-architect
+markdown: kramdown
+url: bodrovis.github.io/ChgkRating
+repository: bodrovis/ChgkRating
 exclude:
   - Gemfile
   - Gemfile.lock
