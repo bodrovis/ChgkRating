@@ -12,7 +12,7 @@ Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api)
 
 The main documentation can be found at the [official website](http://chgk-rating.bodrovis.tech/).
 
-Документация на русском языке также доступна на [официальном сайте](http://chgk-rating.bodrovis.tech/index_ru].
+Документация на русском языке также доступна на [официальном сайте](http://chgk-rating.bodrovis.tech/index_ru).
 
 Documentation can also be found on [RubyDoc](http://www.rubydoc.info/github/bodrovis/ChgkRating/master).
 
