@@ -1,8 +1,8 @@
-# Recap (Team's Roster)
+# Recaps (Team's Rosters)
 
 The term "recap" is used by the ChgkRating API but I do not think it is suitable. Basically, it means "team's roster", "team list", or "team's lineup".
 
-## Recaps - Collection
+## Collection
 
 Get recaps grouped by seasons for a single team:
 
@@ -20,7 +20,7 @@ The `Recaps` collection responds to the following methods:
 team # Team - lazily-loaded Team model
 ```
 
-## Recap - Model
+## Model
 
 Get information about a team's recap in a given season:
 

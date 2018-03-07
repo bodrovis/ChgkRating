@@ -1,6 +1,6 @@
 # Team Results at Tournament
 
-## Team Results at Tournament - Collection
+## Collection
 
 Get team results at a given tournament:
 
@@ -19,7 +19,7 @@ team       # Team. Lazily-loaded model
 tournament # Tournament. Lazily-loaded model
 ```
 
-## Team Result at Tournament - Model
+## Model
 
 API does not allow to load team result for a given tour separately, so use the `team_results_at_tournament` method listed above.
 

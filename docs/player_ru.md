@@ -1,36 +1,36 @@
 # Игроки
 
-## Players - Collection
+## Коллекция
 
-Returns an array-like `Players` object containing list of `Player` models sorted by their IDs:
+Возвращает объект `Players`, созданный на основе массива. Он содержит в себе модели `Player`, отсортированные по идентификатору.
 
 ```ruby
-client.players params={} # Input:
-                         # (optional) params - Hash
-                         ## Supported params:
-                         ## :page - Integer or String. The requested page. Default is 1, and there are 1000 results per page.
-                         ## :lazy - Boolean. Should the Player models be marked as lazily loaded? Note that the models will still contain all the information returned by the API.
-                         ## :collection - Enumerable. An array or collection of Players that will be used to build a new collection. If this option is provided, API request will not be sent. This param is mostly used for internal purposes, but you may take advantage of it as well.
+client.players params={} # Входные значения:
+                         # (необязательное) params - Hash
+                         ## Поддерживаемые параметры:
+                         ## :page - Integer или String. Запрашиваемая страница. По умолчанию запрашивается первая страница, а количество возвращаемых результатов никогда не превышает 1000.
+                         ## :lazy - Boolean. Следует ли пометить загруженных игроков как "ленивых"? В основном, этот параметр используется для служебных целей; устанавливать его вручную обычно не имеет смысла.
+                         ## :collection - Enumerable. Обычный массив идентификаторов игроков или коллекция класса Players, которую необходимо использовать для создания новой коллекции. Если присутствует эта опция, то запрос к API не будет отправлен.
 ```
 
-Note that the information returned for each `Player` is a bit limited: specifically, `db_chgk_info_tag` and `comment` attributes are `nil` (actually, most players have no value for these attributes anyways). However, you are free to forcibly eager load one or more players:
+Следует заметить, что информация о каждом игроке в данном случае будет ограничена: в частности, атрибуты `db_chgk_info_tag` и `comment` всегда имеют значение `nil`, так как API их не возвращает (надо отметить, что у большинства игроков эти поля всё равно пустые). Для получения полной информации об игроках следует использовать [принудительную загрузку](/loading_ru):
 
 ```ruby
 players = client.players.take(3)
 players.map! {|p| p.eager_load! true}
 ```
 
-## Player - Model
+## Модель
 
-Returns information about a single `Player`:
+Возвращает образец класса `Player`, содержащий информацию об одном игроке.
 
 ```ruby
-client.player id, lazy=false # Input:
-                             # id - Integer or String, player's id
-                             # (optional) lazy - Boolean   
+client.player id, lazy=false # Входные значения:
+                             # id - Integer или String, идентификатор игрока
+                             # (необязательное) lazy - Boolean, следует ли загрузить игрока "лениво"
 ```
 
-Getter methods:
+Доступные методы:
 
 ```ruby
 id               # String
@@ -41,22 +41,22 @@ comment          # String
 db_chgk_info_tag # String
 ```
 
-Special notes:
+Особые указания:
 
-* Can be lazily-loaded and eager-loaded.
+* Поддерживается "ленивая" и принудительная загрузка
 
-## Players - Search
+## Поиск
 
-Search for players by a given criteria:
+Поиск игроков по заданным критериям.
 
 ```ruby
-client.search_players params   # Input:
+client.search_players params   # Входные значения:
                                # params - Hash
-                               ## Supported search params:
+                               ## Поддерживаемые критерии поиска:
                                ## :name - String
                                ## :surname - String
                                ## :patronymic  - String
-                               ## :page - String or Integer. Default is 1, and there are 1000 results per page.
+                               ## :page - String или Integer. Запрашиваемая страница. По умолчанию запрашивается первая страница, а количество возвращаемых результатов никогда не превышает 1000.
 ```
 
-Returns an array-like `Players::Search` collection consisting of `Player` models. 
+Возвращает коллекцию `Players::Search` (созданную на основе массива), содержащую модели `Player`.

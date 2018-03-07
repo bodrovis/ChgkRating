@@ -1,6 +1,6 @@
 # Team Players at Tournament
 
-## Team Players at Tournament - Collection
+## Collection
 
 Get information about the team's roster at the given tournament:
 
@@ -19,7 +19,7 @@ id              # String
 tournament      # Tournament. Lazily-loaded model
 ```
 
-## Team Players at Tournament - Model
+## Model
 
 It is not possible to load information about a specific player at the given tournament, so use the `team_players_at_tournament` method listed above.
 

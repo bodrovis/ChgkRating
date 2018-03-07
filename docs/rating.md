@@ -1,6 +1,6 @@
 # Team Ratings
 
-## Team Ratings - Collection
+## Collection
 
 Get all ratings for a single team:
 
@@ -17,7 +17,7 @@ Collection responds to the following methods:
 team # Team - lazily-loaded model
 ```
 
-## Team Rating - Model
+## Model
 
 Get `Rating` for a team in a given release:
 

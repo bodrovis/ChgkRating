@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email                 = ['golosizpru@gmail.com']
   spec.summary               = 'Ruby interface to the competitive What? Where? When? rating API'
   spec.description           = 'Opinionated Ruby client for the competitive What? Where? When? rating WebAPI (rating.chgk.info) that allows to work with data as with Ruby objects'
-  spec.homepage              = 'https://github.com/bodrovis/ChgkRating'
+  spec.homepage              = 'http://chgk-rating.bodrovis.tech/'
   spec.license               = 'MIT'
   spec.platform              = Gem::Platform::RUBY
   spec.required_ruby_version = '>= 2.4.0'

@@ -1,6 +1,6 @@
 # Teams at Tournament
 
-## Teams at Tournament - Collection
+## Collection
 
 Get a list of all teams which participated in a given tournament:
 
@@ -15,7 +15,7 @@ Returns an array-like `TournamentTeams` collection that responds to the followin
 tournament # Tournament. Lazily-loaded model
 ```
 
-## Team at Tournament - Model
+## Model
 
 Instantiate a `TournamentTeam` model:
 

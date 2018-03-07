@@ -1,6 +1,6 @@
 # Players
 
-## Players - Collection
+## Collection
 
 Returns an array-like `Players` object containing list of `Player` models sorted by their IDs:
 
@@ -20,7 +20,7 @@ players = client.players.take(3)
 players.map! {|p| p.eager_load! true}
 ```
 
-## Player - Model
+## Model
 
 Returns information about a single `Player`:
 
@@ -45,7 +45,7 @@ Special notes:
 
 * Can be lazily-loaded and eager-loaded.
 
-## Players - Search
+## Search
 
 Search for players by a given criteria:
 

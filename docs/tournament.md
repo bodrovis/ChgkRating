@@ -1,6 +1,6 @@
 # Tournaments
 
-## Tournaments - Collection
+## Collection
 
 ```ruby
 client.tournaments team_or_id: nil, season_id: nil, params: {} # Input (arguments are passed in a hash-like format):
@@ -32,7 +32,7 @@ team        # Nil or lazily-loaded Team
 season_id   # Nil or String
 ```
 
-## Tournament - Model
+## Model
 
 Get information about a single tournament:
 

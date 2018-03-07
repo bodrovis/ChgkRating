@@ -1,6 +1,6 @@
 # Teams
 
-## Teams - Collection
+## Collection
 
 Get a list of all teams sorted by their IDs:
 
@@ -15,7 +15,7 @@ client.teams params={}   # Input:
 
 Returns an array-like `Teams` object. A bit limited set of information is returned for each `Team` model: specifically, a `comment` attribute is set to `nil`.
 
-## Team - Model
+## Model
 
 Get full information about a single `Team`:
 
@@ -66,7 +66,7 @@ team.tournaments(season_id: nil, params: {}) # Returns a collection of Tournamen
                                              ## :page - String or Integer. Default is 1
 ```
 
-## Teams - Search
+## Search
 
 Search for teams by a given criteria:
 
