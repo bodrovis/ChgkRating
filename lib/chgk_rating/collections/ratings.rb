@@ -5,7 +5,7 @@ module ChgkRating
 
       def initialize(params = {})
         @team = build_model params[:team]
-
+        @player = build_model params[:player], ChgkRating::Models::Player
         super
       end
 
@@ -16,7 +16,7 @@ module ChgkRating
       end
 
       def api_path
-        "teams/#{@team.id}/rating"
+        @team ? "teams/#{@team.id}/rating" : "players/#{@player.id}/rating"
       end
     end
   end

@@ -67,8 +67,11 @@ module ChgkRating
                               ],
                               RATING: {
                                   team: ['idteam', :team_id],
+                                  player: ['idplayer', :player_id],
                                   release_id: 'idrelease',
                                   rating: [],
+                                  tournaments_in_year: [],
+                                  tournament_count_total: [],
                                   rating_position: [],
                                   date: ['date', :date],
                                   formula: ['formula', :sym]

@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/players/1000/rating/1336
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Fri, 13 Apr 2018 15:43:39 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=d37197ae0ff784b7413f996ece52804392ee0b18beef536f8d3674acd0b93bad08f9ff5a3d9d2af5c70ec3d7f20035a78b828cd33f832efca7fbed0eb7498577;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "idplayer": "1000",
+            "idrelease": "1336",
+            "rating": "7674",
+            "rating_position": "1417",
+            "date": "2018-04-12",
+            "tournaments_in_year": "15",
+            "tournament_count_total": "284"
+        }
+    http_version: 
+  recorded_at: Fri, 13 Apr 2018 15:43:26 GMT
+recorded_with: VCR 4.0.0

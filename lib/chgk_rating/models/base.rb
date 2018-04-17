@@ -81,6 +81,7 @@ module ChgkRating
       def extract_from(raw_data)
         self.class.attribute_mapping.each do |attr, mapping|
           data = raw_data.is_a?(self.class) ? raw_data.send(attr) : raw_data[ mapping[:raw_name] ]
+          next unless data
           data = mapping[:transform_up].call(data) if mapping.has_key?(:transform_up)
           instance_variable_set "@#{attr}", data
         end

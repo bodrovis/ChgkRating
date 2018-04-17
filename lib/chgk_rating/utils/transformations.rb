@@ -43,9 +43,13 @@ module ChgkRating
 
         def to_star(method = :to_s, iterate = false)
           ->(d) do
-            iterate ?
-                d.map {|obj| obj.send method } :
-                d.send(method)
+            begin
+              iterate ?
+                  d.map {|obj| obj.send method } :
+                  d.send(method)
+            rescue NoMethodError
+              nil
+            end
           end
         end
       end

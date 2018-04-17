@@ -6,6 +6,7 @@ module ChgkRating
     end
 
     def extract_id_from(obj, klass = ChgkRating::Models::Team)
+      return unless obj
       return obj unless obj.is_a? klass
       obj&.id
     end
