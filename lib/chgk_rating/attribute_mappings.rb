@@ -85,8 +85,6 @@ module ChgkRating
                               TOURNAMENT: [
                                   {
                                       id: 'idtournament',
-                                      team: ['idteam', :team_id],
-
                                       date_start: ['date_start', :datetime],
                                       date_end: ['date_end', :datetime],
                                       tour_count: [],
