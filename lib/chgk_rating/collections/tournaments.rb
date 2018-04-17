@@ -5,9 +5,10 @@ module ChgkRating
 
       def initialize(params = {})
         @team = build_model params[:team]
+        @player = build_model params[:player], ChgkRating::Models::Player
 
         @season_id = params[:season_id]
-        params.merge!(lazy: true) if @team || @season_id
+        params.merge!(lazy: true) if @team || @season_id || @player
         super
       end
 
@@ -16,6 +17,7 @@ module ChgkRating
             key,
             {
                 'idteam' => @team.id.to_s,
+                'idplayer' => @player.id.to_s,
                 'idseason' => key,
                 'tournaments' => values.map(&:to_h)
             }
@@ -26,7 +28,7 @@ module ChgkRating
 
       def process(_results, params = {})
         super do |result|
-          if @team && @season_id.nil?
+          if (@team || @player) && @season_id.nil?
             ChgkRating::Collections::Tournaments.new(collection: result['tournaments'],
                                                      lazy: true).items
           else
@@ -37,8 +39,12 @@ module ChgkRating
 
       def api_path
         path = 'tournaments'
-        return path unless @team
-        path = "teams/#{@team.id}/#{path}"
+        return path unless @team || @player
+        path = if @team
+                 "teams/#{@team.id}/#{path}"
+               else
+                 "players/#{@player.id}/#{path}"
+               end
         return path unless @season_id
         path + "/#{@season_id}"
       end
