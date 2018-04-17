@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.1.0 (unreleased)
+
+* Added ability to fetch ratings for players
+* Tested against more recent Ruby versions
+
 ## v1.0.0 (2018-02-23)
 
 * First stable version at last

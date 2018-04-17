@@ -72,7 +72,7 @@ module ChgkRating
                                   rating: [],
                                   tournaments_in_year: [],
                                   tournament_count_total: [],
-                                  rating_position: [],
+                                  ☼: [],
                                   date: ['date', :date],
                                   formula: ['formula', :sym]
                               },

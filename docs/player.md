@@ -45,6 +45,17 @@ Special notes:
 
 * Can be lazily-loaded and eager-loaded.
 
+### Interface Methods
+
+`Player` model responds to the following convenience methods:
+
+```ruby
+player.rating(release_id) # Returns Rating for the current Player in a given release. Input:
+                          # release_id - String or Integer
+
+player.ratings              # Returns an array-like Ratings collection for the current player.
+```
+
 ## Search
 
 Search for players by a given criteria:

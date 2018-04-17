@@ -32,4 +32,22 @@ RSpec.describe ChgkRating::Models::Player do
     end
     expect(lazy_player.name).to eq 'Николай'
   end
+
+  describe '#rating' do
+    let(:player_rating) do
+      VCR.use_cassette 'player_rating_release' do
+        subject.rating 1000
+      end
+    end
+    it { expect(player_rating).to be_an_instance_of ChgkRating::Models::Rating }
+  end
+
+  describe '#ratings' do
+    let(:player_ratings) do
+      VCR.use_cassette 'player_ratings_all_releases' do
+        subject.ratings
+      end
+    end
+    it { expect(player_ratings).to be_an_instance_of ChgkRating::Collections::Ratings }
+  end
 end

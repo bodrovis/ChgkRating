@@ -40,7 +40,7 @@ Special notes:
 
 ### Interface Methods
 
-`Team` model respond to the following convenience methods:
+`Team` model responds to the following convenience methods:
 
 ```ruby
 team.recap(season_id)                        # Returns a single Recap for the current Team at a given season. Input:

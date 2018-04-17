@@ -56,8 +56,18 @@ module ChgkRating
     # @return [ChgkRating::Models::Rating] The requested Rating.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load rating for.
     # @param release_id [String or Integer] Release to load rating for.
-    def rating(team_or_id, release_id)
+    def team_rating(team_or_id, release_id)
       team(team_or_id, true).rating(release_id)
+    end
+
+    # Returns Rating for a given Player in a given release
+    #
+    # @raise [ChgkRating::Error::NotFound] Error raised when the requested release or Player cannot be found.
+    # @return [ChgkRating::Models::Rating] The requested Rating.
+    # @param player_or_id [String, Integer or ChgkRating::Models::Team] Player to load rating for.
+    # @param release_id [String or Integer] Release to load rating for.
+    def player_rating(player_or_id, release_id)
+      player(player_or_id, true).rating(release_id)
     end
 
     # Search
@@ -130,13 +140,22 @@ module ChgkRating
       ChgkRating::Collections::Tournaments.new params.merge(team: team_or_id, season_id: season_id)
     end
 
-    # Returns an array-like Ratings collection for a given team.
+    # Returns an array-like Ratings collection for a given Team.
     #
     # @raise [ChgkRating::Error::NotFound] Error raised when the requested Team cannot be found.
     # @return [ChgkRating::Collection::Ratings] The collection of ratings.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load ratings for.
-    def ratings(team_or_id)
+    def team_ratings(team_or_id)
       team(team_or_id, true).ratings
+    end
+
+    # Returns an array-like Ratings collection for a given Player.
+    #
+    # @raise [ChgkRating::Error::NotFound] Error raised when the requested Player cannot be found.
+    # @return [ChgkRating::Collection::Ratings] The collection of ratings.
+    # @param player_or_id [String, Integer or ChgkRating::Models::Team] Player to load ratings for.
+    def player_ratings(player_or_id)
+      player(player_or_id, true).ratings
     end
 
     # Returns an array-like TournamentTeams collection specifying which teams participated in a given tournament

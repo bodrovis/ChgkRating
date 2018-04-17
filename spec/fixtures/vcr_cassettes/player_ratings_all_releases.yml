@@ -1,0 +1,3428 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/players/42511/rating
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Tue, 17 Apr 2018 18:54:27 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=58047b0a843469729b03a0d4eb750a73f2fa70d7d3066c61e4352d62efd26f6b3a4e2e09da71a5d70040c585bb3f35631c83b373b957ab11f219ca3a73abfe69;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+            {
+                "idplayer": "42511",
+                "idrelease": "141",
+                "rating": "3",
+                "rating_position": "13104",
+                "date": "2011-03-31",
+                "tournaments_in_year": "4",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "854",
+                "rating": "3",
+                "rating_position": "13138",
+                "date": "2011-04-07",
+                "tournaments_in_year": "4",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "855",
+                "rating": "296",
+                "rating_position": "5586",
+                "date": "2011-04-14",
+                "tournaments_in_year": "5",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "856",
+                "rating": "293",
+                "rating_position": "5618",
+                "date": "2011-04-21",
+                "tournaments_in_year": "6",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "857",
+                "rating": "290",
+                "rating_position": "5581",
+                "date": "2011-04-28",
+                "tournaments_in_year": "6",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "858",
+                "rating": "287",
+                "rating_position": "5681",
+                "date": "2011-05-05",
+                "tournaments_in_year": "6",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "859",
+                "rating": "284",
+                "rating_position": "5704",
+                "date": "2011-05-12",
+                "tournaments_in_year": "6",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "860",
+                "rating": "282",
+                "rating_position": "5774",
+                "date": "2011-05-19",
+                "tournaments_in_year": "6",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "861",
+                "rating": "1593",
+                "rating_position": "2176",
+                "date": "2011-05-26",
+                "tournaments_in_year": "8",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "862",
+                "rating": "2118",
+                "rating_position": "1688",
+                "date": "2011-06-02",
+                "tournaments_in_year": "9",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "863",
+                "rating": "2097",
+                "rating_position": "1752",
+                "date": "2011-06-09",
+                "tournaments_in_year": "9",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "864",
+                "rating": "2242",
+                "rating_position": "1620",
+                "date": "2011-06-16",
+                "tournaments_in_year": "10",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "865",
+                "rating": "2694",
+                "rating_position": "1263",
+                "date": "2011-06-23",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "143",
+                "rating": "2667",
+                "rating_position": "1272",
+                "date": "2011-06-30",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "867",
+                "rating": "2640",
+                "rating_position": "1280",
+                "date": "2011-07-07",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "868",
+                "rating": "2613",
+                "rating_position": "1287",
+                "date": "2011-07-14",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "869",
+                "rating": "2588",
+                "rating_position": "1296",
+                "date": "2011-07-21",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "870",
+                "rating": "2561",
+                "rating_position": "1301",
+                "date": "2011-07-28",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1096",
+                "rating": "2535",
+                "rating_position": "1306",
+                "date": "2011-08-04",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1097",
+                "rating": "2509",
+                "rating_position": "1306",
+                "date": "2011-08-11",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "165",
+                "rating": "2485",
+                "rating_position": "1328",
+                "date": "2011-08-18",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "871",
+                "rating": "2460",
+                "rating_position": "1333",
+                "date": "2011-08-25",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1107",
+                "rating": "2436",
+                "rating_position": "1336",
+                "date": "2011-08-31",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "872",
+                "rating": "2436",
+                "rating_position": "1336",
+                "date": "2011-09-01",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "875",
+                "rating": "2410",
+                "rating_position": "1354",
+                "date": "2011-09-08",
+                "tournaments_in_year": "11",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "876",
+                "rating": "2808",
+                "rating_position": "1145",
+                "date": "2011-09-15",
+                "tournaments_in_year": "12",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "877",
+                "rating": "2781",
+                "rating_position": "1194",
+                "date": "2011-09-22",
+                "tournaments_in_year": "13",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "878",
+                "rating": "2752",
+                "rating_position": "1199",
+                "date": "2011-09-29",
+                "tournaments_in_year": "13",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "144",
+                "rating": "2724",
+                "rating_position": "1214",
+                "date": "2011-10-06",
+                "tournaments_in_year": "13",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "880",
+                "rating": "2698",
+                "rating_position": "1220",
+                "date": "2011-10-13",
+                "tournaments_in_year": "13",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "881",
+                "rating": "3076",
+                "rating_position": "1068",
+                "date": "2011-10-20",
+                "tournaments_in_year": "13",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "882",
+                "rating": "3302",
+                "rating_position": "931",
+                "date": "2011-10-27",
+                "tournaments_in_year": "14",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "145",
+                "rating": "3269",
+                "rating_position": "997",
+                "date": "2011-11-03",
+                "tournaments_in_year": "17",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "884",
+                "rating": "3236",
+                "rating_position": "1044",
+                "date": "2011-11-10",
+                "tournaments_in_year": "18",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "885",
+                "rating": "3204",
+                "rating_position": "1063",
+                "date": "2011-11-17",
+                "tournaments_in_year": "19",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "886",
+                "rating": "3331",
+                "rating_position": "988",
+                "date": "2011-11-24",
+                "tournaments_in_year": "20",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1105",
+                "rating": "3298",
+                "rating_position": "1001",
+                "date": "2011-12-01",
+                "tournaments_in_year": "20",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "887",
+                "rating": "3263",
+                "rating_position": "1019",
+                "date": "2011-12-08",
+                "tournaments_in_year": "20",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "888",
+                "rating": "3232",
+                "rating_position": "1117",
+                "date": "2011-12-15",
+                "tournaments_in_year": "22",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "889",
+                "rating": "3198",
+                "rating_position": "1116",
+                "date": "2011-12-22",
+                "tournaments_in_year": "22",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1098",
+                "rating": "3167",
+                "rating_position": "1117",
+                "date": "2011-12-29",
+                "tournaments_in_year": "23",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1099",
+                "rating": "3135",
+                "rating_position": "1117",
+                "date": "2012-01-05",
+                "tournaments_in_year": "23",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "891",
+                "rating": "3104",
+                "rating_position": "1140",
+                "date": "2012-01-12",
+                "tournaments_in_year": "24",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "892",
+                "rating": "3073",
+                "rating_position": "1188",
+                "date": "2012-01-19",
+                "tournaments_in_year": "25",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "893",
+                "rating": "3041",
+                "rating_position": "1208",
+                "date": "2012-01-26",
+                "tournaments_in_year": "26",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "147",
+                "rating": "3013",
+                "rating_position": "1250",
+                "date": "2012-02-02",
+                "tournaments_in_year": "26",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "895",
+                "rating": "2982",
+                "rating_position": "1264",
+                "date": "2012-02-09",
+                "tournaments_in_year": "26",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "896",
+                "rating": "2952",
+                "rating_position": "1270",
+                "date": "2012-02-16",
+                "tournaments_in_year": "26",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "897",
+                "rating": "2955",
+                "rating_position": "1285",
+                "date": "2012-02-23",
+                "tournaments_in_year": "27",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1109",
+                "rating": "2925",
+                "rating_position": "1296",
+                "date": "2012-03-01",
+                "tournaments_in_year": "27",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "898",
+                "rating": "2897",
+                "rating_position": "1300",
+                "date": "2012-03-08",
+                "tournaments_in_year": "27",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "899",
+                "rating": "2867",
+                "rating_position": "1364",
+                "date": "2012-03-15",
+                "tournaments_in_year": "28",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "900",
+                "rating": "3721",
+                "rating_position": "855",
+                "date": "2012-03-22",
+                "tournaments_in_year": "30",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "148",
+                "rating": "3738",
+                "rating_position": "869",
+                "date": "2012-03-29",
+                "tournaments_in_year": "31",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "901",
+                "rating": "3744",
+                "rating_position": "903",
+                "date": "2012-04-05",
+                "tournaments_in_year": "32",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "902",
+                "rating": "3706",
+                "rating_position": "952",
+                "date": "2012-04-12",
+                "tournaments_in_year": "32",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "903",
+                "rating": "3947",
+                "rating_position": "817",
+                "date": "2012-04-19",
+                "tournaments_in_year": "35",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "904",
+                "rating": "4047",
+                "rating_position": "773",
+                "date": "2012-04-26",
+                "tournaments_in_year": "36",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "149",
+                "rating": "4005",
+                "rating_position": "793",
+                "date": "2012-05-03",
+                "tournaments_in_year": "37",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "906",
+                "rating": "3966",
+                "rating_position": "799",
+                "date": "2012-05-10",
+                "tournaments_in_year": "38",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "907",
+                "rating": "3926",
+                "rating_position": "799",
+                "date": "2012-05-17",
+                "tournaments_in_year": "38",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "908",
+                "rating": "4078",
+                "rating_position": "744",
+                "date": "2012-05-24",
+                "tournaments_in_year": "38",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "909",
+                "rating": "4037",
+                "rating_position": "775",
+                "date": "2012-05-31",
+                "tournaments_in_year": "38",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "910",
+                "rating": "3997",
+                "rating_position": "823",
+                "date": "2012-06-07",
+                "tournaments_in_year": "40",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "911",
+                "rating": "3957",
+                "rating_position": "832",
+                "date": "2012-06-14",
+                "tournaments_in_year": "41",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "912",
+                "rating": "3916",
+                "rating_position": "852",
+                "date": "2012-06-21",
+                "tournaments_in_year": "43",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "913",
+                "rating": "3879",
+                "rating_position": "850",
+                "date": "2012-06-28",
+                "tournaments_in_year": "44",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "150",
+                "rating": "3942",
+                "rating_position": "827",
+                "date": "2012-07-05",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "915",
+                "rating": "4041",
+                "rating_position": "781",
+                "date": "2012-07-12",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1100",
+                "rating": "4001",
+                "rating_position": "781",
+                "date": "2012-07-19",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "917",
+                "rating": "3961",
+                "rating_position": "782",
+                "date": "2012-07-26",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "151",
+                "rating": "3921",
+                "rating_position": "785",
+                "date": "2012-08-02",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "919",
+                "rating": "3883",
+                "rating_position": "805",
+                "date": "2012-08-09",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "920",
+                "rating": "3844",
+                "rating_position": "808",
+                "date": "2012-08-16",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "921",
+                "rating": "3804",
+                "rating_position": "812",
+                "date": "2012-08-23",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "173",
+                "rating": "3766",
+                "rating_position": "822",
+                "date": "2012-08-30",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1110",
+                "rating": "3762",
+                "rating_position": "823",
+                "date": "2012-08-31",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "923",
+                "rating": "3730",
+                "rating_position": "827",
+                "date": "2012-09-06",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "924",
+                "rating": "3692",
+                "rating_position": "898",
+                "date": "2012-09-13",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "925",
+                "rating": "3656",
+                "rating_position": "907",
+                "date": "2012-09-20",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "926",
+                "rating": "3618",
+                "rating_position": "915",
+                "date": "2012-09-27",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "153",
+                "rating": "3581",
+                "rating_position": "922",
+                "date": "2012-10-04",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "928",
+                "rating": "3546",
+                "rating_position": "951",
+                "date": "2012-10-11",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "929",
+                "rating": "3511",
+                "rating_position": "1018",
+                "date": "2012-10-18",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "930",
+                "rating": "3474",
+                "rating_position": "1033",
+                "date": "2012-10-25",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "154",
+                "rating": "3522",
+                "rating_position": "1053",
+                "date": "2012-11-01",
+                "tournaments_in_year": "44",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "931",
+                "rating": "3553",
+                "rating_position": "1048",
+                "date": "2012-11-08",
+                "tournaments_in_year": "44",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "932",
+                "rating": "3842",
+                "rating_position": "908",
+                "date": "2012-11-15",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "933",
+                "rating": "3805",
+                "rating_position": "924",
+                "date": "2012-11-22",
+                "tournaments_in_year": "44",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "934",
+                "rating": "4300",
+                "rating_position": "657",
+                "date": "2012-11-29",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "935",
+                "rating": "4256",
+                "rating_position": "716",
+                "date": "2012-12-06",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "936",
+                "rating": "4336",
+                "rating_position": "732",
+                "date": "2012-12-13",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "937",
+                "rating": "4294",
+                "rating_position": "730",
+                "date": "2012-12-20",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "938",
+                "rating": "4451",
+                "rating_position": "653",
+                "date": "2012-12-27",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1101",
+                "rating": "4408",
+                "rating_position": "652",
+                "date": "2013-01-03",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "155",
+                "rating": "4362",
+                "rating_position": "661",
+                "date": "2013-01-10",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "941",
+                "rating": "4619",
+                "rating_position": "596",
+                "date": "2013-01-17",
+                "tournaments_in_year": "45",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "942",
+                "rating": "4735",
+                "rating_position": "556",
+                "date": "2013-01-24",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "156",
+                "rating": "4688",
+                "rating_position": "583",
+                "date": "2013-01-31",
+                "tournaments_in_year": "46",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "944",
+                "rating": "4641",
+                "rating_position": "628",
+                "date": "2013-02-07",
+                "tournaments_in_year": "47",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "945",
+                "rating": "4594",
+                "rating_position": "640",
+                "date": "2013-02-14",
+                "tournaments_in_year": "48",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "946",
+                "rating": "4548",
+                "rating_position": "680",
+                "date": "2013-02-21",
+                "tournaments_in_year": "48",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "947",
+                "rating": "4503",
+                "rating_position": "686",
+                "date": "2013-02-28",
+                "tournaments_in_year": "49",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "948",
+                "rating": "4805",
+                "rating_position": "575",
+                "date": "2013-03-07",
+                "tournaments_in_year": "50",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "949",
+                "rating": "5063",
+                "rating_position": "535",
+                "date": "2013-03-14",
+                "tournaments_in_year": "51",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "950",
+                "rating": "5012",
+                "rating_position": "548",
+                "date": "2013-03-21",
+                "tournaments_in_year": "50",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "951",
+                "rating": "5084",
+                "rating_position": "532",
+                "date": "2013-03-28",
+                "tournaments_in_year": "51",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "157",
+                "rating": "5032",
+                "rating_position": "537",
+                "date": "2013-04-04",
+                "tournaments_in_year": "51",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "953",
+                "rating": "4983",
+                "rating_position": "566",
+                "date": "2013-04-11",
+                "tournaments_in_year": "52",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "954",
+                "rating": "4932",
+                "rating_position": "596",
+                "date": "2013-04-18",
+                "tournaments_in_year": "53",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "955",
+                "rating": "4884",
+                "rating_position": "624",
+                "date": "2013-04-25",
+                "tournaments_in_year": "54",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "158",
+                "rating": "4903",
+                "rating_position": "629",
+                "date": "2013-05-02",
+                "tournaments_in_year": "56",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "957",
+                "rating": "5220",
+                "rating_position": "517",
+                "date": "2013-05-09",
+                "tournaments_in_year": "58",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "958",
+                "rating": "5167",
+                "rating_position": "563",
+                "date": "2013-05-16",
+                "tournaments_in_year": "61",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "959",
+                "rating": "5117",
+                "rating_position": "586",
+                "date": "2013-05-23",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "960",
+                "rating": "5063",
+                "rating_position": "614",
+                "date": "2013-05-30",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "961",
+                "rating": "5285",
+                "rating_position": "520",
+                "date": "2013-06-06",
+                "tournaments_in_year": "61",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "962",
+                "rating": "5545",
+                "rating_position": "437",
+                "date": "2013-06-13",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "963",
+                "rating": "5489",
+                "rating_position": "439",
+                "date": "2013-06-20",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "964",
+                "rating": "5435",
+                "rating_position": "447",
+                "date": "2013-06-27",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "159",
+                "rating": "5380",
+                "rating_position": "453",
+                "date": "2013-07-04",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "966",
+                "rating": "5326",
+                "rating_position": "463",
+                "date": "2013-07-11",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "967",
+                "rating": "5273",
+                "rating_position": "463",
+                "date": "2013-07-18",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "968",
+                "rating": "5219",
+                "rating_position": "463",
+                "date": "2013-07-25",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "160",
+                "rating": "5169",
+                "rating_position": "474",
+                "date": "2013-08-01",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "969",
+                "rating": "5116",
+                "rating_position": "474",
+                "date": "2013-08-08",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "970",
+                "rating": "5065",
+                "rating_position": "475",
+                "date": "2013-08-15",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "971",
+                "rating": "5014",
+                "rating_position": "479",
+                "date": "2013-08-22",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "161",
+                "rating": "4964",
+                "rating_position": "490",
+                "date": "2013-08-29",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "225",
+                "rating": "4956",
+                "rating_position": "491",
+                "date": "2013-08-30",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "972",
+                "rating": "5071",
+                "rating_position": "446",
+                "date": "2013-09-05",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "973",
+                "rating": "5021",
+                "rating_position": "454",
+                "date": "2013-09-12",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "974",
+                "rating": "5054",
+                "rating_position": "468",
+                "date": "2013-09-19",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "975",
+                "rating": "5004",
+                "rating_position": "477",
+                "date": "2013-09-26",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "162",
+                "rating": "4953",
+                "rating_position": "490",
+                "date": "2013-10-03",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "977",
+                "rating": "5184",
+                "rating_position": "429",
+                "date": "2013-10-10",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "978",
+                "rating": "5132",
+                "rating_position": "466",
+                "date": "2013-10-17",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "979",
+                "rating": "5498",
+                "rating_position": "347",
+                "date": "2013-10-24",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "163",
+                "rating": "5443",
+                "rating_position": "367",
+                "date": "2013-10-31",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "981",
+                "rating": "5639",
+                "rating_position": "334",
+                "date": "2013-11-07",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "982",
+                "rating": "5583",
+                "rating_position": "361",
+                "date": "2013-11-14",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "983",
+                "rating": "5879",
+                "rating_position": "293",
+                "date": "2013-11-21",
+                "tournaments_in_year": "68",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "984",
+                "rating": "6003",
+                "rating_position": "286",
+                "date": "2013-11-28",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "985",
+                "rating": "5966",
+                "rating_position": "289",
+                "date": "2013-12-05",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "986",
+                "rating": "5959",
+                "rating_position": "293",
+                "date": "2013-12-12",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "987",
+                "rating": "5899",
+                "rating_position": "302",
+                "date": "2013-12-19",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "988",
+                "rating": "6262",
+                "rating_position": "228",
+                "date": "2013-12-26",
+                "tournaments_in_year": "76",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "175",
+                "rating": "6199",
+                "rating_position": "230",
+                "date": "2014-01-02",
+                "tournaments_in_year": "77",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "990",
+                "rating": "6138",
+                "rating_position": "232",
+                "date": "2014-01-09",
+                "tournaments_in_year": "76",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "991",
+                "rating": "6862",
+                "rating_position": "157",
+                "date": "2014-01-16",
+                "tournaments_in_year": "77",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "992",
+                "rating": "6821",
+                "rating_position": "159",
+                "date": "2014-01-23",
+                "tournaments_in_year": "77",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "176",
+                "rating": "6754",
+                "rating_position": "166",
+                "date": "2014-01-30",
+                "tournaments_in_year": "78",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "993",
+                "rating": "6717",
+                "rating_position": "176",
+                "date": "2014-02-06",
+                "tournaments_in_year": "78",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "994",
+                "rating": "6651",
+                "rating_position": "176",
+                "date": "2014-02-13",
+                "tournaments_in_year": "78",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "995",
+                "rating": "6584",
+                "rating_position": "182",
+                "date": "2014-02-20",
+                "tournaments_in_year": "80",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1038",
+                "rating": "6557",
+                "rating_position": "179",
+                "date": "2014-02-27",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "996",
+                "rating": "6613",
+                "rating_position": "179",
+                "date": "2014-03-06",
+                "tournaments_in_year": "81",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "997",
+                "rating": "6702",
+                "rating_position": "166",
+                "date": "2014-03-13",
+                "tournaments_in_year": "81",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "998",
+                "rating": "6636",
+                "rating_position": "177",
+                "date": "2014-03-20",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "178",
+                "rating": "6569",
+                "rating_position": "184",
+                "date": "2014-03-27",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1000",
+                "rating": "6766",
+                "rating_position": "159",
+                "date": "2014-04-03",
+                "tournaments_in_year": "81",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1001",
+                "rating": "6740",
+                "rating_position": "157",
+                "date": "2014-04-10",
+                "tournaments_in_year": "81",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1002",
+                "rating": "6673",
+                "rating_position": "172",
+                "date": "2014-04-17",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1003",
+                "rating": "6606",
+                "rating_position": "180",
+                "date": "2014-04-24",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "179",
+                "rating": "6649",
+                "rating_position": "172",
+                "date": "2014-05-01",
+                "tournaments_in_year": "77",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1004",
+                "rating": "7388",
+                "rating_position": "109",
+                "date": "2014-05-08",
+                "tournaments_in_year": "76",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1005",
+                "rating": "7314",
+                "rating_position": "114",
+                "date": "2014-05-15",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1006",
+                "rating": "7241",
+                "rating_position": "128",
+                "date": "2014-05-22",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1039",
+                "rating": "7168",
+                "rating_position": "134",
+                "date": "2014-05-29",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1007",
+                "rating": "7302",
+                "rating_position": "125",
+                "date": "2014-06-05",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1008",
+                "rating": "7267",
+                "rating_position": "125",
+                "date": "2014-06-12",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1009",
+                "rating": "7195",
+                "rating_position": "132",
+                "date": "2014-06-19",
+                "tournaments_in_year": "72",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1010",
+                "rating": "7122",
+                "rating_position": "133",
+                "date": "2014-06-26",
+                "tournaments_in_year": "72",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "180",
+                "rating": "7053",
+                "rating_position": "141",
+                "date": "2014-07-03",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1012",
+                "rating": "6981",
+                "rating_position": "148",
+                "date": "2014-07-10",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1013",
+                "rating": "6911",
+                "rating_position": "150",
+                "date": "2014-07-17",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1014",
+                "rating": "6843",
+                "rating_position": "151",
+                "date": "2014-07-24",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "181",
+                "rating": "6774",
+                "rating_position": "151",
+                "date": "2014-07-31",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1016",
+                "rating": "6707",
+                "rating_position": "155",
+                "date": "2014-08-07",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1017",
+                "rating": "6638",
+                "rating_position": "155",
+                "date": "2014-08-14",
+                "tournaments_in_year": "74",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1018",
+                "rating": "6572",
+                "rating_position": "155",
+                "date": "2014-08-21",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1111",
+                "rating": "6613",
+                "rating_position": "149",
+                "date": "2014-08-28",
+                "tournaments_in_year": "78",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1046",
+                "rating": "6613",
+                "rating_position": "149",
+                "date": "2014-08-29",
+                "tournaments_in_year": "78",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1020",
+                "rating": "7836",
+                "rating_position": "87",
+                "date": "2014-09-04",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1049",
+                "rating": "7984",
+                "rating_position": "87",
+                "date": "2014-09-11",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1102",
+                "rating": "7903",
+                "rating_position": "89",
+                "date": "2014-09-18",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1103",
+                "rating": "7865",
+                "rating_position": "92",
+                "date": "2014-09-25",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1053",
+                "rating": "7787",
+                "rating_position": "95",
+                "date": "2014-10-02",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1104",
+                "rating": "9067",
+                "rating_position": "63",
+                "date": "2014-10-09",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1113",
+                "rating": "8976",
+                "rating_position": "63",
+                "date": "2014-10-16",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1114",
+                "rating": "8885",
+                "rating_position": "67",
+                "date": "2014-10-23",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1119",
+                "rating": "8796",
+                "rating_position": "68",
+                "date": "2014-10-30",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1120",
+                "rating": "9560",
+                "rating_position": "49",
+                "date": "2014-11-06",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1122",
+                "rating": "9465",
+                "rating_position": "50",
+                "date": "2014-11-13",
+                "tournaments_in_year": "84",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1125",
+                "rating": "9369",
+                "rating_position": "51",
+                "date": "2014-11-20",
+                "tournaments_in_year": "84",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1124",
+                "rating": "9309",
+                "rating_position": "53",
+                "date": "2014-11-27",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1126",
+                "rating": "9527",
+                "rating_position": "48",
+                "date": "2014-12-04",
+                "tournaments_in_year": "87",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1127",
+                "rating": "9510",
+                "rating_position": "53",
+                "date": "2014-12-11",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1128",
+                "rating": "9416",
+                "rating_position": "54",
+                "date": "2014-12-18",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1131",
+                "rating": "10329",
+                "rating_position": "30",
+                "date": "2014-12-25",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1132",
+                "rating": "10226",
+                "rating_position": "31",
+                "date": "2015-01-01",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1133",
+                "rating": "10123",
+                "rating_position": "31",
+                "date": "2015-01-08",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1134",
+                "rating": "10021",
+                "rating_position": "32",
+                "date": "2015-01-15",
+                "tournaments_in_year": "87",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1135",
+                "rating": "9922",
+                "rating_position": "37",
+                "date": "2015-01-22",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1137",
+                "rating": "9823",
+                "rating_position": "43",
+                "date": "2015-01-29",
+                "tournaments_in_year": "84",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1138",
+                "rating": "9724",
+                "rating_position": "46",
+                "date": "2015-02-05",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1140",
+                "rating": "9626",
+                "rating_position": "48",
+                "date": "2015-02-12",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1141",
+                "rating": "9532",
+                "rating_position": "51",
+                "date": "2015-02-19",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1145",
+                "rating": "9435",
+                "rating_position": "52",
+                "date": "2015-02-26",
+                "tournaments_in_year": "76",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1146",
+                "rating": "9340",
+                "rating_position": "54",
+                "date": "2015-03-05",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1147",
+                "rating": "9248",
+                "rating_position": "58",
+                "date": "2015-03-12",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1148",
+                "rating": "9156",
+                "rating_position": "64",
+                "date": "2015-03-19",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1150",
+                "rating": "9064",
+                "rating_position": "65",
+                "date": "2015-03-26",
+                "tournaments_in_year": "72",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1151",
+                "rating": "8972",
+                "rating_position": "70",
+                "date": "2015-04-02",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1152",
+                "rating": "8882",
+                "rating_position": "78",
+                "date": "2015-04-09",
+                "tournaments_in_year": "70",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1153",
+                "rating": "8794",
+                "rating_position": "78",
+                "date": "2015-04-16",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1154",
+                "rating": "8707",
+                "rating_position": "86",
+                "date": "2015-04-23",
+                "tournaments_in_year": "70",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1155",
+                "rating": "8619",
+                "rating_position": "91",
+                "date": "2015-04-30",
+                "tournaments_in_year": "70",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1157",
+                "rating": "8533",
+                "rating_position": "93",
+                "date": "2015-05-07",
+                "tournaments_in_year": "69",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1158",
+                "rating": "8449",
+                "rating_position": "94",
+                "date": "2015-05-14",
+                "tournaments_in_year": "69",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1159",
+                "rating": "8362",
+                "rating_position": "107",
+                "date": "2015-05-21",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1160",
+                "rating": "8278",
+                "rating_position": "116",
+                "date": "2015-05-28",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1163",
+                "rating": "8196",
+                "rating_position": "124",
+                "date": "2015-06-04",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1164",
+                "rating": "8115",
+                "rating_position": "139",
+                "date": "2015-06-11",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1166",
+                "rating": "8262",
+                "rating_position": "123",
+                "date": "2015-06-18",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1169",
+                "rating": "8181",
+                "rating_position": "132",
+                "date": "2015-06-25",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1172",
+                "rating": "8097",
+                "rating_position": "138",
+                "date": "2015-07-02",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1171",
+                "rating": "8306",
+                "rating_position": "114",
+                "date": "2015-07-09",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1173",
+                "rating": "8222",
+                "rating_position": "116",
+                "date": "2015-07-16",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1174",
+                "rating": "8141",
+                "rating_position": "116",
+                "date": "2015-07-23",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1175",
+                "rating": "8061",
+                "rating_position": "117",
+                "date": "2015-07-30",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1176",
+                "rating": "7979",
+                "rating_position": "118",
+                "date": "2015-08-06",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1180",
+                "rating": "7898",
+                "rating_position": "118",
+                "date": "2015-08-13",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1181",
+                "rating": "7968",
+                "rating_position": "115",
+                "date": "2015-08-20",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1182",
+                "rating": "8077",
+                "rating_position": "105",
+                "date": "2015-08-27",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1183",
+                "rating": "8077",
+                "rating_position": "105",
+                "date": "2015-08-28",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1186",
+                "rating": "7998",
+                "rating_position": "106",
+                "date": "2015-09-03",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1188",
+                "rating": "7918",
+                "rating_position": "123",
+                "date": "2015-09-10",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1189",
+                "rating": "8042",
+                "rating_position": "130",
+                "date": "2015-09-17",
+                "tournaments_in_year": "62",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1190",
+                "rating": "8572",
+                "rating_position": "96",
+                "date": "2015-09-24",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1192",
+                "rating": "8486",
+                "rating_position": "115",
+                "date": "2015-10-01",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1193",
+                "rating": "9563",
+                "rating_position": "55",
+                "date": "2015-10-08",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1194",
+                "rating": "9631",
+                "rating_position": "61",
+                "date": "2015-10-15",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1195",
+                "rating": "9535",
+                "rating_position": "84",
+                "date": "2015-10-22",
+                "tournaments_in_year": "68",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1196",
+                "rating": "9691",
+                "rating_position": "83",
+                "date": "2015-10-29",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1197",
+                "rating": "9595",
+                "rating_position": "87",
+                "date": "2015-11-05",
+                "tournaments_in_year": "69",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1198",
+                "rating": "9980",
+                "rating_position": "62",
+                "date": "2015-11-12",
+                "tournaments_in_year": "70",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1199",
+                "rating": "9879",
+                "rating_position": "102",
+                "date": "2015-11-19",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1201",
+                "rating": "9852",
+                "rating_position": "100",
+                "date": "2015-11-26",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1202",
+                "rating": "9755",
+                "rating_position": "100",
+                "date": "2015-12-03",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1203",
+                "rating": "9657",
+                "rating_position": "104",
+                "date": "2015-12-10",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1204",
+                "rating": "9560",
+                "rating_position": "108",
+                "date": "2015-12-17",
+                "tournaments_in_year": "66",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1205",
+                "rating": "9464",
+                "rating_position": "110",
+                "date": "2015-12-24",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1206",
+                "rating": "9370",
+                "rating_position": "114",
+                "date": "2015-12-31",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1207",
+                "rating": "9276",
+                "rating_position": "114",
+                "date": "2016-01-07",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1208",
+                "rating": "9183",
+                "rating_position": "122",
+                "date": "2016-01-14",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1209",
+                "rating": "9091",
+                "rating_position": "127",
+                "date": "2016-01-21",
+                "tournaments_in_year": "63",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1210",
+                "rating": "9000",
+                "rating_position": "135",
+                "date": "2016-01-28",
+                "tournaments_in_year": "64",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1211",
+                "rating": "8911",
+                "rating_position": "137",
+                "date": "2016-02-04",
+                "tournaments_in_year": "65",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1212",
+                "rating": "8821",
+                "rating_position": "151",
+                "date": "2016-02-11",
+                "tournaments_in_year": "67",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1214",
+                "rating": "8735",
+                "rating_position": "158",
+                "date": "2016-02-18",
+                "tournaments_in_year": "69",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1215",
+                "rating": "8647",
+                "rating_position": "168",
+                "date": "2016-02-25",
+                "tournaments_in_year": "71",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1216",
+                "rating": "9301",
+                "rating_position": "104",
+                "date": "2016-03-03",
+                "tournaments_in_year": "73",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1217",
+                "rating": "9207",
+                "rating_position": "107",
+                "date": "2016-03-10",
+                "tournaments_in_year": "75",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1218",
+                "rating": "9123",
+                "rating_position": "115",
+                "date": "2016-03-17",
+                "tournaments_in_year": "79",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1219",
+                "rating": "9207",
+                "rating_position": "115",
+                "date": "2016-03-24",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1220",
+                "rating": "9116",
+                "rating_position": "119",
+                "date": "2016-03-31",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1221",
+                "rating": "9023",
+                "rating_position": "129",
+                "date": "2016-04-07",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1224",
+                "rating": "8934",
+                "rating_position": "130",
+                "date": "2016-04-14",
+                "tournaments_in_year": "82",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1225",
+                "rating": "8843",
+                "rating_position": "136",
+                "date": "2016-04-21",
+                "tournaments_in_year": "83",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1226",
+                "rating": "8777",
+                "rating_position": "141",
+                "date": "2016-04-28",
+                "tournaments_in_year": "84",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1227",
+                "rating": "8689",
+                "rating_position": "146",
+                "date": "2016-05-05",
+                "tournaments_in_year": "85",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1228",
+                "rating": "8601",
+                "rating_position": "155",
+                "date": "2016-05-12",
+                "tournaments_in_year": "86",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1229",
+                "rating": "8522",
+                "rating_position": "161",
+                "date": "2016-05-19",
+                "tournaments_in_year": "89",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1230",
+                "rating": "8507",
+                "rating_position": "162",
+                "date": "2016-05-26",
+                "tournaments_in_year": "91",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1231",
+                "rating": "8424",
+                "rating_position": "173",
+                "date": "2016-06-02",
+                "tournaments_in_year": "90",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1233",
+                "rating": "8338",
+                "rating_position": "180",
+                "date": "2016-06-09",
+                "tournaments_in_year": "91",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1234",
+                "rating": "8255",
+                "rating_position": "188",
+                "date": "2016-06-16",
+                "tournaments_in_year": "94",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1235",
+                "rating": "8294",
+                "rating_position": "187",
+                "date": "2016-06-23",
+                "tournaments_in_year": "95",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1236",
+                "rating": "8212",
+                "rating_position": "197",
+                "date": "2016-06-30",
+                "tournaments_in_year": "97",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1237",
+                "rating": "8129",
+                "rating_position": "203",
+                "date": "2016-07-07",
+                "tournaments_in_year": "96",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1238",
+                "rating": "8048",
+                "rating_position": "213",
+                "date": "2016-07-14",
+                "tournaments_in_year": "99",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1239",
+                "rating": "8077",
+                "rating_position": "211",
+                "date": "2016-07-21",
+                "tournaments_in_year": "100",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1240",
+                "rating": "8262",
+                "rating_position": "167",
+                "date": "2016-07-28",
+                "tournaments_in_year": "102",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1241",
+                "rating": "8299",
+                "rating_position": "164",
+                "date": "2016-08-04",
+                "tournaments_in_year": "102",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1242",
+                "rating": "8277",
+                "rating_position": "166",
+                "date": "2016-08-11",
+                "tournaments_in_year": "103",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1243",
+                "rating": "8194",
+                "rating_position": "168",
+                "date": "2016-08-18",
+                "tournaments_in_year": "104",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1244",
+                "rating": "8245",
+                "rating_position": "169",
+                "date": "2016-08-25",
+                "tournaments_in_year": "106",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1245",
+                "rating": "8245",
+                "rating_position": "169",
+                "date": "2016-08-26",
+                "tournaments_in_year": "105",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1246",
+                "rating": "8508",
+                "rating_position": "135",
+                "date": "2016-09-01",
+                "tournaments_in_year": "108",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1248",
+                "rating": "8575",
+                "rating_position": "124",
+                "date": "2016-09-08",
+                "tournaments_in_year": "110",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1249",
+                "rating": "8490",
+                "rating_position": "139",
+                "date": "2016-09-15",
+                "tournaments_in_year": "114",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1250",
+                "rating": "8539",
+                "rating_position": "144",
+                "date": "2016-09-22",
+                "tournaments_in_year": "114",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1251",
+                "rating": "8453",
+                "rating_position": "157",
+                "date": "2016-09-29",
+                "tournaments_in_year": "112",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1252",
+                "rating": "8368",
+                "rating_position": "170",
+                "date": "2016-10-06",
+                "tournaments_in_year": "111",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1253",
+                "rating": "8618",
+                "rating_position": "143",
+                "date": "2016-10-13",
+                "tournaments_in_year": "113",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1254",
+                "rating": "8811",
+                "rating_position": "116",
+                "date": "2016-10-20",
+                "tournaments_in_year": "112",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1255",
+                "rating": "8725",
+                "rating_position": "123",
+                "date": "2016-10-27",
+                "tournaments_in_year": "111",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1256",
+                "rating": "8636",
+                "rating_position": "135",
+                "date": "2016-11-03",
+                "tournaments_in_year": "111",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1257",
+                "rating": "8552",
+                "rating_position": "141",
+                "date": "2016-11-10",
+                "tournaments_in_year": "114",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1258",
+                "rating": "8715",
+                "rating_position": "135",
+                "date": "2016-11-17",
+                "tournaments_in_year": "116",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1259",
+                "rating": "8627",
+                "rating_position": "144",
+                "date": "2016-11-24",
+                "tournaments_in_year": "119",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1262",
+                "rating": "8541",
+                "rating_position": "150",
+                "date": "2016-12-01",
+                "tournaments_in_year": "120",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1264",
+                "rating": "8457",
+                "rating_position": "163",
+                "date": "2016-12-08",
+                "tournaments_in_year": "121",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1265",
+                "rating": "8433",
+                "rating_position": "169",
+                "date": "2016-12-15",
+                "tournaments_in_year": "126",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1266",
+                "rating": "8348",
+                "rating_position": "192",
+                "date": "2016-12-22",
+                "tournaments_in_year": "129",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1267",
+                "rating": "8589",
+                "rating_position": "157",
+                "date": "2016-12-29",
+                "tournaments_in_year": "132",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1268",
+                "rating": "8596",
+                "rating_position": "156",
+                "date": "2017-01-05",
+                "tournaments_in_year": "132",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1269",
+                "rating": "8800",
+                "rating_position": "126",
+                "date": "2017-01-12",
+                "tournaments_in_year": "134",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1270",
+                "rating": "8722",
+                "rating_position": "141",
+                "date": "2017-01-19",
+                "tournaments_in_year": "134",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1271",
+                "rating": "8729",
+                "rating_position": "151",
+                "date": "2017-01-26",
+                "tournaments_in_year": "136",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1272",
+                "rating": "9306",
+                "rating_position": "102",
+                "date": "2017-02-02",
+                "tournaments_in_year": "138",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1273",
+                "rating": "9774",
+                "rating_position": "80",
+                "date": "2017-02-09",
+                "tournaments_in_year": "140",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1274",
+                "rating": "9858",
+                "rating_position": "75",
+                "date": "2017-02-16",
+                "tournaments_in_year": "141",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1275",
+                "rating": "10195",
+                "rating_position": "65",
+                "date": "2017-02-23",
+                "tournaments_in_year": "144",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1276",
+                "rating": "10094",
+                "rating_position": "73",
+                "date": "2017-03-02",
+                "tournaments_in_year": "145",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1277",
+                "rating": "10541",
+                "rating_position": "51",
+                "date": "2017-03-09",
+                "tournaments_in_year": "146",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1278",
+                "rating": "10771",
+                "rating_position": "51",
+                "date": "2017-03-16",
+                "tournaments_in_year": "148",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1279",
+                "rating": "10806",
+                "rating_position": "45",
+                "date": "2017-03-23",
+                "tournaments_in_year": "149",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1280",
+                "rating": "10697",
+                "rating_position": "56",
+                "date": "2017-03-30",
+                "tournaments_in_year": "152",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1281",
+                "rating": "10589",
+                "rating_position": "63",
+                "date": "2017-04-06",
+                "tournaments_in_year": "152",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1282",
+                "rating": "10483",
+                "rating_position": "67",
+                "date": "2017-04-13",
+                "tournaments_in_year": "154",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1283",
+                "rating": "10380",
+                "rating_position": "75",
+                "date": "2017-04-20",
+                "tournaments_in_year": "156",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1284",
+                "rating": "10286",
+                "rating_position": "77",
+                "date": "2017-04-27",
+                "tournaments_in_year": "155",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1285",
+                "rating": "10432",
+                "rating_position": "74",
+                "date": "2017-05-04",
+                "tournaments_in_year": "155",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1286",
+                "rating": "10329",
+                "rating_position": "87",
+                "date": "2017-05-11",
+                "tournaments_in_year": "159",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1287",
+                "rating": "10226",
+                "rating_position": "91",
+                "date": "2017-05-18",
+                "tournaments_in_year": "155",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1288",
+                "rating": "10212",
+                "rating_position": "97",
+                "date": "2017-05-25",
+                "tournaments_in_year": "157",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1289",
+                "rating": "10355",
+                "rating_position": "87",
+                "date": "2017-06-01",
+                "tournaments_in_year": "159",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1290",
+                "rating": "10377",
+                "rating_position": "84",
+                "date": "2017-06-08",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1291",
+                "rating": "10272",
+                "rating_position": "93",
+                "date": "2017-06-15",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1292",
+                "rating": "10169",
+                "rating_position": "92",
+                "date": "2017-06-22",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1293",
+                "rating": "10182",
+                "rating_position": "91",
+                "date": "2017-06-29",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1294",
+                "rating": "10080",
+                "rating_position": "96",
+                "date": "2017-07-06",
+                "tournaments_in_year": "164",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1295",
+                "rating": "10095",
+                "rating_position": "93",
+                "date": "2017-07-13",
+                "tournaments_in_year": "164",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1296",
+                "rating": "10101",
+                "rating_position": "93",
+                "date": "2017-07-20",
+                "tournaments_in_year": "165",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1297",
+                "rating": "9999",
+                "rating_position": "98",
+                "date": "2017-07-27",
+                "tournaments_in_year": "165",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1298",
+                "rating": "9910",
+                "rating_position": "110",
+                "date": "2017-08-03",
+                "tournaments_in_year": "167",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1299",
+                "rating": "9812",
+                "rating_position": "127",
+                "date": "2017-08-10",
+                "tournaments_in_year": "168",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1300",
+                "rating": "10113",
+                "rating_position": "90",
+                "date": "2017-08-17",
+                "tournaments_in_year": "168",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1301",
+                "rating": "10013",
+                "rating_position": "92",
+                "date": "2017-08-24",
+                "tournaments_in_year": "168",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1302",
+                "rating": "10070",
+                "rating_position": "102",
+                "date": "2017-08-31",
+                "tournaments_in_year": "167",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1303",
+                "rating": "10070",
+                "rating_position": "102",
+                "date": "2017-09-01",
+                "tournaments_in_year": "167",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1304",
+                "rating": "10274",
+                "rating_position": "83",
+                "date": "2017-09-07",
+                "tournaments_in_year": "169",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1305",
+                "rating": "10463",
+                "rating_position": "66",
+                "date": "2017-09-14",
+                "tournaments_in_year": "167",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1306",
+                "rating": "10360",
+                "rating_position": "93",
+                "date": "2017-09-21",
+                "tournaments_in_year": "165",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1307",
+                "rating": "10352",
+                "rating_position": "87",
+                "date": "2017-09-28",
+                "tournaments_in_year": "167",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1308",
+                "rating": "10249",
+                "rating_position": "107",
+                "date": "2017-10-05",
+                "tournaments_in_year": "168",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1309",
+                "rating": "10146",
+                "rating_position": "143",
+                "date": "2017-10-12",
+                "tournaments_in_year": "170",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1310",
+                "rating": "10045",
+                "rating_position": "170",
+                "date": "2017-10-19",
+                "tournaments_in_year": "169",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1311",
+                "rating": "10009",
+                "rating_position": "182",
+                "date": "2017-10-26",
+                "tournaments_in_year": "171",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1312",
+                "rating": "10165",
+                "rating_position": "174",
+                "date": "2017-11-02",
+                "tournaments_in_year": "170",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1313",
+                "rating": "10064",
+                "rating_position": "241",
+                "date": "2017-11-09",
+                "tournaments_in_year": "169",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1314",
+                "rating": "10086",
+                "rating_position": "234",
+                "date": "2017-11-16",
+                "tournaments_in_year": "168",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1315",
+                "rating": "9986",
+                "rating_position": "262",
+                "date": "2017-11-23",
+                "tournaments_in_year": "166",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1316",
+                "rating": "10037",
+                "rating_position": "243",
+                "date": "2017-11-30",
+                "tournaments_in_year": "166",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1317",
+                "rating": "10436",
+                "rating_position": "170",
+                "date": "2017-12-07",
+                "tournaments_in_year": "166",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1318",
+                "rating": "10331",
+                "rating_position": "194",
+                "date": "2017-12-14",
+                "tournaments_in_year": "164",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1319",
+                "rating": "10229",
+                "rating_position": "212",
+                "date": "2017-12-21",
+                "tournaments_in_year": "161",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1320",
+                "rating": "10127",
+                "rating_position": "225",
+                "date": "2017-12-28",
+                "tournaments_in_year": "159",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1321",
+                "rating": "10026",
+                "rating_position": "228",
+                "date": "2018-01-04",
+                "tournaments_in_year": "159",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1322",
+                "rating": "10144",
+                "rating_position": "198",
+                "date": "2018-01-11",
+                "tournaments_in_year": "160",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1324",
+                "rating": "10041",
+                "rating_position": "233",
+                "date": "2018-01-18",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1325",
+                "rating": "10188",
+                "rating_position": "222",
+                "date": "2018-01-25",
+                "tournaments_in_year": "164",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1326",
+                "rating": "10452",
+                "rating_position": "171",
+                "date": "2018-02-01",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1327",
+                "rating": "10419",
+                "rating_position": "186",
+                "date": "2018-02-08",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1328",
+                "rating": "10735",
+                "rating_position": "155",
+                "date": "2018-02-15",
+                "tournaments_in_year": "162",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1329",
+                "rating": "10700",
+                "rating_position": "159",
+                "date": "2018-02-22",
+                "tournaments_in_year": "159",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1330",
+                "rating": "10594",
+                "rating_position": "163",
+                "date": "2018-03-01",
+                "tournaments_in_year": "157",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1331",
+                "rating": "10487",
+                "rating_position": "174",
+                "date": "2018-03-08",
+                "tournaments_in_year": "154",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1332",
+                "rating": "10383",
+                "rating_position": "200",
+                "date": "2018-03-15",
+                "tournaments_in_year": "151",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1333",
+                "rating": "10879",
+                "rating_position": "138",
+                "date": "2018-03-22",
+                "tournaments_in_year": "153",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1334",
+                "rating": "10771",
+                "rating_position": "147",
+                "date": "2018-03-29",
+                "tournaments_in_year": "150",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1335",
+                "rating": "10662",
+                "rating_position": "159",
+                "date": "2018-04-05",
+                "tournaments_in_year": "148",
+                "tournament_count_total": "614"
+            },
+            {
+                "idplayer": "42511",
+                "idrelease": "1336",
+                "rating": "10577",
+                "rating_position": "173",
+                "date": "2018-04-12",
+                "tournaments_in_year": "147",
+                "tournament_count_total": "614"
+            }
+        ]
+    http_version: 
+  recorded_at: Tue, 17 Apr 2018 18:54:28 GMT
+recorded_with: VCR 4.0.0

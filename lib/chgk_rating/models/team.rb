@@ -27,7 +27,7 @@ module ChgkRating
         ChgkRating::Models::Rating.new release_id, team: self
       end
 
-      # Returns an array-like Ratings collection for the current team.
+      # Returns an array-like Ratings collection for the current Team.
       #
       # @return [ChgkRating::Collection::Ratings] The collection of ratings.
       def ratings

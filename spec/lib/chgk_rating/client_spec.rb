@@ -47,9 +47,17 @@ RSpec.describe ChgkRating::Client do
     it { is_expected.to be_an_instance_of ChgkRating::Models::Tournament }
   end
 
-  describe '#rating' do
+  describe '#team_rating' do
     subject do
-      VCR.use_cassette('rating_release') { test_client.rating team_1, 24 }
+      VCR.use_cassette('rating_release') { test_client.team_rating team_1, 24 }
+    end
+
+    it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
+  end
+
+  describe '#player_rating' do
+    subject do
+      VCR.use_cassette('player_rating_release') { test_client.player_rating 42511, 1000 }
     end
 
     it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
@@ -85,10 +93,19 @@ RSpec.describe ChgkRating::Client do
     end
   end
 
-  describe '#ratings' do
+  describe '#team_ratings' do
     subject do
       VCR.use_cassette 'team_ratings' do
-        test_client.ratings team_1
+        test_client.team_ratings team_1
+      end
+    end
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
+  end
+
+  describe '#player_ratings' do
+    subject do
+      VCR.use_cassette 'player_ratings_all_releases' do
+        test_client.player_ratings 42511
       end
     end
     it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
