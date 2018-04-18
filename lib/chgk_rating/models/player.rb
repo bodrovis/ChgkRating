@@ -16,6 +16,16 @@ module ChgkRating
         ChgkRating::Collections::Ratings.new player: self
       end
 
+      # Returns a collection of Tournaments that the current player participated at based on the given criteria
+      #
+      # @raise [ChgkRating::Error::NotFound] Error raised when nothing can be found based on the given criteria.
+      # @return [ChgkRating::Collection::Tournaments] The collection of tournaments.
+      # @param season_id [String or Integer] Season to load tournaments for
+      # @option params [String or Integer] :page The requested page. Default is 1
+      def tournaments(season_id: nil, params: {})
+        ChgkRating::Collections::Tournaments.new params.merge player: self, season_id: season_id, lazy: true
+      end
+
       private
 
       def api_path

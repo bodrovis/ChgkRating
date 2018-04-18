@@ -1,0 +1,87 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/players/1000/tournaments/51
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Wed, 18 Apr 2018 14:12:05 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=db30cdfcbb5d2a42be715b2440871268c503f98b8781c1c4afdec2609ddbfacd96c26a016e05ecf31a6ab6c51af27a42c1b4fe8769aa1914945019e8dc82dd05;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "idplayer": "1000",
+            "idseason": "51",
+            "tournaments": [
+                {
+                    "idtournament": "4712",
+                    "idteam": "51284",
+                    "in_base_team": "0"
+                },
+                {
+                    "idtournament": "4830",
+                    "idteam": "51284",
+                    "in_base_team": "0"
+                },
+                {
+                    "idtournament": "4782",
+                    "idteam": "66",
+                    "in_base_team": "0"
+                },
+                {
+                    "idtournament": "4771",
+                    "idteam": "43783",
+                    "in_base_team": "0"
+                },
+                {
+                    "idtournament": "4150",
+                    "idteam": "66",
+                    "in_base_team": "0"
+                },
+                {
+                    "idtournament": "4467",
+                    "idteam": "40043",
+                    "in_base_team": "1"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 14:11:41 GMT
+recorded_with: VCR 4.0.0

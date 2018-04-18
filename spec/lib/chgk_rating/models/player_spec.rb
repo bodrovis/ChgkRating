@@ -50,4 +50,13 @@ RSpec.describe ChgkRating::Models::Player do
     end
     it { expect(player_ratings).to be_an_instance_of ChgkRating::Collections::Ratings }
   end
+
+  describe '#tournaments' do
+    let(:player_tournaments) do
+      VCR.use_cassette 'player_tournaments2' do
+        subject.tournaments
+      end
+    end
+    it { expect(player_tournaments).to be_an_instance_of ChgkRating::Collections::Tournaments }
+  end
 end

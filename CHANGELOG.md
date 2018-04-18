@@ -1,8 +1,21 @@
 # Changelog
 
-## v1.1.0 (unreleased)
+## v2.0.0 (unreleased)
 
-* Added ability to fetch ratings for players
+Breaking changes:
+
+* `client.rating` is now `client.team_rating`
+* `client.ratings` is now `client.team_ratings`
+* `tournament.team` is now `tournament.team_by`
+
+New features:
+
+* Added ability to fetch ratings for players using `#player_rating` and `#player_ratings`
+* `Player` now also responds to `#rating`, `#ratings`, `#tournaments` methods
+*  Added ability to fetch tournaments for a player. `#tournaments` now also accepts `player_or_id`.
+
+Testing:   
+
 * Tested against more recent Ruby versions
 
 ## v1.0.0 (2018-02-23)

@@ -32,7 +32,7 @@ module ChgkRating
       # @raise [ChgkRating::Error::NotFound] Error raised when the requested Team cannot be found.
       # @return [ChgkRating::Models::TournamentTeam] The requested TournamentTeam.
       # @param team_or_id [String, Integer or Team] Team to search for.
-      def team(team_or_id)
+      def team_by(team_or_id)
         ChgkRating::Models::TournamentTeam.new team_or_id, tournament: self, lazy: true
       end
 

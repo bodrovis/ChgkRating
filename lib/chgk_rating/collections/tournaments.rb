@@ -1,7 +1,7 @@
 module ChgkRating
   module Collections
     class Tournaments < Base
-      attr_reader :team, :season_id
+      attr_reader :team, :season_id, :player
 
       def initialize(params = {})
         @team = build_model params[:team]
@@ -16,8 +16,8 @@ module ChgkRating
         [
             key,
             {
-                'idteam' => @team.id.to_s,
-                'idplayer' => @player.id.to_s,
+                'idteam' => @team&.id.to_s,
+                'idplayer' => @player&.id.to_s,
                 'idseason' => key,
                 'tournaments' => values.map(&:to_h)
             }
@@ -37,14 +37,15 @@ module ChgkRating
         end
       end
 
+      # @return [String] Either `tournaments`, `teams/ID/tournaments`, `players/ID/tournaments`, `teams/ID/tournaments/SEASON_ID`, `players/ID/tournaments/SEASON_ID`
       def api_path
         path = 'tournaments'
         return path unless @team || @player
         path = if @team
-                 "teams/#{@team.id}/#{path}"
+                 "teams/#{@team.id}"
                else
-                 "players/#{@player.id}/#{path}"
-               end
+                 "players/#{@player.id}"
+               end + "/#{path}"
         return path unless @season_id
         path + "/#{@season_id}"
       end

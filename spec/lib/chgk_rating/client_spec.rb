@@ -142,6 +142,26 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#tournaments' do
+    context 'all tournaments for a player by season' do
+      subject do
+        VCR.use_cassette 'player_tournaments_season' do
+          test_client.tournaments player_or_id: 1000, season_id: 51
+        end
+      end
+
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
+    end
+
+    context 'tournaments for a player' do
+      subject do
+        VCR.use_cassette 'player_tournaments' do
+          test_client.tournaments player_or_id: 1000
+        end
+      end
+
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
+    end
+
     context 'all tournaments for a team by season' do
       subject do
         VCR.use_cassette 'team_tournaments_season' do

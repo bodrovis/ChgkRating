@@ -47,7 +47,7 @@ module ChgkRating
     # @param tournament_or_id [String, Integer or Tournament] Tournament to load team for.
     # @param team_or_id [String, Integer or Team] Team to search for.
     def team_at_tournament(tournament_or_id, team_or_id)
-      tournament(tournament_or_id, true).team(team_or_id)
+      tournament(tournament_or_id, true).team_by(team_or_id)
     end
 
     # Returns Rating for a given Team in a given release
@@ -134,10 +134,13 @@ module ChgkRating
     # @raise [ChgkRating::Error::NotFound] Error raised when nothing can be found based on the given criteria.
     # @return [ChgkRating::Collection::Tournaments] The collection of tournaments.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load tournaments for.
+    # @param player_or_id [String, Integer or ChgkRating::Models::Player] Player to load tournaments for. Ignored if team_or_id  is provided.
     # @param season_id [String or Integer] Season to load tournaments for
     # @option params [String or Integer] :page The requested page. Default is 1
-    def tournaments(team_or_id: nil, season_id: nil, params: {})
-      ChgkRating::Collections::Tournaments.new params.merge(team: team_or_id, season_id: season_id)
+    def tournaments(team_or_id: nil, player_or_id: nil, season_id: nil, params: {})
+      ChgkRating::Collections::Tournaments.new params.merge(
+          team: team_or_id, player: player_or_id, season_id: season_id
+      )
     end
 
     # Returns an array-like Ratings collection for a given Team.

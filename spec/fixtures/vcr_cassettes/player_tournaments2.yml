@@ -1,0 +1,3247 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rating.chgk.info/api/players/42511/tournaments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - chgk_rating ruby gem/1.0.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.10.3
+      date:
+      - Wed, 18 Apr 2018 14:37:01 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      x-frame-options:
+      - deny
+      set-cookie:
+      - chgk_session_idhash=b2c233dd62c6a11ca5e38887f819feee668b4ee6bcc7f47f4935671469eac9815aa09c117b5a6deb742bc1a43b6a3f9e972a19686aa6f935c33938c4d4f4db7b;
+        path=/; HttpOnly
+      pragma:
+      - no-cache
+      vary:
+      - Accept
+      cache-control:
+      - no-cache, must-revalidate
+      expires:
+      - '0'
+      x-powered-by:
+      - Luracast Restler v3.0.0rc5
+      content-language:
+      - en
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "51": {
+                "idplayer": "42511",
+                "idseason": "51",
+                "tournaments": [
+                    {
+                        "idtournament": "4510",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4335",
+                        "idteam": "59495",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4872",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4497",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4481",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4473",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4604",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4786",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4584",
+                        "idteam": "56464",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4671",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4509",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4787",
+                        "idteam": "51260",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4714",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4751",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4710",
+                        "idteam": "55842",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4496",
+                        "idteam": "63322",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4334",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4413",
+                        "idteam": "62866",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4577",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4369",
+                        "idteam": "56464",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4495",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4430",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4709",
+                        "idteam": "57263",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4532",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4508",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4729",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4375",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4333",
+                        "idteam": "62289",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3963",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4673",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4717",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4690",
+                        "idteam": "57263",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4681",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4404",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4595",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4484",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4601",
+                        "idteam": "62141",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4598",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4501",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4668",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4670",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4664",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4349",
+                        "idteam": "61871",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4675",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4368",
+                        "idteam": "58461",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4494",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4635",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4328",
+                        "idteam": "38064",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4663",
+                        "idteam": "41366",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "4575",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4506",
+                        "idteam": "7931",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4367",
+                        "idteam": "7931",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4602",
+                        "idteam": "7931",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4543",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4417",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4423",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4455",
+                        "idteam": "4109",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4160",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4566",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4493",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4362",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4366",
+                        "idteam": "50088",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4200",
+                        "idteam": "50088",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4563",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4412",
+                        "idteam": "7894",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4418",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4562",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4331",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4553",
+                        "idteam": "7931",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4365",
+                        "idteam": "7931",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4505",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4427",
+                        "idteam": "51600",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4544",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4492",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4464",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4504",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4150",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4406",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4364",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4425",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4194",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4309",
+                        "idteam": "51600",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4498",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4503",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4477",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4311",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4479",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4337",
+                        "idteam": "51433",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4341",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4478",
+                        "idteam": "51433",
+                        "in_base_team": "0"
+                    }
+                ]
+            },
+            "50": {
+                "idplayer": "42511",
+                "idseason": "50",
+                "tournaments": [
+                    {
+                        "idtournament": "4462",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4012",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4491",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4434",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4436",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4066",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4373",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4426",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4428",
+                        "idteam": "58071",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4287",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4448",
+                        "idteam": "59168",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4420",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4266",
+                        "idteam": "58046",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4272",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4431",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4378",
+                        "idteam": "59032",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4399",
+                        "idteam": "59035",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4344",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4372",
+                        "idteam": "59032",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4407",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4315",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4236",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4203",
+                        "idteam": "50560",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4370",
+                        "idteam": "50560",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4384",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4395",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4211",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4210",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4409",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4400",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4212",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4402",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4198",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4389",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4377",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4291",
+                        "idteam": "51433",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4063",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4306",
+                        "idteam": "50560",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4269",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3664",
+                        "idteam": "50560",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3910",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4249",
+                        "idteam": "37542",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4188",
+                        "idteam": "51475",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4126",
+                        "idteam": "51475",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4361",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4218",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4213",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4351",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4336",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4263",
+                        "idteam": "51249",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4176",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4174",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4276",
+                        "idteam": "58459",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4273",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3779",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4190",
+                        "idteam": "58407",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4060",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4029",
+                        "idteam": "58323",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4140",
+                        "idteam": "43521",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4297",
+                        "idteam": "58360",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3935",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4220",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4144",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4226",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4096",
+                        "idteam": "51149",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3896",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3933",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4167",
+                        "idteam": "46356",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3909",
+                        "idteam": "46356",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3952",
+                        "idteam": "58082",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4041",
+                        "idteam": "55866",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4245",
+                        "idteam": "40869",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3778",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4165",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4131",
+                        "idteam": "57378",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3932",
+                        "idteam": "57817",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4116",
+                        "idteam": "57872",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4187",
+                        "idteam": "55032",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3951",
+                        "idteam": "57722",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4243",
+                        "idteam": "57378",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3871",
+                        "idteam": "48898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4199",
+                        "idteam": "48898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4169",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4040",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3931",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4059",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4026",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4115",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3930",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4092",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3950",
+                        "idteam": "57453",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3971",
+                        "idteam": "57378",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3870",
+                        "idteam": "57378",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3968",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4202",
+                        "idteam": "42263",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4189",
+                        "idteam": "57362",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4103",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3720",
+                        "idteam": "57378",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4170",
+                        "idteam": "53185",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3917",
+                        "idteam": "51433",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3777",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4151",
+                        "idteam": "57263",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4157",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3908",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4095",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4010",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3979",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3929",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3667",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4033",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3928",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3946",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4101",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3981",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3869",
+                        "idteam": "51149",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4085",
+                        "idteam": "56879",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4017",
+                        "idteam": "50560",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3904",
+                        "idteam": "47228",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4039",
+                        "idteam": "51433",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4125",
+                        "idteam": "56765",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3972",
+                        "idteam": "56767",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4122",
+                        "idteam": "56767",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3949",
+                        "idteam": "56745",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4112",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3895",
+                        "idteam": "56713",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3962",
+                        "idteam": "42997",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3940",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3776",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4028",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4020",
+                        "idteam": "49515",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3927",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3980",
+                        "idteam": "53185",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4074",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4038",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3926",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4046",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3961",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3892",
+                        "idteam": "55788",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3907",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4015",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3877",
+                        "idteam": "56409",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3948",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3556",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3834",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3902",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4011",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3966",
+                        "idteam": "47297",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3775",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3875",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "4021",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3879",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3781",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3919",
+                        "idteam": "55920",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3849",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3891",
+                        "idteam": "55788",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3923",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3936",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3719",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3899",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3945",
+                        "idteam": "47297",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3918",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3508",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3976",
+                        "idteam": "47297",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3944",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3744",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3643",
+                        "idteam": "55293",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3750",
+                        "idteam": "48762",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3939",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3920",
+                        "idteam": "53670",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3889",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    }
+                ]
+            },
+            "49": {
+                "idplayer": "42511",
+                "idseason": "49",
+                "tournaments": [
+                    {
+                        "idtournament": "3954",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3922",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3449",
+                        "idteam": "53250",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3714",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3915",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3903",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3816",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3844",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3773",
+                        "idteam": "55036",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3766",
+                        "idteam": "54555",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3882",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3829",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3840",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3721",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3751",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3712",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3584",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3651",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3425",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3862",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3693",
+                        "idteam": "45585",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3711",
+                        "idteam": "54848",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3800",
+                        "idteam": "3156",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3715",
+                        "idteam": "56578",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3663",
+                        "idteam": "222",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3469",
+                        "idteam": "54181",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3649",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3388",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3426",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3658",
+                        "idteam": "54766",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3542",
+                        "idteam": "54620",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3516",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3573",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3832",
+                        "idteam": "54708",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3842",
+                        "idteam": "54620",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3835",
+                        "idteam": "54620",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3665",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3771",
+                        "idteam": "54060",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3415",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3756",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3397",
+                        "idteam": "46381",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3626",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3387",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3794",
+                        "idteam": "54480",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3329",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3694",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3717",
+                        "idteam": "54326",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3468",
+                        "idteam": "28428",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3414",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3599",
+                        "idteam": "38064",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3592",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3805",
+                        "idteam": "54181",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3674",
+                        "idteam": "53969",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3648",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3575",
+                        "idteam": "53969",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3685",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3684",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3460",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3413",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3328",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3377",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3691",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3386",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3552",
+                        "idteam": "53706",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3459",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3564",
+                        "idteam": "46356",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3330",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3424",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3555",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3502",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3378",
+                        "idteam": "46252",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3554",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3412",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3458",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3585",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3326",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3411",
+                        "idteam": "3875",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3457",
+                        "idteam": "52760",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3512",
+                        "idteam": "46356",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3496",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3495",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3405",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3381",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3370",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3404",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3474",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3451",
+                        "idteam": "52760",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3346",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3410",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3391",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3430",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3428",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3500",
+                        "idteam": "51387",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3325",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3313",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3450",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3228",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3534",
+                        "idteam": "49668",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3439",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3322",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3321",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3453",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3409",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3403",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3380",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    }
+                ]
+            },
+            "48": {
+                "idplayer": "42511",
+                "idseason": "48",
+                "tournaments": [
+                    {
+                        "idtournament": "3155",
+                        "idteam": "5694",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3267",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3423",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3223",
+                        "idteam": "5694",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3336",
+                        "idteam": "49668",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2987",
+                        "idteam": "3156",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3184",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3357",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3020",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3044",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2962",
+                        "idteam": "49668",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3125",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3266",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2977",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3099",
+                        "idteam": "47228",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3117",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2914",
+                        "idteam": "51240",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3219",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2979",
+                        "idteam": "43525",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2899",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2906",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3234",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2961",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2935",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3247",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2976",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3081",
+                        "idteam": "49916",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2992",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3088",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3015",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3132",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2974",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2933",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2990",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3005",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3049",
+                        "idteam": "49668",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2960",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3032",
+                        "idteam": "49669",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2985",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2968",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3051",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3050",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2973",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2911",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3029",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "3118",
+                        "idteam": "37506",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2931",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2929",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2923",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3024",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "3040",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2972",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2881",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2910",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2896",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2997",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2884",
+                        "idteam": "578",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2858",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2859",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2965",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2769",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2843",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2918",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2819",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2922",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    }
+                ]
+            },
+            "45": {
+                "idplayer": "42511",
+                "idseason": "45",
+                "tournaments": [
+                    {
+                        "idtournament": "2969",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2829",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2971",
+                        "idteam": "47853",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2665",
+                        "idteam": "44212",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2988",
+                        "idteam": "7898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2856",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2873",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2938",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2776",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2736",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2891",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2728",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2892",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2788",
+                        "idteam": "47305",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2790",
+                        "idteam": "47305",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2900",
+                        "idteam": "47314",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2783",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2764",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2840",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2732",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2834",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2857",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2814",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2640",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2860",
+                        "idteam": "47129",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2839",
+                        "idteam": "37506",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2757",
+                        "idteam": "47075",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2833",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2737",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2749",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2824",
+                        "idteam": "44205",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2718",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2787",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2778",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2782",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2813",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2578",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2763",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2694",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2800",
+                        "idteam": "44198",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2789",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2528",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2784",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2786",
+                        "idteam": "44205",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2689",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2708",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2692",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2745",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2697",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2731",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2696",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2719",
+                        "idteam": "46456",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2695",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2727",
+                        "idteam": "44205",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2656",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2712",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2585",
+                        "idteam": "46359",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2527",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2620",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2707",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2662",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2627",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2524",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2715",
+                        "idteam": "7898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2576",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2547",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2643",
+                        "idteam": "41366",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2556",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2659",
+                        "idteam": "46131",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2535",
+                        "idteam": "44205",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2523",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2548",
+                        "idteam": "43525",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2592",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2506",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2562",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2533",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2472",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2479",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    }
+                ]
+            },
+            "44": {
+                "idplayer": "42511",
+                "idseason": "44",
+                "tournaments": [
+                    {
+                        "idtournament": "2419",
+                        "idteam": "43525",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2420",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2379",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2343",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2195",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2354",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2265",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2388",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2285",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2182",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2395",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2316",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2355",
+                        "idteam": "28428",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2390",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2297",
+                        "idteam": "43422",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2296",
+                        "idteam": "43422",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2151",
+                        "idteam": "38233",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2151",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2236",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2377",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2325",
+                        "idteam": "8475",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2368",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2346",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2314",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2382",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2301",
+                        "idteam": "43525",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2302",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2353",
+                        "idteam": "44231",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2225",
+                        "idteam": "37591",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2357",
+                        "idteam": "41444",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2263",
+                        "idteam": "42832",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2181",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2278",
+                        "idteam": "3395",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2336",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2275",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2222",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2322",
+                        "idteam": "44012",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2274",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2254",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2166",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2268",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2307",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2248",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2235",
+                        "idteam": "5668",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2232",
+                        "idteam": "43568",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2209",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2251",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2269",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2189",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2243",
+                        "idteam": "43575",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2188",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2147",
+                        "idteam": "39110",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2077",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2199",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2156",
+                        "idteam": "3213",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2155",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2165",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2164",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2161",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2180",
+                        "idteam": "5697",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2202",
+                        "idteam": "28154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2136",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    }
+                ]
+            },
+            "37": {
+                "idplayer": "42511",
+                "idseason": "37",
+                "tournaments": [
+                    {
+                        "idtournament": "2047",
+                        "idteam": "1510",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2112",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1954",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2111",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2121",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2006",
+                        "idteam": "127",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2069",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1927",
+                        "idteam": "38404",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2075",
+                        "idteam": "26750",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1931",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1845",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1856",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2115",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2131",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1850",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2009",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2025",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2079",
+                        "idteam": "41981",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2068",
+                        "idteam": "3154",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2026",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2076",
+                        "idteam": "37800",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2139",
+                        "idteam": "4246",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2044",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2019",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "2011",
+                        "idteam": "1397",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2039",
+                        "idteam": "7898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1854",
+                        "idteam": "40227",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2031",
+                        "idteam": "37542",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "2001",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1849",
+                        "idteam": "41514",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1991",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1853",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1949",
+                        "idteam": "28474",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1994",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1817",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1966",
+                        "idteam": "172",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1947",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1905",
+                        "idteam": "10279",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1848",
+                        "idteam": "40227",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1922",
+                        "idteam": "40227",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1858",
+                        "idteam": "10279",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1925",
+                        "idteam": "3133",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1955",
+                        "idteam": "127",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1816",
+                        "idteam": "40356",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1906",
+                        "idteam": "40091",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1857",
+                        "idteam": "2823",
+                        "in_base_team": "0"
+                    }
+                ]
+            },
+            "16": {
+                "idplayer": "42511",
+                "idseason": "16",
+                "tournaments": [
+                    {
+                        "idtournament": "1860",
+                        "idteam": "7898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1806",
+                        "idteam": "218",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1828",
+                        "idteam": "6691",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1794",
+                        "idteam": "39392",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1859",
+                        "idteam": "3133",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1686",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1754",
+                        "idteam": "7898",
+                        "in_base_team": "0"
+                    },
+                    {
+                        "idtournament": "1756",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1726",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1635",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    },
+                    {
+                        "idtournament": "1526",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    }
+                ]
+            },
+            "9": {
+                "idplayer": "42511",
+                "idseason": "9",
+                "tournaments": [
+                    {
+                        "idtournament": "574",
+                        "idteam": "38176",
+                        "in_base_team": "1"
+                    }
+                ]
+            }
+        }
+    http_version: 
+  recorded_at: Wed, 18 Apr 2018 14:36:37 GMT
+recorded_with: VCR 4.0.0
