@@ -41,13 +41,17 @@ module ChgkRating
       def api_path
         path = 'tournaments'
         return path unless @team || @player
-        path = if @team
-                 "teams/#{@team.id}"
-               else
-                 "players/#{@player.id}"
-               end + "/#{path}"
+        path = _team_or_player_for path
         return path unless @season_id
         path + "/#{@season_id}"
+      end
+
+      def _team_or_player_for(path)
+        if @team
+          "teams/#{@team.id}"
+        else
+          "players/#{@player.id}"
+        end + "/#{path}"
       end
     end
   end

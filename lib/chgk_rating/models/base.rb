@@ -80,11 +80,19 @@ module ChgkRating
 
       def extract_from(raw_data)
         self.class.attribute_mapping.each do |attr, mapping|
-          data = raw_data.is_a?(self.class) ? raw_data.send(attr) : raw_data[ mapping[:raw_name] ]
+          data = get_data_from raw_data, attr, mapping
           next unless data
-          data = mapping[:transform_up].call(data) if mapping.has_key?(:transform_up)
-          instance_variable_set "@#{attr}", data
+          instance_variable_set "@#{attr}", transform_up(data, mapping)
         end
+      end
+
+      def get_data_from(raw, attr, mapping)
+        raw.is_a?(self.class) ? raw.send(attr) : raw[ mapping[:raw_name] ]
+      end
+
+      def transform_up(data, mapping)
+        return data unless mapping.has_key?(:transform_up)
+        mapping[:transform_up].call(data)
       end
     end
   end
