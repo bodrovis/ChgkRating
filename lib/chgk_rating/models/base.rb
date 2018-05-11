@@ -1,3 +1,4 @@
+require 'pry'
 module ChgkRating
   module Models
     class Base < ChgkObject
@@ -51,9 +52,12 @@ module ChgkRating
 
       private
 
+      # Grab the attribute mapping for the class and its superclass
+      # (as superclass may present common mappings for multiple classes)
       def self.attribute_mapping
         return nil unless self.name
-        ChgkRating::AttributeMappings.find self.name
+        ChgkRating::AttributeMappings.find(self.name).
+            merge(ChgkRating::AttributeMappings.find(self.superclass.name))
       end
 
       def lazy_load?(params)

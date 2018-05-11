@@ -52,7 +52,7 @@ RSpec.describe ChgkRating::Client do
       VCR.use_cassette('rating_release') { test_client.team_rating team_1, 24 }
     end
 
-    it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
+    it { is_expected.to be_an_instance_of ChgkRating::Models::TeamRating }
   end
 
   describe '#player_rating' do
@@ -60,7 +60,7 @@ RSpec.describe ChgkRating::Client do
       VCR.use_cassette('player_rating_release') { test_client.player_rating 42511, 1000 }
     end
 
-    it { is_expected.to be_an_instance_of ChgkRating::Models::Rating }
+    it { is_expected.to be_an_instance_of ChgkRating::Models::PlayerRating }
   end
 
   describe '#recap' do
@@ -99,7 +99,7 @@ RSpec.describe ChgkRating::Client do
         test_client.team_ratings team_1
       end
     end
-    it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::TeamRatings }
   end
 
   describe '#player_ratings' do
@@ -108,7 +108,7 @@ RSpec.describe ChgkRating::Client do
         test_client.player_ratings 42511
       end
     end
-    it { is_expected.to be_an_instance_of ChgkRating::Collections::Ratings }
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::PlayerRatings }
   end
 
   describe '#team_players_at_tournament' do
@@ -118,7 +118,7 @@ RSpec.describe ChgkRating::Client do
       end
     end
 
-    it { is_expected.to be_an_instance_of ChgkRating::Collections::TournamentPlayers }
+    it { is_expected.to be_an_instance_of ChgkRating::Collections::TournamentTeamPlayers }
   end
 
   describe '#team_results_at_tournament' do
@@ -141,27 +141,29 @@ RSpec.describe ChgkRating::Client do
     it { is_expected.to be_an_instance_of ChgkRating::Collections::TournamentTeams }
   end
 
-  describe '#tournaments' do
+  describe '#player_tournaments' do
     context 'all tournaments for a player by season' do
       subject do
         VCR.use_cassette 'player_tournaments_season' do
-          test_client.tournaments player_or_id: 1000, season_id: 51
+          test_client.player_tournaments 1000, 51
         end
       end
 
-      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::PlayerTournaments }
     end
 
     context 'tournaments for a player' do
       subject do
         VCR.use_cassette 'player_tournaments' do
-          test_client.tournaments player_or_id: 1000
+          test_client.player_tournaments 1000
         end
       end
 
-      it { is_expected.to be_an_instance_of ChgkRating::Collections::Tournaments }
+      it { is_expected.to be_an_instance_of ChgkRating::Collections::PlayerTournaments }
     end
+  end
 
+  describe '#tournaments' do
     context 'all tournaments for a team by season' do
       subject do
         VCR.use_cassette 'team_tournaments_season' do

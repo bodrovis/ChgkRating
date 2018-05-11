@@ -1,10 +1,9 @@
 module ChgkRating
   module Collections
-    class Ratings < Base
-      attr_reader :team
+    class PlayerRatings < Base
+      attr_reader :player
 
       def initialize(params = {})
-        @team = build_model params[:team]
         @player = build_model params[:player], ChgkRating::Models::Player
         super
       end
@@ -12,11 +11,11 @@ module ChgkRating
       private
 
       def process(*_args)
-        super { |result| ChgkRating::Models::Rating.new result }
+        super { |result| ChgkRating::Models::PlayerRating.new result }
       end
 
       def api_path
-        @team ? "teams/#{@team.id}/rating" : "players/#{@player.id}/rating"
+        "players/#{@player.id}/rating"
       end
     end
   end

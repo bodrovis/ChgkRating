@@ -1,6 +1,6 @@
 module ChgkRating
   module Collections
-    class TournamentPlayers < Base
+    class TournamentTeamPlayers < Base
       attr_reader :team, :tournament
 
       def initialize(params = {})
@@ -13,7 +13,7 @@ module ChgkRating
       private
 
       def process(*_args)
-        super { |result| ChgkRating::Models::TournamentPlayer.new result }
+        super { |result| ChgkRating::Models::TournamentTeamPlayer.new result }
       end
 
       def api_path

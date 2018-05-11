@@ -43,13 +43,9 @@ module ChgkRating
 
         def to_star(method = :to_s, iterate = false)
           ->(d) do
-            begin
-              iterate ?
-                  d.map {|obj| obj.send method } :
-                  d.send(method)
-            rescue NoMethodError
-              nil
-            end
+            iterate ?
+                d.map {|obj| obj.send method } :
+                d.send(method)
           end
         end
       end
@@ -77,6 +73,7 @@ module ChgkRating
             d&.map {|result| to_boolean.call(result)}
           end,
           team: chgk_object('Team'),
+          tournament: chgk_object('Tournament'),
           player: chgk_object('Player'),
           players: chgk_object('Players', 'Collections')
       }.freeze

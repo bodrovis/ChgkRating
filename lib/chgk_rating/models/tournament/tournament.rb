@@ -1,13 +1,13 @@
 module ChgkRating
   module Models
     class Tournament < Base
-      # Returns an array-like TournamentPlayers collection containing roster for a team at the current tournament.
+      # Returns an array-like TournamentTeamPlayers collection containing roster for a team at the current tournament.
       #
       # @raise [ChgkRating::Error::NotFound] Error raised when the requested Team cannot be found.
-      # @return [ChgkRating::Collection::TournamentPlayers] The collection of results.
+      # @return [ChgkRating::Collection::TournamentTeamPlayers] The collection of results.
       # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load players for.
       def team_players(team_or_id)
-        ChgkRating::Collections::TournamentPlayers.new tournament: self, team: team_or_id
+        ChgkRating::Collections::TournamentTeamPlayers.new tournament: self, team: team_or_id
       end
 
       # Returns an array-like TournamentTeamResults collection with results for a given team in the current

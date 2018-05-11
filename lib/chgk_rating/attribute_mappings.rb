@@ -4,7 +4,11 @@ module ChgkRating
 
     class << self
       def find(name)
-        const_get name.snakecase_upcase
+        begin
+          const_get name.snakecase_upcase
+        rescue NameError
+          {}
+        end
       end
 
       def generate_mappings_for(data)
@@ -66,14 +70,18 @@ module ChgkRating
                                   :db_chgk_info_tag
                               ],
                               RATING: {
-                                  team: ['idteam', :team_id],
-                                  player: ['idplayer', :player_id],
                                   release_id: 'idrelease',
                                   rating: [],
-                                  tournaments_in_year: [],
-                                  tournament_count_total: [],
                                   rating_position: [],
-                                  date: ['date', :date],
+                                  date: ['date', :date]
+                              },
+                              PLAYER_RATING: {
+                                  player: ['idplayer', :player_id],
+                                  tournaments_in_year: [],
+                                  tournament_count_total: []
+                              },
+                              TEAM_RATING: {
+                                  team: ['idteam', :team_id],
                                   formula: ['formula', :sym]
                               },
                               RECAP: {
@@ -82,11 +90,14 @@ module ChgkRating
                                   captain: ['captain', :player_id],
                                   players: ['players', :players_ids]
                               },
+                              PLAYER_TOURNAMENT: [
+                                  tournament: ['idtournament', :tournament_id],
+                                  team: ['idteam', :team_id],
+                                  in_base_team: ['in_base_team', :boolean_binboolean]
+                              ],
                               TOURNAMENT: [
                                   {
                                       id: 'idtournament',
-                                      team: ['idteam', :team_id],
-                                      in_base_team: ['in_base_team', :boolean_binboolean],
                                       date_start: ['date_start', :datetime],
                                       date_end: ['date_end', :datetime],
                                       tour_count: [],
@@ -105,7 +116,7 @@ module ChgkRating
                                   :discounted_payment_reason,
                                   :comment
                               ],
-                              TOURNAMENT_PLAYER: {
+                              TOURNAMENT_TEAM_PLAYER: {
                                   id: 'idplayer',
                                   is_captain: ['is_captain', :boolean_binboolean],
                                   is_base: ['is_base', :boolean_binboolean],

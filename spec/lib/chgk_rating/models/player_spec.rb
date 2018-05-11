@@ -39,7 +39,7 @@ RSpec.describe ChgkRating::Models::Player do
         subject.rating 1000
       end
     end
-    it { expect(player_rating).to be_an_instance_of ChgkRating::Models::Rating }
+    it { expect(player_rating).to be_an_instance_of ChgkRating::Models::PlayerRating }
   end
 
   describe '#ratings' do
@@ -48,7 +48,7 @@ RSpec.describe ChgkRating::Models::Player do
         subject.ratings
       end
     end
-    it { expect(player_ratings).to be_an_instance_of ChgkRating::Collections::Ratings }
+    it { expect(player_ratings).to be_an_instance_of ChgkRating::Collections::PlayerRatings }
   end
 
   describe '#tournaments' do
@@ -57,6 +57,6 @@ RSpec.describe ChgkRating::Models::Player do
         subject.tournaments
       end
     end
-    it { expect(player_tournaments).to be_an_instance_of ChgkRating::Collections::Tournaments }
+    it { expect(player_tournaments).to be_an_instance_of ChgkRating::Collections::PlayerTournaments }
   end
 end

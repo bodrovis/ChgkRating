@@ -71,7 +71,7 @@ RSpec.describe ChgkRating::Models::Tournament do
       end
     end
 
-    it { expect(players).to be_an_instance_of ChgkRating::Collections::TournamentPlayers }
+    it { expect(players).to be_an_instance_of ChgkRating::Collections::TournamentTeamPlayers }
   end
 
   describe '#team_by' do

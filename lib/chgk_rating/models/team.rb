@@ -19,19 +19,19 @@ module ChgkRating
         ChgkRating::Models::TournamentTeam.new self, tournament: tournament_or_id, lazy: true
       end
 
-      # Returns Rating for the current Team in a given release
+      # Returns rating for the current Team in a given release
       #
-      # @return [ChgkRating::Models::Rating] The requested Rating.
+      # @return [ChgkRating::Models::TeamRating] The requested rating.
       # @param release_id [String or Integer] Release to load rating for.
       def rating(release_id)
-        ChgkRating::Models::Rating.new release_id, team: self
+        ChgkRating::Models::TeamRating.new release_id, team: self
       end
 
-      # Returns an array-like Ratings collection for the current Team.
+      # Returns an array-like ratings collection for the current Team.
       #
-      # @return [ChgkRating::Collection::Ratings] The collection of ratings.
+      # @return [ChgkRating::Collection::TeamRatings] The collection of ratings.
       def ratings
-        ChgkRating::Collections::Ratings.new team: self
+        ChgkRating::Collections::TeamRatings.new team: self
       end
 
       # Returns an hash-like Recaps collection for the current team, grouped by seasons. Seasons act

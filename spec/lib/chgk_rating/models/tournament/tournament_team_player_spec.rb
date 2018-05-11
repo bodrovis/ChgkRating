@@ -1,4 +1,4 @@
-RSpec.describe ChgkRating::Models::TournamentPlayer do
+RSpec.describe ChgkRating::Models::TournamentTeamPlayer do
   subject do
     VCR.use_cassette 'team_players_at_tournament' do
       test_client.team_players_at_tournament(3506, 52853)[0]

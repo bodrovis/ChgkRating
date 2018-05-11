@@ -1,4 +1,4 @@
-RSpec.describe ChgkRating::Collections::TournamentPlayers do
+RSpec.describe ChgkRating::Collections::TournamentTeamPlayers do
   subject do
     VCR.use_cassette 'team_players_at_tournament' do
       described_class.new(tournament: 3506, team: 52853)

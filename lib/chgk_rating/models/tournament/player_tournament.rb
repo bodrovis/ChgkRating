@@ -1,6 +1,6 @@
 module ChgkRating
   module Models
-    class TournamentPlayer < Base
+    class PlayerTournament < Base
       no_eager_loading!
       no_lazy_support!
     end

@@ -50,20 +50,20 @@ module ChgkRating
       tournament(tournament_or_id, true).team_by(team_or_id)
     end
 
-    # Returns Rating for a given Team in a given release
+    # Returns rating for a given Team in a given release
     #
     # @raise [ChgkRating::Error::NotFound] Error raised when the requested release or Team cannot be found.
-    # @return [ChgkRating::Models::Rating] The requested Rating.
+    # @return [ChgkRating::Models::TeamRating] The requested rating.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load rating for.
     # @param release_id [String or Integer] Release to load rating for.
     def team_rating(team_or_id, release_id)
       team(team_or_id, true).rating(release_id)
     end
 
-    # Returns Rating for a given Player in a given release
+    # Returns rating for a given Player in a given release
     #
     # @raise [ChgkRating::Error::NotFound] Error raised when the requested release or Player cannot be found.
-    # @return [ChgkRating::Models::Rating] The requested Rating.
+    # @return [ChgkRating::Models::PlayerRating] The requested rating.
     # @param player_or_id [String, Integer or ChgkRating::Models::Team] Player to load rating for.
     # @param release_id [String or Integer] Release to load rating for.
     def player_rating(player_or_id, release_id)
@@ -134,13 +134,22 @@ module ChgkRating
     # @raise [ChgkRating::Error::NotFound] Error raised when nothing can be found based on the given criteria.
     # @return [ChgkRating::Collection::Tournaments] The collection of tournaments.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load tournaments for.
-    # @param player_or_id [String, Integer or ChgkRating::Models::Player] Player to load tournaments for. Ignored if team_or_id  is provided.
     # @param season_id [String or Integer] Season to load tournaments for
     # @option params [String or Integer] :page The requested page. Default is 1
-    def tournaments(team_or_id: nil, player_or_id: nil, season_id: nil, params: {})
+    def tournaments(team_or_id: nil, season_id: nil, params: {})
       ChgkRating::Collections::Tournaments.new params.merge(
-          team: team_or_id, player: player_or_id, season_id: season_id
+          team: team_or_id, season_id: season_id
       )
+    end
+
+    # Returns a collection of Tournaments that the Player has participated in
+    #
+    # @return [ChgkRating::Collection::PlayerTournaments] The collection of tournaments.
+    # @param player_or_id [String, Integer or ChgkRating::Models::Player] Player to load tournaments for.
+    # @param season_id [String or Integer] Season to load tournaments for
+    def player_tournaments(player_or_id, season_id = nil)
+      ChgkRating::Collections::PlayerTournaments.new player: player_or_id,
+                                                     season_id: season_id
     end
 
     # Returns an array-like Ratings collection for a given Team.
@@ -181,11 +190,11 @@ module ChgkRating
       team_at_tournament(tournament_or_id, team_or_id).results
     end
 
-    # Returns an array-like TournamentPlayers collection containing roster for a
+    # Returns an array-like TournamentTeamPlayers collection containing roster for a
     # given team at a given tournament.
     #
     # @raise [ChgkRating::Error::NotFound] Error raised when the requested Tournament or Team cannot be found.
-    # @return [ChgkRating::Collection::TournamentPlayers] The collection of results.
+    # @return [ChgkRating::Collection::TournamentTeamPlayers] The collection of results.
     # @param tournament_or_id [String, Integer or ChgkRating::Models::Tournament] Tournament to load players for.
     # @param team_or_id [String, Integer or ChgkRating::Models::Team] Team to load players for.
     def team_players_at_tournament(tournament_or_id, team_or_id)

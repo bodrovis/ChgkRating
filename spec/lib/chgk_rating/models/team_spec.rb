@@ -48,7 +48,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.rating 24
       end
     end
-    it { expect(team_rating).to be_an_instance_of ChgkRating::Models::Rating }
+    it { expect(team_rating).to be_an_instance_of ChgkRating::Models::TeamRating }
   end
 
   describe '#recap' do
@@ -84,6 +84,6 @@ RSpec.describe ChgkRating::Models::Team do
         subject.ratings
       end
     end
-    it { expect(team_ratings).to be_an_instance_of ChgkRating::Collections::Ratings }
+    it { expect(team_ratings).to be_an_instance_of ChgkRating::Collections::TeamRatings }
   end
 end
