@@ -1,3 +1,5 @@
+require 'faraday_middleware'
+
 module ChgkRating
   module Connection
     BASE_URL = 'http://rating.chgk.info/api'.freeze
@@ -12,6 +14,7 @@ module ChgkRating
       }
 
       Faraday.new options do |faraday|
+        faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter Faraday.default_adapter
       end
     end
