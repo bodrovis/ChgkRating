@@ -1,4 +1,3 @@
-require 'pry'
 module ChgkRating
   module Models
     class Base < ChgkObject
