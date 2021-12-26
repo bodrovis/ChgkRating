@@ -19,8 +19,9 @@ Gem::Specification.new do |spec|
   spec.extra_rdoc_files = ['README.md']
   spec.require_paths    = ['lib']
 
-  spec.add_dependency 'faraday',                       '~> 0.13'
-  spec.add_dependency 'multi_json',                    '~> 1.12'
+  spec.add_dependency 'faraday',                       '~> 1.8'
+  spec.add_dependency 'faraday_middleware',            '~> 1.2'
+  spec.add_dependency 'multi_json',                    '~> 1.15'
 
   spec.add_development_dependency 'rake',                      '~> 12.1'
   spec.add_development_dependency 'rspec',                     '~> 3.6'
