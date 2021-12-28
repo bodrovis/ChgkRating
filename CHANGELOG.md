@@ -1,6 +1,6 @@
 # Changelog
 
-## v2.0.0 (unreleased)
+## v2.0.0 (2021-12-28)
 
 Breaking changes:
 
@@ -10,6 +10,7 @@ Breaking changes:
 
 New features:
 
+* Faraday now follows redirects (thanks, @L-Eugene)
 * Added ability to fetch ratings for players using `#player_rating` and `#player_ratings`
 * `Player` now also responds to `#rating`, `#ratings`, `#tournaments` methods
 *  Added ability to fetch tournaments for a player. `#tournaments` now also accepts `player_or_id`.
