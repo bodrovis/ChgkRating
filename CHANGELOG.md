@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.1.0 (2021-12-29)
+
+* Updated API mappings (thanks, @L-Eugene)
+
 ## v2.0.0 (2021-12-28)
 
 Breaking changes:
