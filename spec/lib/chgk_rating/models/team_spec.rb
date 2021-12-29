@@ -12,6 +12,10 @@ RSpec.describe ChgkRating::Models::Team do
 
   specify('#id') { expect(subject.id).to eq '1' }
   specify('#town') { expect(subject.town).to eq 'Москва' }
+  specify('#region_name') { expect(subject.region_name).to eq 'Москва' }
+  specify('#country_name') { expect(subject.country_name).to eq 'Россия' }
+  specify('#tournaments_total') { expect(subject.tournaments_total).to eq 101 }
+  specify('#tournaments_this_season') { expect(subject.tournaments_this_season).to eq 0 }
   specify('#name') { expect(subject.name).to eq 'Неспроста' }
   specify('#comment') { expect(subject.comment).to eq '' }
 
@@ -28,6 +32,10 @@ RSpec.describe ChgkRating::Models::Team do
     expect(team_h['idteam']).to eq '1'
     expect(team_h['name']).to eq 'Неспроста'
     expect(team_h['town']).to eq 'Москва'
+    expect(team_h['region_name']).to eq 'Москва'
+    expect(team_h['country_name']).to eq 'Россия'
+    expect(team_h['tournaments_total']).to eq '101'
+    expect(team_h['tournaments_this_season']).to eq '0'
     expect(team_h['comment']).to eq ''
   end
 
