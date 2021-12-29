@@ -73,6 +73,7 @@ module ChgkRating
                                   release_id: 'idrelease',
                                   rating: [],
                                   rating_position: [],
+                                  tech_rating: [],
                                   date: ['date', :date]
                               },
                               PLAYER_RATING: {
@@ -106,14 +107,19 @@ module ChgkRating
                                       questions_total: [],
                                       main_payment_value: ['main_payment_value', :float],
                                       discounted_payment_value: ['discounted_payment_value', :float],
+                                      tournament_in_rating: ['tournament_in_rating', :boolean_binboolean],
                                       date_requests_allowed_to: ['date_requests_allowed_to', :datetime],
-                                      site_url: ['site_url', :uri]
+                                      site_url: ['site_url', :uri],
+                                      date_archived_at: ['date_archived_at', :datetime]
                                   },
                                   :name,
                                   :town,
                                   :long_name,
                                   :type_name,
+                                  :main_payment_currency,
+                                  :discounted_payment_currency,
                                   :discounted_payment_reason,
+                                  :archive,
                                   :comment
                               ],
                               TOURNAMENT_TEAM_PLAYER: {
@@ -128,22 +134,28 @@ module ChgkRating
                                       position: ['position', :float],
                                       questions_total: [],
                                       result: ['mask', :splitboolean_arraystrboolean],
-                                      bonus_a: [],
                                       bonus_b: [],
-                                      tech_rating: [],
+                                      tech_rating_rt: [],
+                                      tech_rating_rg: [],
+                                      tech_rating_rb: [],
+                                      rating_r: [],
                                       predicted_position: [],
-                                      d_bonus_a: [],
-                                      d_bonus_b: [],
-                                      d_diff_bonus: [],
+                                      diff_bonus: [],
                                       included_in_rating: ['included_in_rating', :boolean_binboolean]
                                   },
                                   :current_name,
                                   :base_name
                               ],
                               TEAM: [
-                                  { id: 'idteam' },
+                                  {
+                                    id: 'idteam',
+                                    tournaments_this_season: [],
+                                    tournaments_total: []
+                                  },
                                   :name,
                                   :town,
+                                  :region_name,
+                                  :country_name,
                                   :comment
                               ],
                               TOURNAMENT_TEAM_RESULT: {

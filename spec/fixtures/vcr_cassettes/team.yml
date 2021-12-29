@@ -51,6 +51,10 @@ http_interactions:
                 "idteam": "1",
                 "name": "Неспроста",
                 "town": "Москва",
+                "region_name": "Москва",
+                "country_name": "Россия",
+                "tournaments_this_season": "0",
+                "tournaments_total": "101",
                 "comment": ""
             }
         ]

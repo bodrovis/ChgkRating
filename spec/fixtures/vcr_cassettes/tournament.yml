@@ -56,15 +56,21 @@ http_interactions:
                 "date_end": "2015-11-08 18:00:00",
                 "tour_count": "4",
                 "tour_questions": "12",
-                "tour_ques_per_tour": "",
+                "tour_ques_per_tour": null,
                 "questions_total": "48",
                 "type_name": "Обычный",
                 "main_payment_value": "660",
+                "main_payment_currency": "руб",
                 "discounted_payment_value": "360",
+                "discounted_payment_currency": "руб",
                 "discounted_payment_reason": "для детских команд; 480 - для студенческих",
-                "date_requests_allowed_to": "",
-                "comment": "",
-                "site_url": "https://vk.com/chgk.perm.championship"
+                "tournament_in_rating": "1",
+                "date_requests_allowed_to": null,
+                "comment": null,
+                "site_url": "https://vk.com/chgk.perm.championship",
+                "archive": null,
+                "date_archived_at": null,
+                "db_tags": []
             }
         ]
     http_version: 

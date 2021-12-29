@@ -17,14 +17,17 @@ RSpec.describe ChgkRating::Models::Tournament do
   specify('#date_end') { expect(subject.date_end).to eq DateTime.parse('2015-11-08 18:00:00') }
   specify('#tour_count') { expect(subject.tour_count).to eq 4 }
   specify('#tour_questions') { expect(subject.tour_questions).to eq 12 }
-  specify('#tour_ques_per_tour') { expect(subject.tour_ques_per_tour).to eq 0 }
+  specify('#tour_ques_per_tour') { expect(subject.tour_ques_per_tour).to be_nil }
   specify('#questions_total') { expect(subject.questions_total).to eq 48 }
   specify('#type_name') { expect(subject.type_name).to eq 'Обычный' }
   specify('#main_payment_value') { expect(subject.main_payment_value).to eq 660 }
+  specify('#main_payment_currency') { expect(subject.main_payment_currency).to eq 'руб' }
   specify('#discounted_payment_value') { expect(subject.discounted_payment_value).to eq 360 }
+  specify('#discounted_payment_currency') { expect(subject.discounted_payment_currency).to eq 'руб' }
   specify('#discounted_payment_reason') { expect(subject.discounted_payment_reason).to eq 'для детских команд; 480 - для студенческих' }
+  specify('#tournament_in_rating') { expect(subject.tournament_in_rating).to eq true }
   specify('#date_requests_allowed_to') { expect(subject.date_requests_allowed_to).to be_nil }
-  specify('#comment') { expect(subject.comment).to eq '' }
+  specify('#comment') { expect(subject.comment).to be_nil }
   specify('#town') { expect(subject.town).to eq 'Пермь' }
   specify('#site_url') { expect(subject.site_url).to eq URI.parse('https://vk.com/chgk.perm.championship') }
   specify '#to_h' do
@@ -33,7 +36,7 @@ RSpec.describe ChgkRating::Models::Tournament do
     expect(tournament_h['date_end']).to eq '2015-11-08T18:00:00+00:00'
     expect(tournament_h['tour_count']).to eq '4'
     expect(tournament_h['tour_questions']).to eq '12'
-    expect(tournament_h['tour_ques_per_tour']).to eq '0'
+    expect(tournament_h['tour_ques_per_tour']).to eq ''
     expect(tournament_h['questions_total']).to eq '48'
     expect(tournament_h['main_payment_value']).to eq '660.0'
     expect(tournament_h['discounted_payment_value']).to eq '360.0'
@@ -44,7 +47,7 @@ RSpec.describe ChgkRating::Models::Tournament do
     expect(tournament_h['long_name']).to eq 'XV Чемпионат Перми и Пермского края по игре "Что? Где? Когда?"'
     expect(tournament_h['type_name']).to eq 'Обычный'
     expect(tournament_h['discounted_payment_reason']).to eq 'для детских команд; 480 - для студенческих'
-    expect(tournament_h['comment']).to eq ''
+    expect(tournament_h['comment']).to be_nil
   end
 
   specify '#eager_load!' do

@@ -15,13 +15,12 @@ RSpec.describe ChgkRating::Collections::TournamentTeams do
   specify('#base_name') { expect(team.base_name).to eq 'Полосатый мамонт' }
   specify('#position') { expect(team.position).to eq 3 }
   specify('#questions_total') { expect(team.questions_total).to eq 34 }
-  specify('#bonus_a') { expect(team.bonus_a).to eq 1575 }
-  specify('#bonus_b') { expect(team.bonus_b).to eq -47 }
-  specify('#tech_rating') { expect(team.tech_rating).to eq 2549 }
+  specify('#bonus_b') { expect(team.bonus_b).to eq 421 }
+  specify('#tech_rating_rt') { expect(team.tech_rating_rt).to eq 2583 }
+  specify('#tech_rating_rg') { expect(team.tech_rating_rg).to eq 2583 }
+  specify('#tech_rating_rb') { expect(team.tech_rating_rb).to eq 2525 }
   specify('#predicted_position') { expect(team.predicted_position).to eq 2 }
-  specify('#d_bonus_a') { expect(team.d_bonus_a).to eq 1575 }
-  specify('#d_bonus_b') { expect(team.d_bonus_b).to eq 420 }
-  specify('#d_diff_bonus') { expect(team.d_diff_bonus).to eq -47 }
+  specify('#diff_bonus') { expect(team.diff_bonus).to eq -48 }
   specify('#included_in_rating') { expect(team.included_in_rating).to eq true }
   specify('#result') { expect(team.result).to eq [true, true, true, false, true, true,
                                                      true, true, true, true, true,
@@ -46,12 +45,11 @@ RSpec.describe ChgkRating::Collections::TournamentTeams do
                                              "0", "1", "1", "1", "0", "0", "1", "0", "1", "1", "0",
                                              "1", "1", "0", "1", "0", "1", "0", "1", "1", "1", "0",
                                              "1", "1", "1", "1"]
-    expect(tournament_team_h['bonus_a']).to eq '1575'
-    expect(tournament_team_h['bonus_b']).to eq '-47'
-    expect(tournament_team_h['tech_rating']).to eq '2549'
-    expect(tournament_team_h['d_bonus_a']).to eq '1575'
-    expect(tournament_team_h['d_bonus_b']).to eq '420'
-    expect(tournament_team_h['d_diff_bonus']).to eq '-47'
+    expect(tournament_team_h['bonus_b']).to eq '421'
+    expect(tournament_team_h['tech_rating_rt']).to eq '2583'
+    expect(tournament_team_h['tech_rating_rg']).to eq '2583'
+    expect(tournament_team_h['tech_rating_rb']).to eq '2525'
+    expect(tournament_team_h['diff_bonus']).to eq '-48'
     expect(tournament_team_h['predicted_position']).to eq '2'
     expect(tournament_team_h['included_in_rating']).to eq '1'
     expect(tournament_team_h['current_name']).to eq 'Полосатый мамонт'
