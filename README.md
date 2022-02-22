@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/bodrovis/ChgkRating.svg?branch=master)](https://travis-ci.org/bodrovis/ChgkRating)
 [![Code Climate](https://codeclimate.com/github/bodrovis/ChgkRating/badges/gpa.svg)](https://codeclimate.com/github/bodrovis/ChgkRating)
 
-**This gem is in passive maintenance mode. I won't release any new features or introduce any complex enhancements as ChgkRating v1 is deprecated.**
+**This gem is in passive maintenance mode. I won't release any new features or introduce any complex enhancements as ChgkRating v1 is deprecated. Please use [rating-chgk-v2 gem](https://github.com/bodrovis/rating-chgk-v2) which works with the new version of the API.**
 
 Ruby interface for the [rating.chgk.info](http://rating.chgk.info/index.php/api) WebAPI. This is not just a wrapper, but rather a quite complex opinionated client that allows to easily work with various API resources.
 
