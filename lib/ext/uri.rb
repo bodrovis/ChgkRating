@@ -1,9 +1,9 @@
+# frozen_string_literal: true
+
 module URI
   def self.parse_safely(raw_uri)
-    begin
-      URI.parse raw_uri
-    rescue URI::InvalidURIError
-      nil
-    end
+    URI.parse raw_uri
+  rescue URI::InvalidURIError
+    nil
   end
 end

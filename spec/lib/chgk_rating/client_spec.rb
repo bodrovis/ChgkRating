@@ -1,20 +1,22 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples 'lazy loaded' do
   it 'is lazy loaded' do
-    expect(object.lazy).to eq(true)
+    expect(object.lazy).to be(true)
   end
 end
 
 RSpec.describe ChgkRating::Client do
   let(:team_1) { test_client.team(1, true) }
-  let(:team_52853) { test_client.team(52853, true) }
+  let(:team_52853) { test_client.team(52_853, true) }
   let(:tournament_3506) { test_client.tournament(3506, true) }
 
-  def with_erroneous_cassette
-    VCR.use_cassette('erroneous_request') { yield }
+  def with_erroneous_cassette(&block)
+    VCR.use_cassette('erroneous_request', &block)
   end
 
   context 'errors' do
-    it 'should raise an error for an erroneous request' do
+    it 'raises an error for an erroneous request' do
       expect do
         # That's a very strange bug that makes VCR raise UnhandledHTTPError
         # so for now disable VCR for Ruby 2.5+
@@ -57,7 +59,7 @@ RSpec.describe ChgkRating::Client do
 
   describe '#player_rating' do
     subject do
-      VCR.use_cassette('player_rating_release') { test_client.player_rating 42511, 1000 }
+      VCR.use_cassette('player_rating_release') { test_client.player_rating 42_511, 1000 }
     end
 
     it { is_expected.to be_an_instance_of ChgkRating::Models::PlayerRating }
@@ -84,7 +86,7 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#player' do
-    subject { test_client.player 42511, true }
+    subject { test_client.player 42_511, true }
 
     it { is_expected.to be_an_instance_of ChgkRating::Models::Player }
 
@@ -99,15 +101,17 @@ RSpec.describe ChgkRating::Client do
         test_client.team_ratings team_1
       end
     end
+
     it { is_expected.to be_an_instance_of ChgkRating::Collections::TeamRatings }
   end
 
   describe '#player_ratings' do
     subject do
       VCR.use_cassette 'player_ratings_all_releases' do
-        test_client.player_ratings 42511
+        test_client.player_ratings 42_511
       end
     end
+
     it { is_expected.to be_an_instance_of ChgkRating::Collections::PlayerRatings }
   end
 

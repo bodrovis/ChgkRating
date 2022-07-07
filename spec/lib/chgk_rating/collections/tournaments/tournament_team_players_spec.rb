@@ -1,10 +1,11 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::TournamentTeamPlayers do
   subject do
     VCR.use_cassette 'team_players_at_tournament' do
-      described_class.new(tournament: 3506, team: 52853)
+      described_class.new(tournament: 3506, team: 52_853)
     end
   end
-
 
   it_behaves_like 'tournament team player' do
     let(:player) { subject[0] }

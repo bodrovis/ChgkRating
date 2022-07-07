@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 require 'faraday/follow_redirects'
 
 module ChgkRating
   module Connection
-    BASE_URL = 'http://rating.chgk.info/api'.freeze
+    BASE_URL = 'http://rating.chgk.info/api'
 
     def connection
       options = {
-          headers: {
-              accept: 'application/json',
-              user_agent: "chgk_rating ruby gem/#{ChgkRating::VERSION}"
-          },
-          url: BASE_URL + '/'
+        headers: {
+          accept: 'application/json',
+          user_agent: "chgk_rating ruby gem/#{ChgkRating::VERSION}"
+        },
+        url: "#{BASE_URL}/"
       }
 
       Faraday.new options do |faraday|

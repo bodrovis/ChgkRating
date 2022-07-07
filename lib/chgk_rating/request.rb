@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Request
     include ChgkRating::Connection
@@ -16,17 +18,16 @@ module ChgkRating
     end
 
     def respond(response)
-      begin
-        body = MultiJson.load response.body
-        raise MultiJson::ParseError if body.respond_to?(:has_key?) && body.has_key?('error')
-        body
-      rescue MultiJson::ParseError
-        respond_with_error response.status, response.body
-      end
+      body = MultiJson.load response.body
+      raise MultiJson::ParseError if body.respond_to?(:has_key?) && body.key?('error')
+
+      body
+    rescue MultiJson::ParseError
+      respond_with_error response.status, response.body
     end
 
     def respond_with_error(code, body)
-      fail ChgkRating::Error::ERRORS[code].from_response(body)
+      raise ChgkRating::Error::ERRORS[code].from_response(body)
     end
   end
 end

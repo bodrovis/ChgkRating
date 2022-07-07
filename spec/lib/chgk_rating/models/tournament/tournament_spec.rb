@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Models::Tournament do
   subject do
     VCR.use_cassette 'tournament' do
       described_class.new 3506
     end
   end
+
   let(:lazy_tournament) { described_class.new 3506, lazy: true }
   let(:tournament_h) { subject.to_h }
 
@@ -12,7 +15,11 @@ RSpec.describe ChgkRating::Models::Tournament do
 
   specify('#id') { expect(subject.id).to eq '3506' }
   specify('#name') { expect(subject.name).to eq 'Чемпионат Перми и Пермского края' }
-  specify('#long_name') { expect(subject.long_name).to eq 'XV Чемпионат Перми и Пермского края по игре "Что? Где? Когда?"' }
+
+  specify('#long_name') do
+    expect(subject.long_name).to eq 'XV Чемпионат Перми и Пермского края по игре "Что? Где? Когда?"'
+  end
+
   specify('#date_start') { expect(subject.date_start).to eq DateTime.parse('2015-11-08 14:00:00') }
   specify('#date_end') { expect(subject.date_end).to eq DateTime.parse('2015-11-08 18:00:00') }
   specify('#tour_count') { expect(subject.tour_count).to eq 4 }
@@ -24,12 +31,17 @@ RSpec.describe ChgkRating::Models::Tournament do
   specify('#main_payment_currency') { expect(subject.main_payment_currency).to eq 'руб' }
   specify('#discounted_payment_value') { expect(subject.discounted_payment_value).to eq 360 }
   specify('#discounted_payment_currency') { expect(subject.discounted_payment_currency).to eq 'руб' }
-  specify('#discounted_payment_reason') { expect(subject.discounted_payment_reason).to eq 'для детских команд; 480 - для студенческих' }
-  specify('#tournament_in_rating') { expect(subject.tournament_in_rating).to eq true }
+
+  specify('#discounted_payment_reason') do
+    expect(subject.discounted_payment_reason).to eq 'для детских команд; 480 - для студенческих'
+  end
+
+  specify('#tournament_in_rating') { expect(subject.tournament_in_rating).to be true }
   specify('#date_requests_allowed_to') { expect(subject.date_requests_allowed_to).to be_nil }
   specify('#comment') { expect(subject.comment).to be_nil }
   specify('#town') { expect(subject.town).to eq 'Пермь' }
   specify('#site_url') { expect(subject.site_url).to eq URI.parse('https://vk.com/chgk.perm.championship') }
+
   specify '#to_h' do
     expect(tournament_h['idtournament']).to eq '3506'
     expect(tournament_h['date_start']).to eq '2015-11-08T14:00:00+00:00'
@@ -60,7 +72,7 @@ RSpec.describe ChgkRating::Models::Tournament do
   describe '#team_results' do
     let(:team_results) do
       VCR.use_cassette 'team_results_at_tournament' do
-        subject.team_results(52853)
+        subject.team_results(52_853)
       end
     end
 
@@ -70,7 +82,7 @@ RSpec.describe ChgkRating::Models::Tournament do
   describe '#team_players' do
     let(:players) do
       VCR.use_cassette 'team_players_at_tournament' do
-        subject.team_players(52853)
+        subject.team_players(52_853)
       end
     end
 
@@ -78,7 +90,7 @@ RSpec.describe ChgkRating::Models::Tournament do
   end
 
   describe '#team_by' do
-    let(:team) { subject.team_by 52853 }
+    let(:team) { subject.team_by 52_853 }
 
     it { expect(team).to be_an_instance_of ChgkRating::Models::TournamentTeam }
   end

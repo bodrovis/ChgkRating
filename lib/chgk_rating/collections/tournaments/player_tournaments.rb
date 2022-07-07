@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Collections
     class PlayerTournaments < Base
@@ -12,12 +14,12 @@ module ChgkRating
 
       def revert_to_hash(key, values)
         [
-            key,
-            {
-                'idplayer' => @player.id.to_s,
-                'idseason' => key,
-                'tournaments' => values.map(&:to_h)
-            }
+          key,
+          {
+            'idplayer' => @player.id.to_s,
+            'idseason' => key,
+            'tournaments' => values.map(&:to_h)
+          }
         ]
       end
 
@@ -33,10 +35,12 @@ module ChgkRating
         end
       end
 
-      # @return [String] Either `tournaments`, `teams/ID/tournaments`, `players/ID/tournaments`, `teams/ID/tournaments/SEASON_ID`, `players/ID/tournaments/SEASON_ID`
+      # @return [String] Either `tournaments`, `teams/ID/tournaments`, `players/ID/tournaments`,
+      # `teams/ID/tournaments/SEASON_ID`, `players/ID/tournaments/SEASON_ID`
       def api_path
         path = "players/#{@player.id}/tournaments"
         return path unless @season_id
+
         path + "/#{@season_id}"
       end
     end

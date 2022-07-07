@@ -1,11 +1,14 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Models::Player do
   subject do
     VCR.use_cassette 'player' do
-      described_class.new 42511
+      described_class.new 42_511
     end
   end
+
   let(:player_h) { subject.to_h }
-  let(:lazy_player) { described_class.new 42511, lazy: true }
+  let(:lazy_player) { described_class.new 42_511, lazy: true }
 
   it_behaves_like 'model with eager loading'
   it_behaves_like 'model with lazy support'
@@ -39,6 +42,7 @@ RSpec.describe ChgkRating::Models::Player do
         subject.rating 1000
       end
     end
+
     it { expect(player_rating).to be_an_instance_of ChgkRating::Models::PlayerRating }
   end
 
@@ -48,6 +52,7 @@ RSpec.describe ChgkRating::Models::Player do
         subject.ratings
       end
     end
+
     it { expect(player_ratings).to be_an_instance_of ChgkRating::Collections::PlayerRatings }
   end
 
@@ -57,6 +62,7 @@ RSpec.describe ChgkRating::Models::Player do
         subject.tournaments
       end
     end
+
     it { expect(player_tournaments).to be_an_instance_of ChgkRating::Collections::PlayerTournaments }
   end
 end

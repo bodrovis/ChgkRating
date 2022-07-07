@@ -1,0 +1,69 @@
+require:
+ - rubocop-performance
+ - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.5
+  NewCops: enable
+
+Layout/SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+Metrics/BlockLength:
+  Max: 36
+  Exclude:
+    - spec/**/*.rb
+    - chgk_rating.gemspec
+
+Metrics/BlockNesting:
+  Max: 2
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 20
+
+Metrics/ModuleLength:
+  Max: 200
+
+Style/CollectionMethods:
+  Enabled: true
+  PreferredMethods:
+    collect:  'map'
+    collect!: 'map!'
+    inject:   'reduce'
+    find:     'detect'
+    find_all: 'select'
+    delete:   'gsub'
+
+Style/Documentation:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+RSpec/ExampleLength:
+  Max: 35
+
+RSpec/MessageSpies:
+  EnforcedStyle: have_received
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 30
+
+RSpec/ContextWording:
+  Enabled: false
+
+Naming/VariableNumber:
+  Enabled: false
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false

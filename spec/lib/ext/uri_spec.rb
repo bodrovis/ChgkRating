@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe URI do
   specify '.parse_safely' do
     expect(described_class.parse_safely('http://example.com/test').to_s).to eq('http://example.com/test')

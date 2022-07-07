@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Utils
     module Transformations
@@ -6,10 +8,10 @@ module ChgkRating
         up = 'integer' if up.nil? || up.empty?
         down = 'string' if down.nil? || down.empty?
 
-        %i(up down).inject({}) do |result, t|
+        %i[up down].reduce({}) do |result, t|
           current_transformer = binding.local_variable_get t
           result.merge({
-                           "transform_#{t}".to_sym => send(current_transformer)
+                         "transform_#{t}".to_sym => send(current_transformer)
                        })
         end
       end
@@ -24,10 +26,12 @@ module ChgkRating
         private
 
         def chgk_object(namespace, type = 'Models')
-          ->(d) do
-            opts = type == 'Models' ?
-                       [d, {lazy: true}] :
-                       [{collection: d, lazy: true}]
+          lambda do |d|
+            opts = if type == 'Models'
+                     [d, {lazy: true}]
+                   else
+                     [{collection: d, lazy: true}]
+                   end
 
             Module.const_get("ChgkRating::#{type}::#{namespace}").new(*opts)
           end
@@ -42,40 +46,42 @@ module ChgkRating
         end
 
         def to_star(method = :to_s, iterate = false)
-          ->(d) do
-            iterate ?
-                d.map {|obj| obj.send method } :
-                d.send(method)
+          lambda do |d|
+            if iterate
+              d.map { |obj| obj.send method }
+            else
+              d.send(method)
+            end
           end
         end
       end
 
       TRANSFORMERS = {
-          string: to_star,
-          integer: to_star(:to_i),
-          float: to_star(:to_f),
-          id: to_star(:id),
-          ids: to_star(:id, true),
-          sym: to_star(:to_sym),
-          strdate: to_star(:to_s_chgk),
-          uri: ->(d) { URI.parse_safely d },
-          boolean: to_boolean,
-          binboolean: to_binary_boolean,
-          date: ->(d) { Date.parse_safely d},
-          datetime: ->(d) { DateTime.parse_safely d},
-          splitboolean: ->(d) do
-            d&.split('')&.map {|result| to_boolean.call(result)}
-          end,
-          arraystrboolean: ->(d) do
-            d&.map {|result| to_binary_boolean.call(result)}
-          end,
-          arrayboolean: ->(d) do
-            d&.map {|result| to_boolean.call(result)}
-          end,
-          team: chgk_object('Team'),
-          tournament: chgk_object('Tournament'),
-          player: chgk_object('Player'),
-          players: chgk_object('Players', 'Collections')
+        string: to_star,
+        integer: to_star(:to_i),
+        float: to_star(:to_f),
+        id: to_star(:id),
+        ids: to_star(:id, true),
+        sym: to_star(:to_sym),
+        strdate: to_star(:to_s_chgk),
+        uri: ->(d) { URI.parse_safely d },
+        boolean: to_boolean,
+        binboolean: to_binary_boolean,
+        date: ->(d) { Date.parse_safely d },
+        datetime: ->(d) { DateTime.parse_safely d },
+        splitboolean: lambda do |d|
+                        d&.split('')&.map { |result| to_boolean.call(result) }
+                      end,
+        arraystrboolean: lambda do |d|
+                           d&.map { |result| to_binary_boolean.call(result) }
+                         end,
+        arrayboolean: lambda do |d|
+                        d&.map { |result| to_boolean.call(result) }
+                      end,
+        team: chgk_object('Team'),
+        tournament: chgk_object('Tournament'),
+        player: chgk_object('Player'),
+        players: chgk_object('Players', 'Collections')
       }.freeze
 
       load_transformers!

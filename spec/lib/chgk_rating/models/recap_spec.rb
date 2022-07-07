@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Models::Recap do
   subject do
     VCR.use_cassette 'recap_last_season' do
       described_class.new :last, team: 7931
     end
   end
+
   let(:recap_h) { subject.to_h }
 
   it_behaves_like 'model without eager loading'
@@ -13,11 +16,12 @@ RSpec.describe ChgkRating::Models::Recap do
   specify('#team') { expect(subject.team.id).to eq '7931' }
   specify('#captain') { expect(subject.captain.id).to eq '23539' }
   specify('#players') { expect(subject.players.first.id).to eq '2668' }
+
   specify '#to_h' do
     expect(recap_h['idseason']).to eq '51'
     expect(recap_h['idteam']).to eq '7931'
     expect(recap_h['captain']).to eq '23539'
-    expect(recap_h['players']).to eq %w(2668 6654 23539 53735 94783 98697 115867 149858)
+    expect(recap_h['players']).to eq %w[2668 6654 23539 53735 94783 98697 115867 149858]
   end
 
   context 'with season number' do

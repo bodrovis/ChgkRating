@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   class Error < StandardError
     ClientError = Class.new(self)
@@ -26,10 +28,10 @@ module ChgkRating
     NotImplemented = Class.new(ServerError)
 
     ERRORS = {
-        400 => ChgkRating::Error::BadRequest,
-        404 => ChgkRating::Error::NotFound,
-        501 => ChgkRating::Error::NotImplemented
-    }
+      400 => ChgkRating::Error::BadRequest,
+      404 => ChgkRating::Error::NotFound,
+      501 => ChgkRating::Error::NotImplemented
+    }.freeze
 
     class << self
       # Create a new error from an HTTP response

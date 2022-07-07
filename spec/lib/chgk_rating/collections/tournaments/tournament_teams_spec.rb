@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::TournamentTeams do
   subject do
     VCR.use_cassette 'teams_at_tournament' do
       described_class.new(tournament: 3506)
     end
   end
+
   let(:team) { subject[0] }
   let(:tournament_team_h) { team.to_h }
 
@@ -20,16 +23,19 @@ RSpec.describe ChgkRating::Collections::TournamentTeams do
   specify('#tech_rating_rg') { expect(team.tech_rating_rg).to eq 2583 }
   specify('#tech_rating_rb') { expect(team.tech_rating_rb).to eq 2525 }
   specify('#predicted_position') { expect(team.predicted_position).to eq 2 }
-  specify('#diff_bonus') { expect(team.diff_bonus).to eq -48 }
-  specify('#included_in_rating') { expect(team.included_in_rating).to eq true }
-  specify('#result') { expect(team.result).to eq [true, true, true, false, true, true,
-                                                     true, true, true, true, true,
-                                                     true, true, false, false, false, false,
-                                                     true, true, true, true, true, false, true,
-                                                     true, true, false, false, true, false,
-                                                     true, true, false, true, true, false, true,
-                                                     false, true, false, true, true, true,
-                                                     false, true, true, true, true] }
+  specify('#diff_bonus') { expect(team.diff_bonus).to eq(-48) }
+  specify('#included_in_rating') { expect(team.included_in_rating).to be true }
+
+  specify('#result') do
+    expect(team.result).to eq [true, true, true, false, true, true,
+                               true, true, true, true, true,
+                               true, true, false, false, false, false,
+                               true, true, true, true, true, false, true,
+                               true, true, false, false, true, false,
+                               true, true, false, true, true, false, true,
+                               false, true, false, true, true, true,
+                               false, true, true, true, true]
+  end
 
   specify '#to_a' do
     expect(subject.to_a[2]['idteam']).to eq '28434'
@@ -40,11 +46,11 @@ RSpec.describe ChgkRating::Collections::TournamentTeams do
     expect(tournament_team_h['idteam']).to eq '2124'
     expect(tournament_team_h['position']).to eq '3.0'
     expect(tournament_team_h['questions_total']).to eq '34'
-    expect(tournament_team_h['mask']).to eq ["1", "1", "1", "0", "1", "1", "1", "1", "1", "1", "1",
-                                             "1", "1", "0", "0", "0", "0", "1", "1", "1", "1", "1",
-                                             "0", "1", "1", "1", "0", "0", "1", "0", "1", "1", "0",
-                                             "1", "1", "0", "1", "0", "1", "0", "1", "1", "1", "0",
-                                             "1", "1", "1", "1"]
+    expect(tournament_team_h['mask']).to eq %w[1 1 1 0 1 1 1 1 1 1 1
+                                               1 1 0 0 0 0 1 1 1 1 1
+                                               0 1 1 1 0 0 1 0 1 1 0
+                                               1 1 0 1 0 1 0 1 1 1 0
+                                               1 1 1 1]
     expect(tournament_team_h['bonus_b']).to eq '421'
     expect(tournament_team_h['tech_rating_rt']).to eq '2583'
     expect(tournament_team_h['tech_rating_rg']).to eq '2583'

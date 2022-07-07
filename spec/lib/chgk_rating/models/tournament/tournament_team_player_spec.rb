@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Models::TournamentTeamPlayer do
   subject do
     VCR.use_cassette 'team_players_at_tournament' do
-      test_client.team_players_at_tournament(3506, 52853)[0]
+      test_client.team_players_at_tournament(3506, 52_853)[0]
     end
   end
+
   let(:tournament_player_h) { subject.to_h }
 
   it_behaves_like 'model without eager loading'

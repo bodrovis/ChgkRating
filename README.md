@@ -1,8 +1,8 @@
 # ChgkRating
 
 [![Gem Version](https://badge.fury.io/rb/chgk_rating.svg)](https://badge.fury.io/rb/chgk_rating)
-[![Build Status](https://travis-ci.org/bodrovis/ChgkRating.svg?branch=master)](https://travis-ci.org/bodrovis/ChgkRating)
-[![Code Climate](https://codeclimate.com/github/bodrovis/ChgkRating/badges/gpa.svg)](https://codeclimate.com/github/bodrovis/ChgkRating)
+![CI](https://github.com/bodrovis/ChgkRating/actions/workflows/ci.yml/badge.svg)
+[![Test Coverage](https://codecov.io/gh/bodrovis/ChgkRating/graph/badge.svg)](https://codecov.io/gh/bodrovis/ChgkRating)
 
 **This gem is in passive maintenance mode. I won't release any new features or introduce any complex enhancements as ChgkRating v1 is deprecated. Please use [rating-chgk-v2 gem](https://github.com/bodrovis/rating-chgk-v2) which works with the new version of the API.**
 
@@ -64,4 +64,4 @@ Tests run against mock responses so you don't need to perform any special setup.
 
 This plugin is licensed under the [MIT License](https://github.com/bodrovis/ChgkRating/blob/master/LICENSE).
 
-Copyright (c) [Ilya Bodrov](http://bodrovis.tech)
+Copyright (c) [Ilya Krukowski](http://bodrovis.tech)

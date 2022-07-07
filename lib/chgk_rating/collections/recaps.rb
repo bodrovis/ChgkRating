@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Collections
     class Recaps < Base
@@ -12,7 +14,7 @@ module ChgkRating
       private
 
       def process(results, _params)
-        results.each do |season,value|
+        results.each do |season, value|
           results[season] = ChgkRating::Models::Recap.new value, team: @team
         end
       end

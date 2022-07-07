@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::TournamentTeamResults do
   subject do
     VCR.use_cassette 'team_results_at_tournament' do
-      described_class.new(tournament: 3506, team: 52853)
+      described_class.new(tournament: 3506, team: 52_853)
     end
   end
 

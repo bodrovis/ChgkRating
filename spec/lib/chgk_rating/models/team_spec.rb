@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Models::Team do
   subject do
     VCR.use_cassette 'team' do
       described_class.new 1
     end
   end
+
   let(:team_h) { subject.to_h }
   let(:lazy_team) { described_class.new 1, lazy: true }
 
@@ -56,6 +59,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.rating 24
       end
     end
+
     it { expect(team_rating).to be_an_instance_of ChgkRating::Models::TeamRating }
   end
 
@@ -65,6 +69,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.recap 9
       end
     end
+
     it { expect(team_recap).to be_an_instance_of ChgkRating::Models::Recap }
   end
 
@@ -74,6 +79,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.recaps
       end
     end
+
     it { expect(team_recaps).to be_an_instance_of ChgkRating::Collections::Recaps }
   end
 
@@ -83,6 +89,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.tournaments
       end
     end
+
     it { expect(team_tournaments).to be_an_instance_of ChgkRating::Collections::Tournaments }
   end
 
@@ -92,6 +99,7 @@ RSpec.describe ChgkRating::Models::Team do
         subject.ratings
       end
     end
+
     it { expect(team_ratings).to be_an_instance_of ChgkRating::Collections::TeamRatings }
   end
 end

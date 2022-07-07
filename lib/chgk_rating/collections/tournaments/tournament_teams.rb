@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Collections
     class TournamentTeams < Base
       attr_reader :tournament
+
       def initialize(params = {})
         @tournament = build_model params[:tournament], ChgkRating::Models::Tournament
 

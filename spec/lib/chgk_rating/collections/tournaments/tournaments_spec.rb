@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::Tournaments do
   context 'all tournaments for a team by season' do
     subject do
@@ -13,6 +15,7 @@ RSpec.describe ChgkRating::Collections::Tournaments do
       tournaments_arr = subject.to_a
       expect(tournaments_arr[2]['idtournament']).to eq '150'
     end
+
     specify('#id') { expect(subject[0].id).to eq '188' }
     specify('#team') { expect(subject.team.id).to eq 1 }
     specify('#season_id') { expect(subject.season_id).to eq 4 }
@@ -24,6 +27,7 @@ RSpec.describe ChgkRating::Collections::Tournaments do
         described_class.new
       end
     end
+
     let(:tournament) { subject[0] }
 
     it_behaves_like 'not a hash'
@@ -33,6 +37,7 @@ RSpec.describe ChgkRating::Collections::Tournaments do
       tournaments_arr = subject.to_a
       expect(tournaments_arr[10]['idtournament']).to eq '1538'
     end
+
     specify('#id') { expect(tournament.id).to eq '1908' }
     specify('#name') { expect(tournament.name).to eq 'Фестиваль в Мариуполе' }
     specify('#date_start') { expect(tournament.date_start).to eq DateTime.parse('1989-09-01 00:00:00') }
@@ -46,6 +51,7 @@ RSpec.describe ChgkRating::Collections::Tournaments do
         described_class.new(team: 1)
       end
     end
+
     let(:tournament) { subject['8'][0] }
 
     it_behaves_like 'a hash'
@@ -57,6 +63,7 @@ RSpec.describe ChgkRating::Collections::Tournaments do
       expect(subject_h['idseason']).to eq '7'
       expect(subject_h['idteam']).to eq '1'
     end
+
     specify('#id') { expect(tournament.id).to eq '424' }
   end
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Collections
     class Teams < Base

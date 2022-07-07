@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::TeamRatings do
   subject do
     VCR.use_cassette 'team_ratings' do
       described_class.new(team: 1)
     end
   end
+
   let(:ratings) do
     subject[0]
   end
@@ -16,6 +19,7 @@ RSpec.describe ChgkRating::Collections::TeamRatings do
     expect(ratings_arr.count).to eq 572
     expect(ratings_arr[500]['date']).to eq '2006-08-17'
   end
+
   specify('#date') { expect(ratings.date.to_s).to eq '2003-07-01' }
   specify('#formula') { expect(ratings.formula).to eq :a }
   specify('#rating_position') { expect(ratings.rating_position).to eq 8 }

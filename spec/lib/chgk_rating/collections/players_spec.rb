@@ -1,10 +1,13 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::Players do
-  let(:player) { subject[1] }
   subject do
     VCR.use_cassette 'players' do
       described_class.new
     end
   end
+
+  let(:player) { subject[1] }
 
   it_behaves_like 'not a hash'
   it_behaves_like 'an array'
@@ -14,11 +17,13 @@ RSpec.describe ChgkRating::Collections::Players do
     expect(players_arr.count).to eq 1000
     expect(players_arr[10]['surname']).to eq 'Абарников'
   end
+
   specify('#id') { expect(player.id).to eq '6' }
   specify('#surname') { expect(player.surname).to eq 'Абаков' }
   specify('#name') { expect(player.name).to eq 'Карен' }
+
   it 'respond_to should still work properly' do
-    expect(subject.respond_to?(:count)).to eq true
+    expect(subject.respond_to?(:count)).to be true
   end
 
   context 'searching' do

@@ -1,5 +1,14 @@
 # Changelog
 
+## v2.2.0 (2022-07-07)
+
+* **Drop support for Ruby 2.4**
+* Switched to Faraday v2 (thanks, @L-Eugene)
+* Fixed various minor issues
+* Switched to GH Actions
+* Use Rubocop
+* Update test matrix
+
 ## v2.1.0 (2021-12-29)
 
 * Updated API mappings (thanks, @L-Eugene)

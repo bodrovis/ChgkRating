@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Collections
     class Tournaments < Base
@@ -7,18 +9,18 @@ module ChgkRating
         @team = build_model params[:team]
 
         @season_id = params[:season_id]
-        params.merge!(lazy: true) if @team || @season_id
+        params[:lazy] = true if @team || @season_id
         super
       end
 
       def revert_to_hash(key, values)
         [
-            key,
-            {
-                'idteam' => @team&.id.to_s,
-                'idseason' => key,
-                'tournaments' => values.map(&:to_h)
-            }
+          key,
+          {
+            'idteam' => @team&.id.to_s,
+            'idseason' => key,
+            'tournaments' => values.map(&:to_h)
+          }
         ]
       end
 
@@ -39,8 +41,10 @@ module ChgkRating
       def api_path
         path = 'tournaments'
         return path unless @team
+
         path = "teams/#{@team.id}/#{path}"
         return path unless @season_id
+
         path + "/#{@season_id}"
       end
     end

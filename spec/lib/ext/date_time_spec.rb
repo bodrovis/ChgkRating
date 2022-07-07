@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 RSpec.describe DateTime do
-  subject { DateTime.new(2018,01,24,16,58,34) }
+  subject { described_class.new(2018, 0o1, 24, 16, 58, 34) }
 
   specify '#to_s_chgk' do
     expect(subject.to_s_chgk).to eq '2018-01-24 16:58:34'

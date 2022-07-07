@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   class Client
     # Returns a single Team
@@ -138,7 +140,7 @@ module ChgkRating
     # @option params [String or Integer] :page The requested page. Default is 1
     def tournaments(team_or_id: nil, season_id: nil, params: {})
       ChgkRating::Collections::Tournaments.new params.merge(
-          team: team_or_id, season_id: season_id
+        team: team_or_id, season_id: season_id
       )
     end
 

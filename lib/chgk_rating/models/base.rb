@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ChgkRating
   module Models
     class Base < ChgkObject
@@ -24,7 +26,8 @@ module ChgkRating
       # Set `force` to reload data even if it is already present.
       def eager_load!(force = false)
         return unless @lazy || force
-        extract_from raw_by(self.id)
+
+        extract_from raw_by(id)
         @lazy = false
         self
       end
@@ -36,28 +39,30 @@ module ChgkRating
       end
 
       def self.no_lazy_support!
-        self.const_set :NO_LAZY_SUPPORT, true
+        const_set :NO_LAZY_SUPPORT, true
         undef_method :lazy
       end
 
       def to_h
-        self.class.attribute_mapping.inject({}) do |memo, (attr, mapping)|
-          data = self.send attr
-          data = mapping[:transform_down].call(data) if mapping.has_key?(:transform_down)
-          memo[ mapping[:raw_name] ] = data
-          memo
+        self.class.attribute_mapping.each_with_object({}) do |(attr, mapping), memo|
+          data = send attr
+          data = mapping[:transform_down].call(data) if mapping.key?(:transform_down)
+          memo[mapping[:raw_name]] = data
+        end
+      end
+
+      class << self
+        # Grab the attribute mapping for the class and its superclass
+        # (as superclass may present common mappings for multiple classes)
+        def self.attribute_mapping
+          return nil unless name
+
+          ChgkRating::AttributeMappings.find(name).
+            merge(ChgkRating::AttributeMappings.find(superclass.name))
         end
       end
 
       private
-
-      # Grab the attribute mapping for the class and its superclass
-      # (as superclass may present common mappings for multiple classes)
-      def self.attribute_mapping
-        return nil unless self.name
-        ChgkRating::AttributeMappings.find(self.name).
-            merge(ChgkRating::AttributeMappings.find(self.superclass.name))
-      end
 
       def lazy_load?(params)
         self.class.const_defined?(:NO_LAZY_SUPPORT) ? false : params[:lazy]
@@ -85,16 +90,18 @@ module ChgkRating
         self.class.attribute_mapping.each do |attr, mapping|
           data = get_data_from raw_data, attr, mapping
           next unless data
+
           instance_variable_set "@#{attr}", transform_up(data, mapping)
         end
       end
 
       def get_data_from(raw, attr, mapping)
-        raw.is_a?(self.class) ? raw.send(attr) : raw[ mapping[:raw_name] ]
+        raw.is_a?(self.class) ? raw.send(attr) : raw[mapping[:raw_name]]
       end
 
       def transform_up(data, mapping)
-        return data unless mapping.has_key?(:transform_up)
+        return data unless mapping.key?(:transform_up)
+
         mapping[:transform_up].call(data)
       end
     end

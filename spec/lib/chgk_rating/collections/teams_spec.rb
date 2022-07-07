@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 RSpec.describe ChgkRating::Collections::Teams do
   subject do
     VCR.use_cassette 'teams' do
       described_class.new
     end
   end
+
   let(:team) { subject[1] }
 
   it_behaves_like 'not a hash'
@@ -12,6 +15,7 @@ RSpec.describe ChgkRating::Collections::Teams do
   specify('#id') { expect(team.id).to eq '2' }
   specify('#town') { expect(team.town).to eq 'Москва' }
   specify('#name') { expect(team.name).to eq 'Афина' }
+
   specify '#to_a' do
     teams_arr = subject.to_a
     expect(teams_arr.count).to eq 1000
