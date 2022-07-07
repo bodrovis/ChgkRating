@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   spec.homepage              = 'http://chgk-rating.bodrovis.tech/'
   spec.license               = 'MIT'
   spec.platform              = Gem::Platform::RUBY
-  spec.required_ruby_version = '>= 2.5.0'
+  spec.required_ruby_version = '>= 2.6.0'
 
   spec.files = Dir['README.md', 'LICENSE', 'CONTRIBUTING.md',
                    'CHANGELOG.md', 'lib/**/*.rb', 'chgk_rating.gemspec', '.github/*.md',

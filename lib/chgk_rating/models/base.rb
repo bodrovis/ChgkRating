@@ -54,7 +54,7 @@ module ChgkRating
       class << self
         # Grab the attribute mapping for the class and its superclass
         # (as superclass may present common mappings for multiple classes)
-        def self.attribute_mapping
+        def attribute_mapping
           return nil unless name
 
           ChgkRating::AttributeMappings.find(name).

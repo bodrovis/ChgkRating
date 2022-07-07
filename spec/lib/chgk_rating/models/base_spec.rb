@@ -7,6 +7,7 @@ RSpec.describe ChgkRating::Models::Base do
     let!(:klass) do
       Class.new(described_class) do
         no_lazy_support!
+        def initialize; end # rubocop:disable Style/RedundantInitialize
       end
     end
 
@@ -23,6 +24,7 @@ RSpec.describe ChgkRating::Models::Base do
     let!(:klass) do
       Class.new(described_class) do
         no_eager_loading!
+        def initialize; end # rubocop:disable Style/RedundantInitialize
       end
     end
 

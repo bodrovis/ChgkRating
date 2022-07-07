@@ -2,7 +2,7 @@
 
 ## v2.2.0 (2022-07-07)
 
-* **Drop support for Ruby 2.4**
+* **Drop support for Ruby 2.4 and 2.5 (EOL)**
 * Switched to Faraday v2 (thanks, @L-Eugene)
 * Fixed various minor issues
 * Switched to GH Actions
