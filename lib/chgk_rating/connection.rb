@@ -1,4 +1,4 @@
-require 'faraday/follow_redirects'
+require 'faraday_middleware'
 
 module ChgkRating
   module Connection
@@ -14,7 +14,7 @@ module ChgkRating
       }
 
       Faraday.new options do |faraday|
-        faraday.use Faraday::FollowRedirects::Middleware
+        faraday.use FaradayMiddleware::FollowRedirects
         faraday.adapter Faraday.default_adapter
       end
     end
