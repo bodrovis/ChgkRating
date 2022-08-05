@@ -38,7 +38,7 @@ module ChgkRating
         end
 
         def to_boolean
-          ->(d) { !d.to_i.zero? }
+          ->(d) { d.respond_to?(:to_i) ? !d.to_i.zero? : !!d }
         end
 
         def to_binary_boolean

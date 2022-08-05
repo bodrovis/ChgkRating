@@ -30,12 +30,24 @@ RSpec.describe ChgkRating::Client do
   end
 
   describe '#team_at_tournament' do
-    subject { test_client.team_at_tournament tournament_3506, team_52853 }
+    context 'lazy loaded objects' do
+      subject { test_client.team_at_tournament tournament_3506, team_52853 }
 
-    it { is_expected.to be_an_instance_of ChgkRating::Models::TournamentTeam }
+      it { is_expected.to be_an_instance_of ChgkRating::Models::TournamentTeam }
 
-    include_examples 'lazy loaded' do
-      let(:object) { subject }
+      include_examples 'lazy loaded' do
+        let(:object) { subject }
+      end
+    end
+
+    context 'eager loaded objects' do
+      subject { test_client.team_at_tournament test_client.tournament(3506, false), test_client.team(52_853, false) }
+
+      it { is_expected.to be_an_instance_of ChgkRating::Models::TournamentTeam }
+
+      include_examples 'lazy loaded' do
+        let(:object) { subject }
+      end
     end
   end
 
