@@ -2,8 +2,10 @@
 
 RSpec.describe ChgkRating::Utils::Transformations do
   specify '.to_boolean' do
-    expect(described_class.send(:to_boolean).call('1')).to be(true)
-    expect(described_class.send(:to_boolean).call('0')).to be(false)
+    expect(described_class.send(:to_boolean).call('1')).to be_truthy
+    expect(described_class.send(:to_boolean).call('0')).to be_falsey
+    expect(described_class.send(:to_boolean).call(true)).to be_truthy
+    expect(described_class.send(:to_boolean).call(false)).to be_falsey
   end
 
   specify '.to_binary_boolean' do
