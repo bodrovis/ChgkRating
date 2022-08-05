@@ -1,5 +1,9 @@
 # Changelog
 
+## v2.2.1 (2022-08-05)
+
+* Fixed conversion to boolean (thanks, @L-Eugene)
+
 ## v2.2.0 (2022-07-07)
 
 * **Drop support for Ruby 2.4 and 2.5 (EOL)**
